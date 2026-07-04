@@ -108,11 +108,9 @@ export function Navbar() {
             {/* Mobile Nav Toggle */}
             <div className="flex items-center gap-2 lg:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-foreground">
-                    <Menu className="h-6 w-6" />
-                    <span className="sr-only">Toggle Menu</span>
-                  </Button>
+                <SheetTrigger render={<Button variant="ghost" size="icon" className="text-foreground" />}>
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Toggle Menu</span>
                 </SheetTrigger>
                 <SheetContent side="right" className="flex flex-col gap-6 pt-12 px-6 bg-background">
                   <div className="flex flex-col gap-4">
