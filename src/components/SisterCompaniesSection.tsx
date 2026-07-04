@@ -3,7 +3,7 @@ import Image from "next/image"
 import { sisterCompanies } from "@/data/content"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "./ui/card"
 import { buttonVariants, Button } from "./ui/button"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, ArrowRight } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -15,72 +15,73 @@ import {
 
 export function SisterCompaniesSection() {
   return (
-    <section id="group" className="py-20 bg-muted/30 scroll-m-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Sister Companies</h2>
-          <div className="w-16 h-1 bg-primary mx-auto rounded-full" />
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Grup perusahaan kami yang tergabung untuk memberikan ekosistem layanan yang lebih luas dan terintegrasi.
+    <section id="group" className="py-24 bg-muted/10 border-t border-b scroll-m-20">
+      <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+        <div className="text-center space-y-6 mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">Grup <span className="text-primary">Perusahaan</span></h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Ekosistem layanan terintegrasi dari grup perusahaan kami, hadir untuk melengkapi setiap kebutuhan operasional dan visual bisnis Anda.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sisterCompanies.map((company) => (
-            <Card key={company.id} className="group/card flex flex-col hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/50 relative overflow-hidden">
-              {/* Subtle gradient background on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              
-              <CardHeader className="flex flex-row items-center gap-4 relative z-10">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl shrink-0 group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors duration-300 shadow-sm">
+            <Card key={company.id} className="group/card flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 border-border bg-card relative overflow-hidden rounded-xl">
+              <CardHeader className="flex flex-col gap-4 relative z-10 pt-8 px-8">
+                <div className="w-16 h-16 rounded-xl bg-secondary/30 flex items-center justify-center text-primary font-bold text-2xl shrink-0 group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors duration-500 shadow-sm">
                   {company.logoText}
                 </div>
                 <div>
-                  <CardTitle className="text-xl">{company.name}</CardTitle>
-                  <CardDescription className="line-clamp-1">{company.shortDesc}</CardDescription>
+                  <CardTitle className="text-2xl font-bold mb-2">{company.name}</CardTitle>
+                  <CardDescription className="text-sm font-semibold text-primary">{company.shortDesc}</CardDescription>
                 </div>
               </CardHeader>
-              <CardContent className="flex-1">
-                <p className="text-muted-foreground line-clamp-3">
+              <CardContent className="flex-1 px-8">
+                <p className="text-foreground/70 leading-relaxed line-clamp-3">
                   {company.fullDesc}
                 </p>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="px-8 pb-8 pt-4">
                 <Dialog>
-                  <DialogTrigger render={<Button variant="outline" className="w-full" />}>
-                    Detail
+                  <DialogTrigger asChild>
+                    <Button variant="ghost" className="w-full justify-between group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors border">
+                      Lihat Detail <ArrowRight className="w-4 h-4" />
+                    </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-[425px]">
-                    <DialogHeader>
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-2xl shrink-0">
-                          {company.logoText}
-                        </div>
-                        <div>
-                          <DialogTitle className="text-2xl">{company.name}</DialogTitle>
-                          <DialogDescription className="mt-1">
-                            {company.shortDesc}
-                          </DialogDescription>
-                        </div>
-                      </div>
-                    </DialogHeader>
+                  <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden rounded-xl border-none shadow-2xl">
                     {company.image && (
-                      <div className="relative w-full h-48 sm:h-56 rounded-lg overflow-hidden my-4 border">
+                      <div className="relative w-full h-48 sm:h-64 bg-muted">
                         <Image 
                           src={company.image} 
                           alt={company.name} 
                           fill 
                           className="object-cover"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                        <div className="absolute bottom-6 left-6 flex items-center gap-4">
+                          <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg">
+                            {company.logoText}
+                          </div>
+                          <div>
+                            <DialogTitle className="text-2xl font-bold text-white mb-1">{company.name}</DialogTitle>
+                            <DialogDescription className="text-white/80 font-medium">
+                              {company.shortDesc}
+                            </DialogDescription>
+                          </div>
+                        </div>
                       </div>
                     )}
-                    <div className="py-2">
-                      <p className="text-foreground leading-relaxed">
+                    
+                    <div className="p-8">
+                      <p className="text-foreground/80 leading-relaxed text-base mb-8">
                         {company.fullDesc}
                       </p>
-                    </div>
-                    <div className="flex justify-end pt-4 border-t mt-4">
-                      <a href={company.website} target="_blank" rel="noopener noreferrer" className={buttonVariants({ className: "gap-2" })}>
+                      <a 
+                        href={company.website} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className={buttonVariants({ size: "lg", className: "w-full gap-2 font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-md" })}
+                      >
                         Kunjungi Website <ExternalLink className="w-4 h-4" />
                       </a>
                     </div>

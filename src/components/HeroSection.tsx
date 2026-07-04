@@ -1,59 +1,80 @@
+"use client"
+
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { companyInfo } from "@/data/content"
-import { buttonVariants } from "./ui/button"
+import { buttonVariants, Button } from "./ui/button"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi
 } from "@/components/ui/carousel"
 
 export function HeroSection() {
   const { heroSlides } = companyInfo
+  const [api, setApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+  const [count, setCount] = React.useState(0)
+
+  React.useEffect(() => {
+    if (!api) return
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap())
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
 
   return (
     <section className="w-full relative bg-background">
-      <Carousel className="w-full" opts={{ loop: true }}>
+      <Carousel setApi={setApi} className="w-full group" opts={{ loop: true }}>
         <CarouselContent>
-          {heroSlides.map((slide) => (
+          {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id}>
-              <div className="relative h-[80vh] md:h-[550px] w-full overflow-hidden bg-primary/95">
-                {/* Aesthetic Soft Mesh Gradient Background */}
-                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-400/40 rounded-full mix-blend-screen filter blur-[100px] animate-pulse-slow pointer-events-none" />
-                <div className="absolute bottom-[-10%] left-[20%] w-[40%] h-[40%] bg-sky-300/40 rounded-full mix-blend-screen filter blur-[100px] animate-pulse-slow pointer-events-none" style={{ animationDelay: '2s' }} />
-                <div className="absolute top-[20%] right-[30%] w-[45%] h-[45%] bg-purple-400/30 rounded-full mix-blend-screen filter blur-[100px] animate-pulse-slow pointer-events-none" style={{ animationDelay: '4s' }} />
+              <div className="relative h-[60vh] md:h-[600px] w-full overflow-hidden">
+                {/* Full width background image */}
+                <Image 
+                  src={slide.image}
+                  alt={slide.headline}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                />
                 
-                {/* Right Side: Image container overlapping */}
-                <div className="absolute right-0 md:right-8 lg:right-16 top-16 md:top-8 bottom-0 md:bottom-8 w-full md:w-[60%] lg:w-[50%] h-[50%] md:h-auto overflow-hidden rounded-tl-3xl md:rounded-3xl shadow-2xl">
-                  <Image 
-                    src={slide.image}
-                    alt="Hero slide"
-                    fill
-                    className="object-cover"
-                    priority={slide.id === 1}
-                  />
-                  {/* Subtle overlay to ensure text readability if it overlaps heavily */}
-                  <div className="absolute inset-0 bg-black/20 md:bg-transparent" />
-                </div>
+                {/* Corporate Gradient Overlay for Text Readability */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-transparent" />
 
-                {/* Left Side: Overlapping Text */}
-                <div className="absolute inset-0 flex flex-col justify-end md:justify-center px-8 md:pl-24 pb-12 md:pb-0 z-10 pointer-events-none">
-                  <div className="w-full md:w-[80%] lg:w-[70%]">
-                    <h1 
-                      className="text-5xl md:text-7xl lg:text-[5.5rem] font-extrabold uppercase tracking-tighter whitespace-pre-line leading-[0.95] text-white drop-shadow-xl animate-fade-in-up"
-                    >
-                      {slide.headline}
-                    </h1>
-                    <div className="mt-8 animate-fade-in-up pointer-events-auto" style={{ animationDelay: '0.2s' }}>
-                      <Link 
-                        href={slide.link}
-                        className={buttonVariants({ variant: "outline", size: "lg", className: "rounded-full border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary font-semibold px-8 transition-colors backdrop-blur-sm" })}
-                      >
-                        {slide.cta}
-                      </Link>
+                {/* Content Container */}
+                <div className="absolute inset-0 flex items-center">
+                  <div className="container mx-auto px-6 md:px-12 w-full">
+                    <div className="w-full md:w-1/2 flex flex-col gap-6 animate-in slide-in-from-left-8 duration-700">
+                      <div className="inline-block px-3 py-1 bg-secondary/90 text-secondary-foreground text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">
+                        {slide.id === 1 ? 'Solusi Bisnis' : 'Inovasi Digital'}
+                      </div>
+                      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-primary-foreground leading-[1.1]">
+                        {slide.headline}
+                      </h1>
+                      <p className="text-primary-foreground/90 text-lg md:text-xl font-medium max-w-lg">
+                        Mewujudkan transformasi digital perusahaan Anda melalui solusi teknologi terbaik dan strategi pemasaran yang terintegrasi.
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-4">
+                        <Link 
+                          href={slide.link}
+                          className={buttonVariants({ size: "lg", className: "bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold px-8 shadow-lg" })}
+                        >
+                          {slide.cta}
+                        </Link>
+                        <Link 
+                          href="#contact"
+                          className={buttonVariants({ variant: "outline", size: "lg", className: "bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8" })}
+                        >
+                          Hubungi Kami
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -62,12 +83,26 @@ export function HeroSection() {
           ))}
         </CarouselContent>
         
-        {/* Navigation Controls */}
-        <div className="absolute top-1/2 left-2 md:left-6 -translate-y-1/2 z-20">
-          <CarouselPrevious className="static translate-y-0 h-10 w-10 border-none bg-white/20 hover:bg-white/40 text-white backdrop-blur-md" />
+        {/* Navigation Controls (Visible on hover) */}
+        <div className="absolute top-1/2 left-4 md:left-8 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <CarouselPrevious className="h-12 w-12 border-2 border-primary-foreground/30 bg-primary/20 hover:bg-primary/60 text-primary-foreground backdrop-blur-sm" />
         </div>
-        <div className="absolute top-1/2 right-2 md:right-6 -translate-y-1/2 z-20">
-          <CarouselNext className="static translate-y-0 h-10 w-10 border-none bg-white/20 hover:bg-white/40 text-white backdrop-blur-md" />
+        <div className="absolute top-1/2 right-4 md:right-8 -translate-y-1/2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <CarouselNext className="h-12 w-12 border-2 border-primary-foreground/30 bg-primary/20 hover:bg-primary/60 text-primary-foreground backdrop-blur-sm" />
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
+          {Array.from({ length: count }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => api?.scrollTo(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === current ? "w-8 bg-secondary" : "w-2 bg-primary-foreground/50 hover:bg-primary-foreground/80"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </Carousel>
     </section>

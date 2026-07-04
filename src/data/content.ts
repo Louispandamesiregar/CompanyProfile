@@ -1,4 +1,4 @@
-import { Code, Megaphone, Smartphone, Lightbulb, PieChart, Users } from "lucide-react";
+import { FaLaptopCode, FaBullhorn, FaMobileAlt, FaPalette, FaChartPie, FaUserTie } from "react-icons/fa";
 
 export const companyInfo = {
   name: "NexGen Agency",
@@ -44,37 +44,43 @@ export const services = [
     id: 1,
     title: "Web Development",
     description: "Pembuatan website company profile, e-commerce, hingga web app kompleks dengan teknologi terkini.",
-    icon: Code
+    icon: FaLaptopCode,
+    color: "#4285F4"
   },
   {
     id: 2,
     title: "Digital Marketing",
     description: "Strategi pemasaran digital yang tepat sasaran untuk meningkatkan visibilitas dan penjualan Anda.",
-    icon: Megaphone
+    icon: FaBullhorn,
+    color: "#EA4335"
   },
   {
     id: 3,
     title: "Mobile Apps",
     description: "Pengembangan aplikasi Android dan iOS yang responsif, cepat, dan user-friendly.",
-    icon: Smartphone
+    icon: FaMobileAlt,
+    color: "#34A853"
   },
   {
     id: 4,
     title: "UI/UX Design",
     description: "Desain antarmuka yang tidak hanya indah, tapi juga memberikan pengalaman pengguna terbaik.",
-    icon: Lightbulb
+    icon: FaPalette,
+    color: "#FBBC05"
   },
   {
     id: 5,
     title: "Data Analytics",
     description: "Analisis data bisnis untuk membantu Anda mengambil keputusan yang lebih tepat dan terukur.",
-    icon: PieChart
+    icon: FaChartPie,
+    color: "#9C27B0"
   },
   {
     id: 6,
     title: "IT Consulting",
     description: "Konsultasi infrastruktur dan arsitektur IT untuk efisiensi dan keamanan bisnis Anda.",
-    icon: Users
+    icon: FaUserTie,
+    color: "#FF9800"
   }
 ];
 
