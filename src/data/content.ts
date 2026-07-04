@@ -9,21 +9,21 @@ export const companyInfo = {
       headline: "DREAM WITH A TEAM\nMAKE WAVES",
       cta: "Learn more",
       link: "#about",
-      image: "/demo.jpg"
+      image: "/CompanyProfile/demo.jpg"
     },
     {
       id: 2,
       headline: "INNOVATE & CREATE\nTHE FUTURE",
       cta: "Contact Us",
       link: "#contact",
-      image: "/demo.jpg"
+      image: "/CompanyProfile/demo.jpg"
     },
     {
       id: 3,
       headline: "GROW YOUR BUSINESS\nWITH US",
       cta: "Our Services",
       link: "#services",
-      image: "/demo.jpg"
+      image: "/CompanyProfile/demo.jpg"
     }
   ],
   about: {
@@ -86,7 +86,7 @@ export const sisterCompanies = [
     fullDesc: "Senja Coffee menyajikan kopi artisan terbaik dengan biji pilihan yang disangrai sendiri (roastery). Tempat nongkrong yang nyaman dengan desain estetik, cocok untuk bekerja maupun bersantai bersama teman.",
     website: "https://senjacoffee.example.com",
     logoText: "SC",
-    image: "/demo.jpg"
+    image: "/CompanyProfile/demo.jpg"
   },
   {
     id: 2,
@@ -95,7 +95,7 @@ export const sisterCompanies = [
     fullDesc: "Warmindo Berkah adalah tempat makan favorit yang menyajikan berbagai olahan mi instan, roti bakar, dan minuman hangat. Cocok sebagai tempat ngobrol santai dengan harga yang sangat bersahabat.",
     website: "https://warmindoberkah.example.com",
     logoText: "WB",
-    image: "/demo.jpg"
+    image: "/CompanyProfile/demo.jpg"
   },
   {
     id: 3,
@@ -104,6 +104,6 @@ export const sisterCompanies = [
     fullDesc: "Gamma Studio adalah sister company kami yang menangani segala kebutuhan visual mulai dari corporate video, commercial, hingga fotografi produk profesional.",
     website: "https://gammastudio.example.com",
     logoText: "GS",
-    image: "/demo.jpg"
+    image: "/CompanyProfile/demo.jpg"
   }
 ];
