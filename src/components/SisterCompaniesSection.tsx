@@ -43,10 +43,8 @@ export function SisterCompaniesSection() {
               </CardContent>
               <CardFooter className="px-8 pb-8 pt-4">
                 <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="ghost" className="w-full justify-between group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors border">
-                      Lihat Detail <ArrowRight className="w-4 h-4" />
-                    </Button>
+                  <DialogTrigger render={<Button variant="ghost" className="w-full justify-between group-hover/card:bg-primary group-hover/card:text-primary-foreground transition-colors border" />}>
+                    Lihat Detail <ArrowRight className="w-4 h-4" />
                   </DialogTrigger>
                   <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden rounded-xl border-none shadow-2xl">
                     {company.image && (
