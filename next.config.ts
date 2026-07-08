@@ -5,9 +5,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: "export",
-  // Gunakan basePath hanya saat build/deploy ke GitHub Pages.
-  // Sesuaikan "ComProf" dengan nama repository GitHub Anda.
-  basePath: isProd ? "/ComProf" : "",
+  // basePath: isProd ? "/CompanyProfile" : "", // Buka komentar ini HANYA jika Anda deploy ke GitHub Pages tanpa custom domain
   images: {
     unoptimized: true,
   },
