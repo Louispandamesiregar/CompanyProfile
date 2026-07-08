@@ -1,52 +1,97 @@
+"use client"
+
 import * as React from "react"
-import { services } from "@/data/content"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card"
-import { ArrowRight } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext"
+import Image from "next/image"
+import { CheckCircle2 } from "lucide-react"
+import Autoplay from "embla-carousel-autoplay"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
+
+function ServiceCarousel({ service, index }: { service: any, index: number }) {
+  const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: true }))
+
+  const direction = index % 2 === 0 ? "ltr" : "rtl"
+
+  return (
+    <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
+      <Carousel
+        plugins={[plugin.current]}
+        opts={{ loop: true, direction }}
+        dir={direction}
+        className="w-full h-full"
+      >
+        <CarouselContent className="h-full ml-0">
+          {service.images?.map((img: string, imgIdx: number) => (
+            <CarouselItem key={imgIdx} className="relative h-[300px] md:h-[400px] w-full pl-0">
+              <Image 
+                src={img}
+                alt={`${service.title} ${imgIdx + 1}`}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              {/* Overlay inside each item so it covers the image */}
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+    </div>
+  )
+}
 
 export function ServicesSection() {
+  const { content } = useLanguage()
+  const services = content.services.items
+
   return (
-    <section id="services" className="py-24 bg-background scroll-m-20">
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="space-y-4 max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground">Solusi Bisnis <br/><span className="text-primary">Terintegrasi</span></h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Kami menghadirkan berbagai solusi digital komprehensif yang dirancang khusus untuk memenuhi kebutuhan bisnis Anda di era modern.
-            </p>
-          </div>
-          <div className="hidden md:flex">
-            <a href="#contact" className="text-primary font-bold hover:underline flex items-center gap-2">
-              Pelajari Lebih Lanjut <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
+    <section id="services" className="py-24 bg-gradient-to-b from-card/50 to-background scroll-m-20 relative">
+      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+        <div className="text-center mb-16 space-y-6">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground uppercase">
+            {content.services.title}
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => {
-            const Icon = service.icon
+        <div className="space-y-24 md:space-y-32">
+          {services.map((service, index) => {
+            const isEven = index % 2 === 0
+            
             return (
-              <Card key={service.id} className="group flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 border-border bg-card relative overflow-hidden rounded-xl">
-                {/* Decorative Accent Line */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-primary scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500" />
+              <div key={service.id} className={`flex flex-col gap-10 md:gap-16 items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 
-                <CardHeader className="pt-8 px-8 relative z-10">
-                  <div 
-                    className="w-14 h-14 rounded-full text-white flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300 shadow-sm mb-6"
-                    style={{ backgroundColor: service.color }}
-                  >
-                    <Icon className="w-7 h-7" />
+                {/* Image Side with Autoplay Carousel */}
+                <ServiceCarousel service={service} index={index} />
+
+                {/* Text Side */}
+                <div className="w-full md:w-1/2 space-y-6">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div 
+                      className="w-14 h-14 rounded-xl text-white flex items-center justify-center shrink-0 shadow-lg"
+                      style={{ backgroundColor: service.color }}
+                    >
+                      <service.icon className="w-7 h-7" />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight">{service.title}</h3>
                   </div>
-                  <CardTitle className="text-xl font-bold">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="px-8 pb-8 flex-1 flex flex-col justify-between">
-                  <CardDescription className="text-base text-foreground/70 leading-relaxed mb-6">
-                    {service.description}
-                  </CardDescription>
-                  <div className="flex items-center text-sm font-bold text-primary group-hover:gap-2 transition-all">
-                    Selengkapnya <ArrowRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
-                  </div>
-                </CardContent>
-              </Card>
+                  
+                  <ul className="space-y-5">
+                    {service.items?.map((item: string, i: number) => (
+                      <li key={i} className="flex items-start">
+                        <CheckCircle2 
+                          className="w-6 h-6 mr-4 shrink-0 mt-0.5" 
+                          style={{ color: service.color }}
+                        />
+                        <span className="text-lg text-muted-foreground leading-relaxed font-medium">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             )
           })}
         </div>
