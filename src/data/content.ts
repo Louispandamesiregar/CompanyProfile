@@ -15,21 +15,21 @@ export const contentID = {
         headline: "SOLUSI PENGADAAN &\nDISTRIBUSI TERPERCAYA",
         cta: "Layanan Kami",
         link: "#services",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 2,
         headline: "PENGIRIMAN BARANG\nPULAU JAWA",
         cta: "Hubungi Kami",
         link: "#contact",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 3,
         headline: "PENGADAAN ATK &\nALAT KESEHATAN",
         cta: "Tentang Kami",
         link: "#about",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       }
     ],
     about: {
@@ -76,7 +76,7 @@ export const contentID = {
         ],
         icon: FaTruck,
         color: "#4285F4",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       },
       {
         id: 2,
@@ -88,7 +88,7 @@ export const contentID = {
         ],
         icon: FaBriefcase,
         color: "#EA4335",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       },
       {
         id: 3,
@@ -100,7 +100,7 @@ export const contentID = {
         ],
         icon: FaStethoscope,
         color: "#34A853",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       },
       {
         id: 4,
@@ -112,7 +112,7 @@ export const contentID = {
         ],
         icon: FaPrint,
         color: "#FBBC05",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       }
     ]
   },
@@ -127,7 +127,7 @@ export const contentID = {
         fullDesc: "Menyediakan perlengkapan alat kesehatan berkualitas untuk instansi dan masyarakat.",
         website: "#",
         logoText: "NA",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 2,
@@ -136,7 +136,7 @@ export const contentID = {
         fullDesc: "Solusi alat tulis kantor dan sekolah yang lengkap dengan layanan pengiriman terbaik.",
         website: "#",
         logoText: "NATK",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 3,
@@ -145,7 +145,7 @@ export const contentID = {
         fullDesc: "Menyajikan makanan dan minuman berkualitas tinggi, nyaman untuk bersantai.",
         website: "#",
         logoText: "FW",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 4,
