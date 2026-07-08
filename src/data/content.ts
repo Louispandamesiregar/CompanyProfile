@@ -154,7 +154,7 @@ export const contentID = {
         fullDesc: "Menyajikan racikan kopi istimewa secara berkeliling dengan harga bersahabat.",
         website: "#",
         logoText: "KLG",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       }
     ]
   },
@@ -186,21 +186,21 @@ export const contentEN = {
         headline: "TRUSTED PROCUREMENT &\nDISTRIBUTION SOLUTION",
         cta: "Our Services",
         link: "#services",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 2,
         headline: "FREIGHT FORWARDING\nACROSS JAVA ISLAND",
         cta: "Contact Us",
         link: "#contact",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 3,
         headline: "MEDICAL & OFFICE\nSUPPLIES PROCUREMENT",
         cta: "About Us",
         link: "#about",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       }
     ],
     about: {
@@ -247,7 +247,7 @@ export const contentEN = {
         ],
         icon: FaTruck,
         color: "#4285F4",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       },
       {
         id: 2,
@@ -259,7 +259,7 @@ export const contentEN = {
         ],
         icon: FaBriefcase,
         color: "#EA4335",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       },
       {
         id: 3,
@@ -271,7 +271,7 @@ export const contentEN = {
         ],
         icon: FaStethoscope,
         color: "#34A853",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       },
       {
         id: 4,
@@ -283,7 +283,7 @@ export const contentEN = {
         ],
         icon: FaPrint,
         color: "#FBBC05",
-        images: ["/demo.jpg", "/demo.jpg", "/demo.jpg"]
+        images: ["./demo.jpg", "./demo.jpg", "./demo.jpg"]
       }
     ]
   },
@@ -298,7 +298,7 @@ export const contentEN = {
         fullDesc: "Providing high quality medical equipment for institutions and public needs.",
         website: "#",
         logoText: "NA",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 2,
@@ -307,7 +307,7 @@ export const contentEN = {
         fullDesc: "Complete office and school supplies solution with the best delivery service.",
         website: "#",
         logoText: "NATK",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 3,
@@ -316,7 +316,7 @@ export const contentEN = {
         fullDesc: "Serving high quality food and beverages, perfect for relaxing.",
         website: "#",
         logoText: "FW",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       },
       {
         id: 4,
@@ -325,7 +325,7 @@ export const contentEN = {
         fullDesc: "Serving special coffee blends on the go with friendly prices.",
         website: "#",
         logoText: "KLG",
-        image: "/demo.jpg"
+        image: "./demo.jpg"
       }
     ]
   },
