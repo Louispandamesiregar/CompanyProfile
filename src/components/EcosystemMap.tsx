@@ -3,6 +3,7 @@
 import * as React from "react"
 import { useLanguage } from "@/context/LanguageContext"
 import { MapPin } from "lucide-react"
+import Image from "next/image"
 
 // Dummy Locations Data
 const LOCATIONS = [
@@ -55,11 +56,16 @@ export function EcosystemMap() {
 
       <div className="relative w-full max-w-5xl mx-auto h-[400px] md:h-[500px] rounded-3xl overflow-hidden border bg-card/30 shadow-2xl backdrop-blur-sm group">
         
+        {/* Background Image of Map */}
+        <div className="absolute inset-0 opacity-20 dark:opacity-40">
+          <Image src="/java-map.png" alt="Java Map" fill className="object-cover md:object-contain" priority />
+        </div>
+        
         {/* Stylized Map Background (Grid / Abstract lines) */}
-        <div className="absolute inset-0 opacity-[0.03] dark:opacity-10" 
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-5" 
              style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)', backgroundSize: '32px 32px' }} 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-background/95" />
         
         {/* Map Nodes */}
         {LOCATIONS.map((loc) => {
