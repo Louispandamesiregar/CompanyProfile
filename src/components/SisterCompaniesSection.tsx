@@ -102,7 +102,7 @@ export function SisterCompaniesSection() {
                       className="h-full relative"
                     >
                       <div className="flex flex-col items-center justify-center p-6 h-full gap-4 group cursor-pointer bg-gradient-to-br from-white/10 to-white/0 dark:from-white/5 dark:to-transparent backdrop-blur-md rounded-3xl shadow-xl border border-white/20 dark:border-white/10">
-                      <div className="h-32 md:h-40 w-full max-w-[240px] flex flex-col items-center justify-center relative overflow-hidden transition-transform duration-500 group-hover:scale-110">
+                      <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110">
                         {company.image ? (
                           <Image 
                             src={company.image} 
