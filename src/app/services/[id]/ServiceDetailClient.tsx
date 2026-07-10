@@ -38,7 +38,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
           <div className="container mx-auto px-6 md:px-12 relative z-10 pt-20">
             <Link 
               href="/" 
-              className="inline-flex items-center text-sm font-bold text-white bg-white/20 hover:bg-white/30 border border-white/30 backdrop-blur-md transition-all mb-6 px-4 py-2 rounded-full shadow-lg"
+              className="inline-flex items-center text-sm font-bold text-black bg-white/40 hover:bg-white/60 border border-white/50 backdrop-blur-md transition-all mb-6 px-4 py-2 rounded-full shadow-lg"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
