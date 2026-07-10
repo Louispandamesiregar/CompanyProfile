@@ -11,7 +11,7 @@ export function QuickAccessSection() {
   ]
 
   return (
-    <section className="w-full relative -mt-8 md:-mt-12 z-30 px-4 md:px-8 max-w-6xl mx-auto">
+    <section className="w-full relative -mt-8 md:-mt-12 z-30 px-4 md:px-8 max-w-[1440px] mx-auto">
       <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
         {featuredProducts.map((link) => {
           const Icon = link.icon

@@ -65,7 +65,7 @@ export default function MapClient() {
   }, [])
 
   return (
-    <div className="w-full max-w-5xl mx-auto h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl border bg-card relative z-0">
+    <div className="w-full max-w-[1440px] mx-auto h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl border bg-card relative z-0">
       <MapContainer 
         center={[-6.25, 106.8]} // Center of Jabodetabek roughly
         zoom={10} 

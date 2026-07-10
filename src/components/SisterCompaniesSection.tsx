@@ -71,7 +71,7 @@ export function SisterCompaniesSection() {
               loop: true,
               duration: 40,
             }}
-            className="w-full max-w-5xl mx-auto"
+            className="w-full max-w-[1440px] mx-auto"
           >
             <CarouselContent className="transform-style-3d py-8">
               {loopingCompanies.map((company, index) => {

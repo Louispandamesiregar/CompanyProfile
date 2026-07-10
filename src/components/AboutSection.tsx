@@ -10,7 +10,7 @@ export function AboutSection() {
 
   return (
     <section id="about" className="py-24 bg-gradient-to-b from-background to-card/50 scroll-m-16 relative">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 max-w-[1440px]">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">

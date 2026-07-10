@@ -51,7 +51,7 @@ export function ServicesSection() {
 
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-card/50 to-background scroll-m-20 relative">
-      <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+      <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
         <div className="text-center mb-16 space-y-6">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground uppercase">
             {content.services.title}
