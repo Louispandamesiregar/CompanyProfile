@@ -81,9 +81,11 @@ export function EcosystemMap() {
               onMouseLeave={() => setActiveLocation(null)}
             >
               {/* Icon Map Marker */}
-              <Link href={`/companies/${loc.businesses[0].id}`} className="relative flex items-center justify-center cursor-pointer text-teal-600 dark:text-teal-400 hover:scale-125 transition-transform z-20">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-40"></span>
-                <Building2 className="w-8 h-8 drop-shadow-md" fill="currentColor" />
+              <Link href={`/companies/${loc.businesses[0].id}`} className="relative flex flex-col items-center justify-center cursor-pointer group z-20">
+                <div className="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-white dark:bg-card rounded-full shadow-xl border-[3px] border-teal-500 group-hover:scale-110 group-hover:bg-teal-500 transition-all duration-300">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-30"></span>
+                  <MapPin className="w-5 h-5 md:w-6 md:h-6 text-teal-600 dark:text-teal-400 group-hover:text-white transition-colors" />
+                </div>
               </Link>
               
               {/* City Label */}
