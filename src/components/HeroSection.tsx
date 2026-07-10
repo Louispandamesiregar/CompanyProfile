@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/context/LanguageContext"
 import { buttonVariants, Button } from "./ui/button"
+import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
   CarouselContent,
@@ -18,6 +19,7 @@ export function HeroSection() {
   const { content } = useLanguage()
   const { heroSlides } = content.companyInfo
   const { badges } = content
+  const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: true }))
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
@@ -33,7 +35,7 @@ export function HeroSection() {
 
   return (
     <section className="w-full relative bg-background">
-      <Carousel setApi={setApi} className="w-full group" opts={{ loop: true, duration: 40 }}>
+      <Carousel setApi={setApi} plugins={[plugin.current]} className="w-full group" opts={{ loop: true, duration: 40 }}>
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id}>
