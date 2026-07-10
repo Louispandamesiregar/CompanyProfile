@@ -41,7 +41,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary rounded-md"
+                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-teal-600 dark:hover:text-teal-400 rounded-md"
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}
@@ -77,7 +77,7 @@ export function Navbar() {
           <div className="flex items-center gap-2 md:gap-4">
             <div 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity text-foreground/70 hover:text-primary"
+              className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity text-foreground/70 hover:text-teal-600 dark:hover:text-teal-400"
             >
               <Globe className="w-4 h-4" />
               <span className="text-sm font-semibold">{language.toUpperCase()}</span>
@@ -100,7 +100,7 @@ export function Navbar() {
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
-                        className="text-lg font-semibold text-foreground/80 hover:text-primary border-b pb-2 transition-colors"
+                        className="text-lg font-semibold text-foreground/80 hover:text-teal-600 dark:hover:text-teal-400 border-b pb-2 transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -111,8 +111,8 @@ export function Navbar() {
                     <div className="flex items-center justify-between text-sm text-muted-foreground mt-4">
                       <span>Language</span>
                       <div className="flex gap-2 font-semibold cursor-pointer" onClick={toggleLanguage}>
-                        <span className={language === 'id' ? 'text-primary' : 'hover:text-primary transition-colors'}>ID</span> | 
-                        <span className={language === 'en' ? 'text-primary' : 'hover:text-primary transition-colors'}>EN</span>
+                        <span className={language === 'id' ? 'text-teal-600 dark:text-teal-400' : 'hover:text-teal-600 dark:hover:text-teal-400 transition-colors'}>ID</span> | 
+                        <span className={language === 'en' ? 'text-teal-600 dark:text-teal-400' : 'hover:text-teal-600 dark:hover:text-teal-400 transition-colors'}>EN</span>
                       </div>
                     </div>
                   </div>
