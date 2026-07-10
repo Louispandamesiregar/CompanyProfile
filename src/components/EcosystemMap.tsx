@@ -81,19 +81,19 @@ export function EcosystemMap() {
               onMouseLeave={() => setActiveLocation(null)}
             >
               {/* Icon Map Marker */}
-              <div className="relative flex items-center justify-center cursor-pointer text-primary hover:scale-125 transition-transform">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-30"></span>
-                <Building2 className="w-8 h-8 drop-shadow-[0_0_8px_rgba(var(--primary),0.8)]" />
-              </div>
+              <Link href={`/companies/${loc.businesses[0].id}`} className="relative flex items-center justify-center cursor-pointer text-teal-600 dark:text-teal-400 hover:scale-125 transition-transform z-20">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-500 opacity-40"></span>
+                <Building2 className="w-8 h-8 drop-shadow-md" fill="currentColor" />
+              </Link>
               
               {/* City Label */}
-              <span className={`mt-2 font-bold text-sm md:text-base transition-colors ${isActive ? 'text-primary' : 'text-muted-foreground'}`}>
+              <span className={`mt-2 font-bold text-sm md:text-base transition-colors ${isActive ? 'text-teal-600 dark:text-teal-400' : 'text-muted-foreground'}`}>
                 {loc.name}
               </span>
 
               {/* Hover Popup Card */}
               <div 
-                className={`absolute top-full mt-4 left-1/2 -translate-x-1/2 w-48 md:w-56 p-4 rounded-xl shadow-2xl backdrop-blur-md bg-background/95 border border-primary/20 transition-all duration-300 pointer-events-none ${isActive ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
+                className={`absolute top-full mt-4 left-1/2 -translate-x-1/2 w-48 md:w-56 p-4 rounded-xl shadow-2xl backdrop-blur-md bg-background/95 border border-primary/20 transition-all duration-300 z-30 ${isActive ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95 pointer-events-none'}`}
               >
                 <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-background/95 border-l border-t border-primary/20 rotate-45" />
                 <div className="relative z-10">
