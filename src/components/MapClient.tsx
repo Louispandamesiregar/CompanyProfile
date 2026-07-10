@@ -70,6 +70,7 @@ export default function MapClient() {
         center={[-6.25, 106.8]} // Center of Jabodetabek roughly
         zoom={10} 
         scrollWheelZoom={false} // Prevent accidental zooming while scrolling page
+        attributionControl={false} // Hide the attribution text at the bottom right
         className="w-full h-full z-0"
         style={{ zIndex: 0 }}
       >
