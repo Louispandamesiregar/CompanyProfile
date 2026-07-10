@@ -41,7 +41,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary rounded-md group-hover:bg-muted"
+                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary rounded-md"
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}
