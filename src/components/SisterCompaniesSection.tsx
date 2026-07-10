@@ -10,6 +10,7 @@ import {
   CarouselItem,
   type CarouselApi
 } from "@/components/ui/carousel"
+import { EcosystemMap } from "./EcosystemMap"
 
 export function SisterCompaniesSection() {
   const { content } = useLanguage()
@@ -131,6 +132,8 @@ export function SisterCompaniesSection() {
             {/* Navigation buttons can be added here if needed */}
           </Carousel>
         </div>
+
+        <EcosystemMap />
       </div>
     </section>
   )
