@@ -2,38 +2,39 @@
 
 import * as React from "react"
 import { useLanguage } from "@/context/LanguageContext"
-import { MapPin } from "lucide-react"
+import { MapPin, Building2, ExternalLink } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
-// Dummy Locations Data
+// Dummy Locations Data mapped to specific Sister Company IDs
 const LOCATIONS = [
   {
     id: "jakarta",
     name: "Jakarta",
     top: "42%",
     left: "32%",
-    businesses: ["Nawasena Alkes", "PT Bumi Karya Mandiri"]
+    businesses: [{ id: 1, name: "Nawasena Alkes" }]
   },
   {
     id: "tangerang",
     name: "Tangerang",
     top: "44%",
     left: "26%",
-    businesses: ["Nawasena ATK"]
+    businesses: [{ id: 2, name: "Nawasena ATK" }]
   },
   {
     id: "depok",
     name: "Depok",
     top: "52%",
     left: "31%",
-    businesses: ["Faenzone & Warmindo"]
+    businesses: [{ id: 3, name: "Faenzone & Warmindo" }]
   },
   {
     id: "bekasi",
     name: "Bekasi",
     top: "45%",
     left: "38%",
-    businesses: ["Koling", "Nawasena Printing"]
+    businesses: [{ id: 4, name: "Koling" }]
   }
 ]
 
@@ -79,10 +80,10 @@ export function EcosystemMap() {
               onMouseEnter={() => setActiveLocation(loc.id)}
               onMouseLeave={() => setActiveLocation(null)}
             >
-              {/* Glowing Pulse Effect */}
-              <div className="relative flex h-6 w-6 items-center justify-center cursor-pointer">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-50"></span>
-                <span className="relative inline-flex rounded-full h-4 w-4 bg-primary shadow-[0_0_15px_rgba(var(--primary),0.8)]"></span>
+              {/* Icon Map Marker */}
+              <div className="relative flex items-center justify-center cursor-pointer text-primary hover:scale-125 transition-transform">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-30"></span>
+                <Building2 className="w-8 h-8 drop-shadow-[0_0_8px_rgba(var(--primary),0.8)]" />
               </div>
               
               {/* City Label */}
@@ -100,11 +101,19 @@ export function EcosystemMap() {
                     <MapPin className="w-4 h-4 text-primary" />
                     <span className="font-bold text-sm uppercase tracking-wider">{loc.name}</span>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {loc.businesses.map((biz, idx) => (
-                      <li key={idx} className="text-sm font-semibold text-foreground/80 flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                        {biz}
+                      <li key={idx}>
+                        <Link 
+                          href={`/companies/${biz.id}`}
+                          className="text-sm font-semibold text-foreground/90 hover:text-primary transition-colors flex items-center justify-between group/link p-2 -mx-2 rounded-md hover:bg-muted/50"
+                        >
+                          <div className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary/50 group-hover/link:bg-primary transition-colors" />
+                            {biz.name}
+                          </div>
+                          <ExternalLink className="w-3 h-3 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
+                        </Link>
                       </li>
                     ))}
                   </ul>
