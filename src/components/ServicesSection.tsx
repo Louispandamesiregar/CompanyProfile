@@ -31,7 +31,7 @@ function ServiceCarousel({ service, index }: { service: any, index: number }) {
                 src={img}
                 alt={`${service.title} ${imgIdx + 1}`}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
               {/* Overlay inside each item so it covers the image */}
               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
