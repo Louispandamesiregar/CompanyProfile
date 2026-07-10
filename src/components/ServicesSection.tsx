@@ -3,7 +3,9 @@
 import * as React from "react"
 import { useLanguage } from "@/context/LanguageContext"
 import Image from "next/image"
-import { CheckCircle2 } from "lucide-react"
+import Link from "next/link"
+import { buttonVariants } from "./ui/button"
+import { CheckCircle2, ChevronRight } from "lucide-react"
 import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
@@ -44,7 +46,7 @@ function ServiceCarousel({ service, index }: { service: any, index: number }) {
 }
 
 export function ServicesSection() {
-  const { content } = useLanguage()
+  const { content, language } = useLanguage()
   const services = content.services.items
 
   return (
@@ -90,6 +92,13 @@ export function ServicesSection() {
                       </li>
                     ))}
                   </ul>
+                  
+                  <div className="pt-4">
+                    <Link href={`/services/${service.id}`} className={buttonVariants({ variant: "outline", size: "lg", className: "group font-bold" })}>
+                      {language === 'id' ? 'Selengkapnya' : 'Learn More'}
+                      <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             )

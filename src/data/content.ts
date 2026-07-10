@@ -68,6 +68,13 @@ export const contentID = {
       {
         id: 1,
         title: "Layanan Pengiriman Barang",
+        fullDescription: "Kami menyediakan solusi logistik dan pengiriman barang yang terpadu, cepat, dan terpercaya. Dari dokumen penting hingga kargo besar, tim kami siap mengantarkan barang Anda dengan armada yang selalu dalam kondisi prima. Jaringan distribusi kami mencakup pulau Jawa hingga rute laut ke pulau-pulau besar lainnya di Indonesia.",
+        benefits: [
+          "Ketepatan waktu pengiriman yang sangat terjamin",
+          "Perlindungan asuransi kargo untuk keamanan barang Anda",
+          "Pemantauan armada langsung melalui sistem GPS Tracking",
+          "Harga yang fleksibel untuk kontrak pengiriman rutin"
+        ],
         items: [
           "Armada: Colt Diesel Engkel & Double (Box)",
           "Jalur Darat: Jawa Barat, Jawa Tengah, Jawa Timur",
@@ -81,6 +88,13 @@ export const contentID = {
       {
         id: 2,
         title: "Pengadaan ATK",
+        fullDescription: "PT. Nawasena Jaya Group menjadi mitra andalan bagi banyak perusahaan, sekolah, dan instansi pemerintah dalam memenuhi kebutuhan Alat Tulis Kantor (ATK). Kami menyediakan berbagai merk ternama dengan jaminan keaslian dan harga kompetitif, sehingga operasional Anda dapat berjalan tanpa hambatan.",
+        benefits: [
+          "Varian produk yang lengkap dari berbagai merek terkemuka",
+          "Proses pemesanan mudah dengan layanan pengiriman langsung ke kantor",
+          "Penawaran harga grosir khusus untuk pembelian skala instansi",
+          "Garansi retur untuk produk yang tidak sesuai pesanan"
+        ],
         items: [
           "Buku tulis, pulpen, pensil",
           "Amplop coklat & putih, bak stempel",
@@ -93,6 +107,13 @@ export const contentID = {
       {
         id: 3,
         title: "Pengadaan Alkes",
+        fullDescription: "Kesehatan dan keselamatan adalah prioritas utama. Kami mendukung fasilitas kesehatan (klinik, rumah sakit, puskesmas) serta perusahaan dengan menyediakan Alat Kesehatan (Alkes) yang bersertifikat dan berstandar nasional maupun internasional. Kami memiliki izin resmi untuk distribusi alat kesehatan.",
+        benefits: [
+          "Produk alat kesehatan tersertifikasi (Kemenkes/BPOM)",
+          "Ketersediaan stok untuk kebutuhan darurat (fast-moving items)",
+          "Dukungan alat diagnostik hingga perlengkapan medis sekali pakai",
+          "Layanan purna jual dan garansi resmi dari produsen"
+        ],
         items: [
           "Kapas, kasa, alkohol",
           "Alat tensi, termometer",
@@ -105,6 +126,13 @@ export const contentID = {
       {
         id: 4,
         title: "Tinta & Perlengkapan Printer",
+        fullDescription: "Kebutuhan pencetakan dokumen di era digital masih sangat tinggi. Kami memastikan printer di kantor Anda selalu siap digunakan dengan menyediakan layanan isi ulang tinta dan pasokan cartridge berkualitas. Kami menjamin hasil cetakan yang tajam dengan risiko kerusakan printer yang minim.",
+        benefits: [
+          "Tinta berkualitas tinggi yang tidak merusak print-head",
+          "Solusi cartridge kompatibel untuk menghemat biaya operasional",
+          "Menyediakan perlengkapan cetak lain (kertas foto, kertas barcode)",
+          "Layanan jemput bola untuk isi ulang (refill) skala besar"
+        ],
         items: [
           "Tinta refill HP & Epson (warna & hitam)",
           "Cartridge original dan kompatibel",
@@ -239,6 +267,13 @@ export const contentEN = {
       {
         id: 1,
         title: "Freight Forwarding Services",
+        fullDescription: "We provide integrated, fast, and highly reliable logistics and freight forwarding solutions. From important documents to large cargo, our team is ready to deliver your goods using well-maintained fleets. Our distribution network covers Java and sea routes to other major islands in Indonesia.",
+        benefits: [
+          "Strict adherence to delivery schedules",
+          "Comprehensive cargo insurance coverage for your goods",
+          "Real-time fleet monitoring through GPS Tracking",
+          "Flexible pricing structures for routine delivery contracts"
+        ],
         items: [
           "Fleet: Colt Diesel Single & Double (Box)",
           "Land Route: West Java, Central Java, East Java",
@@ -252,6 +287,13 @@ export const contentEN = {
       {
         id: 2,
         title: "Office Supplies (ATK)",
+        fullDescription: "PT. Nawasena Jaya Group is a trusted partner for many companies, schools, and government agencies in fulfilling their Office Supplies (ATK) needs. We provide various top brands with guaranteed authenticity and competitive pricing, ensuring your operations run smoothly without hiccups.",
+        benefits: [
+          "Comprehensive product variants from leading brands",
+          "Easy ordering process with direct delivery to your office",
+          "Special wholesale pricing for institutional purchases",
+          "Return guarantee for products that do not match the order"
+        ],
         items: [
           "Notebooks, pens, pencils",
           "Brown & white envelopes, stamp pads",
@@ -264,6 +306,13 @@ export const contentEN = {
       {
         id: 3,
         title: "Medical Equipment (Alkes)",
+        fullDescription: "Health and safety are our top priorities. We support healthcare facilities (clinics, hospitals, health centers) and companies by providing Medical Equipment (Alkes) that is certified and meets national and international standards. We are officially licensed to distribute medical equipment.",
+        benefits: [
+          "Certified medical products (Ministry of Health / BPOM)",
+          "Ready stock availability for emergency needs (fast-moving items)",
+          "Support for diagnostic tools to disposable medical supplies",
+          "After-sales service and official manufacturer warranty"
+        ],
         items: [
           "Cotton, gauze, rubbing alcohol",
           "Blood pressure monitors, thermometers",
@@ -276,6 +325,13 @@ export const contentEN = {
       {
         id: 4,
         title: "Ink & Printer Accessories",
+        fullDescription: "The need for document printing in the digital era remains high. We ensure that your office printers are always ready to use by providing ink refill services and high-quality cartridge supplies. We guarantee sharp print results with minimal risk of printer damage.",
+        benefits: [
+          "High-quality ink that does not damage the print-head",
+          "Compatible cartridge solutions to save operational costs",
+          "Providing other printing supplies (photo paper, barcode paper)",
+          "Pick-up and delivery services for large-scale refills"
+        ],
         items: [
           "HP & Epson refill ink (color & black)",
           "Original and compatible cartridges",
