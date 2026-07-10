@@ -20,7 +20,7 @@ function ServiceCarousel({ service, index }: { service: any, index: number }) {
     <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
       <Carousel
         plugins={[plugin.current]}
-        opts={{ loop: true, direction }}
+        opts={{ loop: true, direction, duration: 40 }}
         dir={direction}
         className="w-full h-full"
       >

@@ -33,7 +33,7 @@ export function HeroSection() {
 
   return (
     <section className="w-full relative bg-background">
-      <Carousel setApi={setApi} className="w-full group" opts={{ loop: true }}>
+      <Carousel setApi={setApi} className="w-full group" opts={{ loop: true, duration: 40 }}>
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id}>
