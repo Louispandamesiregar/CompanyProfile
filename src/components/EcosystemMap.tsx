@@ -10,29 +10,29 @@ const LOCATIONS = [
   {
     id: "jakarta",
     name: "Jakarta",
-    top: "40%",
-    left: "45%",
+    top: "42%",
+    left: "32%",
     businesses: ["Nawasena Alkes", "PT Bumi Karya Mandiri"]
   },
   {
     id: "tangerang",
     name: "Tangerang",
-    top: "45%",
-    left: "25%",
+    top: "44%",
+    left: "26%",
     businesses: ["Nawasena ATK"]
   },
   {
     id: "depok",
     name: "Depok",
-    top: "65%",
-    left: "50%",
+    top: "52%",
+    left: "31%",
     businesses: ["Faenzone & Warmindo"]
   },
   {
     id: "bekasi",
     name: "Bekasi",
     top: "45%",
-    left: "75%",
+    left: "38%",
     businesses: ["Koling", "Nawasena Printing"]
   }
 ]
@@ -57,8 +57,8 @@ export function EcosystemMap() {
       <div className="relative w-full max-w-5xl mx-auto h-[400px] md:h-[500px] rounded-3xl overflow-hidden border bg-card/30 shadow-2xl backdrop-blur-sm group">
         
         {/* Background Image of Map */}
-        <div className="absolute inset-0 opacity-20 dark:opacity-40">
-          <Image src="/java-map.png" alt="Java Map" fill className="object-cover md:object-contain" priority />
+        <div className="absolute inset-0 opacity-80 dark:opacity-60 mix-blend-multiply dark:mix-blend-screen pointer-events-none">
+          <Image src="/java-map.png" alt="Java Map" fill className="object-contain scale-[1.3] md:scale-150 origin-center" priority />
         </div>
         
         {/* Stylized Map Background (Grid / Abstract lines) */}
