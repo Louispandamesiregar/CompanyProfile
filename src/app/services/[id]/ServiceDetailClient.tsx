@@ -37,11 +37,11 @@ export function ServiceDetailClient({ id }: { id: string }) {
           
           <div className="container mx-auto px-6 md:px-12 relative z-10 pt-20">
             <Link 
-              href="/#services" 
+              href="/" 
               className="inline-flex items-center text-sm font-semibold text-primary hover:text-primary/80 transition-colors mb-6"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {language === 'id' ? 'Kembali ke Layanan' : 'Back to Services'}
+              {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
             </Link>
             
             <div className="flex items-center gap-4 mb-4">
