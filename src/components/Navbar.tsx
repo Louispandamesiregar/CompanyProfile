@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Globe, Menu, Search, ChevronDown, User } from "lucide-react"
+import { Globe, Menu, Search, ChevronDown } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
 import { ThemeToggle } from "./ThemeToggle"
 import { Button } from "./ui/button"
@@ -87,10 +87,7 @@ export function Navbar() {
             </div>
 
             <ThemeToggle />
-            <Button className="hidden md:flex gap-2 rounded-full px-6 font-semibold shadow-md hover:shadow-lg transition-all">
-              <User className="w-4 h-4" />
-              Client Login
-            </Button>
+
 
             {/* Mobile Nav Toggle */}
             <div className="flex items-center gap-2 lg:hidden">
@@ -113,10 +110,7 @@ export function Navbar() {
                     ))}
                   </div>
                   <div className="mt-auto flex flex-col gap-4 pb-8">
-                    <Button className="w-full justify-start gap-2" size="lg">
-                      <User className="w-5 h-5" />
-                      Client Login
-                    </Button>
+
                     <div className="flex items-center justify-between text-sm text-muted-foreground mt-4">
                       <span>Language</span>
                       <div className="flex gap-2 font-semibold cursor-pointer" onClick={toggleLanguage}>
