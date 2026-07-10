@@ -2,12 +2,11 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Globe, Menu, Search, ChevronDown } from "lucide-react"
+import { Globe, Menu, ChevronDown } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
 import { ThemeToggle } from "./ThemeToggle"
 import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -16,43 +15,8 @@ export function Navbar() {
   const { navLinks, companyInfo } = content
   const closeMenu = () => setIsOpen(false)
 
-  const [isOpenSearch, setIsOpenSearch] = React.useState(false)
-  const [searchQuery, setSearchQuery] = React.useState("")
-
-  const searchItems = React.useMemo(() => {
-    const items = []
-    items.push({ id: 'about', title: content.companyInfo.about.title, desc: content.companyInfo.about.description, link: '#about' })
-    content.services.items.forEach((svc: any) => {
-      items.push({ id: `svc-${svc.id}`, title: svc.title, desc: svc.items[0], link: '#services' })
-    })
-    content.sisterCompanies.items.forEach((co: any) => {
-      items.push({ id: `co-${co.id}`, title: co.name, desc: co.shortDesc, link: '#group' })
-    })
-    items.push({ id: 'contact', title: content.companyInfo.contact.title, desc: content.companyInfo.contact.description, link: '#contact' })
-    return items
-  }, [content])
-
-  const filteredItems = React.useMemo(() => {
-    if (!searchQuery.trim()) return []
-    const q = searchQuery.toLowerCase()
-    return searchItems.filter(item => 
-      item.title.toLowerCase().includes(q) || 
-      item.desc.toLowerCase().includes(q)
-    )
-  }, [searchQuery, searchItems])
-
-  const handleSearchResultClick = (link: string) => {
-    setIsOpenSearch(false)
-    setSearchQuery("")
-    const element = document.querySelector(link)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
-    <>
-      <header className="sticky top-0 z-50 w-full flex flex-col shadow-sm">
+    <header className="sticky top-0 z-50 w-full flex flex-col shadow-sm">
       {/* Main Navbar */}
       <div className="w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
         <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
@@ -111,9 +75,6 @@ export function Navbar() {
 
           {/* Right Actions */}
           <div className="flex items-center gap-2 md:gap-4">
-            <Button variant="ghost" size="icon" className="flex text-foreground/70 hover:text-primary" onClick={() => setIsOpenSearch(true)}>
-              <Search className="w-5 h-5" />
-            </Button>
             <div 
               onClick={toggleLanguage}
               className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity text-foreground/70 hover:text-primary"
@@ -162,52 +123,5 @@ export function Navbar() {
         </div>
       </div>
     </header>
-      
-      {/* Search Modal */}
-      <Dialog open={isOpenSearch} onOpenChange={setIsOpenSearch}>
-        <DialogContent className="sm:max-w-xl top-[20%] translate-y-0">
-          <DialogHeader>
-            <DialogTitle className="sr-only">Search</DialogTitle>
-            <DialogDescription className="sr-only">Search our services and companies</DialogDescription>
-          </DialogHeader>
-          <div className="flex items-center border-b px-3">
-            <Search className="mr-2 h-5 w-5 shrink-0 opacity-50" />
-            <input
-              type="text"
-              placeholder={language === 'id' ? 'Cari layanan atau informasi...' : 'Search services or information...'}
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex h-12 w-full rounded-md bg-transparent py-3 text-base outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50"
-              autoFocus
-            />
-          </div>
-          <div className="max-h-[300px] overflow-y-auto p-2">
-            {searchQuery.trim() === "" ? (
-              <p className="p-4 text-sm text-muted-foreground text-center">
-                {language === 'id' ? 'Mulai mengetik untuk mencari.' : 'Start typing to search.'}
-              </p>
-            ) : filteredItems.length === 0 ? (
-              <p className="p-4 text-sm text-muted-foreground text-center">
-                {language === 'id' ? 'Tidak ada hasil ditemukan.' : 'No results found.'}
-              </p>
-            ) : (
-              <ul className="space-y-1">
-                {filteredItems.map(item => (
-                  <li key={item.id}>
-                    <button 
-                      onClick={() => handleSearchResultClick(item.link)}
-                      className="w-full text-left px-4 py-3 hover:bg-muted rounded-md transition-colors flex flex-col gap-1"
-                    >
-                      <span className="font-semibold text-foreground text-sm">{item.title}</span>
-                      <span className="text-xs text-muted-foreground line-clamp-1">{item.desc}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
-    </>
   )
 }
