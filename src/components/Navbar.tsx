@@ -51,7 +51,7 @@ export function Navbar() {
                   {link.hasDropdown && activeMenu === link.name && (
                     <div className="absolute top-full left-0 w-[500px] bg-card text-card-foreground border shadow-xl rounded-b-xl p-6 grid grid-cols-2 gap-6 animate-in slide-in-from-top-2">
                       <div>
-                        <h4 className="font-bold text-primary mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
+                        <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
                         <ul className="space-y-3">
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Alat Tulis Kantor (ATK)' : 'Office Supplies (ATK)'}</Link></li>
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Alat Kesehatan (Alkes)' : 'Medical Equipment'}</Link></li>
@@ -59,7 +59,7 @@ export function Navbar() {
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-bold text-primary mb-4 border-b pb-2">{language === 'id' ? 'Distribusi' : 'Distribution'}</h4>
+                        <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Distribusi' : 'Distribution'}</h4>
                         <ul className="space-y-3">
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Pengiriman Barang (Box)' : 'Freight Forwarding (Box)'}</Link></li>
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Jalur Darat (Jawa)' : 'Land Route (Java)'}</Link></li>
