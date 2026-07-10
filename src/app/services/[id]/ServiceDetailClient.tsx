@@ -27,7 +27,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[60vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden">
           <Image 
-            src={service.images[0] || "./demo.jpg"} 
+            src="/demo.jpg" 
             alt={service.title} 
             fill 
             className="object-cover" 
@@ -79,7 +79,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   {service.images.slice(1, 3).map((img: string, idx: number) => (
                     <div key={idx} className="relative h-48 rounded-xl overflow-hidden shadow-md">
-                      <Image src={img} alt={`Gallery ${idx}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                      <Image src="/demo.jpg" alt={`Gallery ${idx}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
                     </div>
                   ))}
                 </div>
