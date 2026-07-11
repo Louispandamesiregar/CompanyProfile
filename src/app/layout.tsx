@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
         >
           <LanguageProvider>
             {children}
+            <FloatingWhatsApp />
           </LanguageProvider>
         </ThemeProvider>
       </body>
