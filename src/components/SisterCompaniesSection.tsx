@@ -68,10 +68,12 @@ export function SisterCompaniesSection() {
 
   React.useEffect(() => {
     if (!api) return
-    const initTimer = setTimeout(() => onScroll(), 0)
+    
+    // Initialize 3D transforms on mount (no longer sets state, so it's safe)
+    onScroll()
+    
     api.on("scroll", onScroll)
     api.on("reInit", onScroll)
-    return () => clearTimeout(initTimer)
   }, [api, onScroll])
 
   return (
