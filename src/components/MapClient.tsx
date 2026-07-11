@@ -51,20 +51,20 @@ const LOCATIONS = [
   }
 ]
 
-function MapSizeFixer() {
+function MapSizeFixer({ isActive }: { isActive: boolean }) {
   const map = useMap()
   useEffect(() => {
-    // invalidateSize forces the map to recalculate its container size
-    // timeout is needed to allow DOM layout to settle when switching tabs
-    const timer = setTimeout(() => {
-      map.invalidateSize()
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [map])
+    if (isActive) {
+      const timer = setTimeout(() => {
+        map.invalidateSize()
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+  }, [map, isActive])
   return null
 }
 
-export default function MapClient() {
+export default function MapClient({ isActive = true }: { isActive?: boolean }) {
   const router = useRouter()
 
   useEffect(() => {
@@ -87,7 +87,7 @@ export default function MapClient() {
         className="w-full h-full z-0"
         style={{ zIndex: 0 }}
       >
-        <MapSizeFixer />
+        <MapSizeFixer isActive={isActive} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"

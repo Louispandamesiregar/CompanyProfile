@@ -17,13 +17,13 @@ const MapClient = dynamic(() => import('./MapClient'), {
   )
 })
 
-export function EcosystemMap() {
+export function EcosystemMap({ isActive = true }: { isActive?: boolean }) {
   const { language } = useLanguage()
 
   return (
     <div className="w-full mt-8 mb-4">
       <div className="relative w-full max-w-[1440px] mx-auto">
-        <MapClient />
+        <MapClient isActive={isActive} />
       </div>
     </div>
   )

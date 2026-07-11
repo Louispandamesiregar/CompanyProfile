@@ -112,11 +112,11 @@ export function SisterCompaniesSection() {
           </div>
         </div>
 
-        {activeTab === 'carousel' ? (
-          <div className="relative px-4 md:px-12 perspective-[1200px] animate-in fade-in zoom-in-95 duration-500">
-            <Carousel
-              setApi={setApi}
-              plugins={[plugin]}
+        {/* Carousel Mode (Always mounted, toggled via CSS) */}
+        <div className={`relative px-4 md:px-12 perspective-[1200px] animate-in fade-in zoom-in-95 duration-500 ${activeTab === 'carousel' ? 'block' : 'hidden'}`}>
+          <Carousel
+            setApi={setApi}
+            plugins={[plugin]}
               opts={{
                 align: "center",
                 loop: true,
@@ -165,11 +165,11 @@ export function SisterCompaniesSection() {
               {/* Navigation buttons can be added here if needed */}
             </Carousel>
           </div>
-        ) : (
-          <div className="animate-in fade-in zoom-in-95 duration-500">
-            <EcosystemMap />
-          </div>
-        )}
+
+        {/* Map Mode (Always mounted, toggled via CSS) */}
+        <div className={`w-full relative z-10 px-4 md:px-12 animate-in fade-in zoom-in-95 duration-500 ${activeTab === 'map' ? 'block' : 'hidden'}`}>
+          <EcosystemMap isActive={activeTab === 'map'} />
+        </div>
       </div>
     </section>
   )
