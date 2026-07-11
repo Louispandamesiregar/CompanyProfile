@@ -23,7 +23,7 @@ export function CompanyDetailClient({ id }: { id: string }) {
   return (
     <>
       <Navbar />
-      <main className="flex-1 bg-background">1
+      <main className="flex-1 bg-background">
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] min-h-[350px] w-full flex items-center justify-center overflow-hidden bg-muted">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background/50" />
@@ -41,7 +41,7 @@ export function CompanyDetailClient({ id }: { id: string }) {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-foreground">
                 {company.name}
               </h1>
-              <p className="text-xl text-primary font-semibold mt-4">
+              <p className="text-xl text-[#35627A] dark:text-teal-400 font-bold mt-4 tracking-wide uppercase drop-shadow-sm">
                 {company.shortDesc}
               </p>
             </div>
