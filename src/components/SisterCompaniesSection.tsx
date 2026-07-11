@@ -54,34 +54,34 @@ export function SisterCompaniesSection() {
   }, [api, onScroll])
 
   return (
-    <section id="group" className="py-24 md:py-32 bg-gradient-to-br from-[#12222b] to-[#0a1116] scroll-m-20 overflow-hidden relative border-y border-white/5 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
+    <section id="group" className="py-24 md:py-32 bg-slate-50 dark:bg-[#0a1116] scroll-m-20 overflow-hidden relative border-y border-border/50">
       {/* Decorative Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.03] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-40 dark:opacity-[0.03] pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
-      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl mix-blend-screen pointer-events-none -translate-y-1/2" />
-      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl mix-blend-screen pointer-events-none -translate-y-1/2" />
+      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
+      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
       
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-          <h3 className="text-sm font-bold tracking-[0.3em] text-teal-400 uppercase drop-shadow-[0_0_15px_rgba(45,212,191,0.5)]">
+          <h3 className="text-sm font-bold tracking-[0.3em] text-[#35627A] dark:text-teal-400 uppercase drop-shadow-sm">
             {content.sisterCompanies.subtitle}
           </h3>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-xl">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground drop-shadow-sm">
             {content.sisterCompanies.title}
           </h2>
         </div>
 
         <div className="flex justify-center mb-12 relative z-10">
-          <div className="inline-flex bg-white/5 p-1.5 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-md">
+          <div className="inline-flex bg-white dark:bg-white/5 p-1.5 rounded-2xl border border-border/60 shadow-lg backdrop-blur-md">
             <button 
               onClick={() => setActiveTab('carousel')}
-              className={`px-8 py-3 rounded-xl text-sm font-extrabold transition-all duration-300 ${activeTab === 'carousel' ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-[0_0_20px_rgba(20,184,166,0.4)] scale-105' : 'text-white/60 hover:text-white hover:bg-white/5'}`}
+              className={`px-8 py-3 rounded-xl text-sm font-extrabold transition-all duration-300 ${activeTab === 'carousel' ? 'bg-gradient-to-r from-[#35627A] to-teal-600 text-white shadow-[0_10px_20px_rgba(20,184,166,0.2)] scale-105' : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}
             >
               {language === 'id' ? 'Mode Etalase' : 'Showcase Mode'}
             </button>
             <button 
               onClick={() => setActiveTab('map')}
-              className={`px-8 py-3 rounded-xl text-sm font-extrabold transition-all duration-300 ${activeTab === 'map' ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-[0_0_20px_rgba(20,184,166,0.4)] scale-105' : 'text-white/60 hover:text-white hover:bg-white/5'}`}
+              className={`px-8 py-3 rounded-xl text-sm font-extrabold transition-all duration-300 ${activeTab === 'map' ? 'bg-gradient-to-r from-[#35627A] to-teal-600 text-white shadow-[0_10px_20px_rgba(20,184,166,0.2)] scale-105' : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}
             >
               {language === 'id' ? 'Mode Peta' : 'Map Mode'}
             </button>
@@ -129,24 +129,24 @@ export function SisterCompaniesSection() {
                         }}
                         className="h-full relative"
                       >
-                        <Link href={`/companies/${company.id}`} className="flex flex-col items-center justify-center p-6 h-full gap-5 group cursor-pointer bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 hover:border-teal-400/50 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(20,184,166,0.2)] transition-all duration-500">
+                        <Link href={`/companies/${company.id}`} className="flex flex-col items-center justify-center p-6 h-full gap-5 group cursor-pointer bg-white dark:bg-white/5 backdrop-blur-xl rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-border/50 hover:border-teal-400/50 hover:shadow-[0_20px_50px_rgba(20,184,166,0.15)] transition-all duration-500">
                         <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
                           {company.image ? (
                             <Image 
                               src={company.image} 
                               alt={company.name} 
                               fill 
-                              className="object-contain p-2 drop-shadow-2xl" 
+                              className="object-contain p-2 drop-shadow-xl" 
                             />
                           ) : (
-                            <span className="text-3xl font-black text-white drop-shadow-lg text-center">
+                            <span className="text-3xl font-black text-foreground drop-shadow-md text-center">
                               {company.name}
                             </span>
                           )}
                         </div>
                         <div className="text-center mt-2 relative z-10 w-full">
-                          <h4 className="font-extrabold text-xl md:text-2xl text-white group-hover:text-teal-300 transition-colors drop-shadow-md">{company.name}</h4>
-                          <p className="text-sm md:text-base text-teal-100/70 font-semibold mt-2 tracking-wide uppercase">
+                          <h4 className="font-extrabold text-xl md:text-2xl text-foreground group-hover:text-teal-600 dark:group-hover:text-teal-300 transition-colors drop-shadow-sm">{company.name}</h4>
+                          <p className="text-sm md:text-base text-muted-foreground font-semibold mt-2 tracking-wide uppercase">
                             {company.shortDesc}
                           </p>
                         </div>
