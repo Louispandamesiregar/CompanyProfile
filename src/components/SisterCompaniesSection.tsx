@@ -23,8 +23,9 @@ export function SisterCompaniesSection() {
   const { language } = useLanguage()
 
   const tweenNode = React.useCallback(
-    (engine: any, slideProgress: number, index: number) => {
-      const slideNodes = engine.slideNodes
+    (api: CarouselApi, engine: any, slideProgress: number, index: number) => {
+      if (!api) return
+      const slideNodes = api.slideNodes()
       if (!slideNodes || !slideNodes[index]) return
       
       const slideNode = slideNodes[index]
@@ -62,7 +63,7 @@ export function SisterCompaniesSection() {
           }
         })
       }
-      tweenNode(engine, diffToTarget, index)
+      tweenNode(api, engine, diffToTarget, index)
     })
   }, [api, tweenNode])
 
