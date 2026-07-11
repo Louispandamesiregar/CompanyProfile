@@ -21,8 +21,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   // Initialize from localStorage if available
   useEffect(() => {
-    setMounted(true)
+    const initTimer = setTimeout(() => setMounted(true), 0)
     const stored = localStorage.getItem("language") as Language | null
+    if (stored === "id" || stored === "en") {
+      setLanguage(stored)
+    }
+    return () => clearTimeout(initTimer)
+  }, [])
     if (stored === "id" || stored === "en") {
       setLanguage(stored)
     }
@@ -34,8 +39,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       localStorage.setItem("language", language)
     }
   }, [language, mounted])
-
-  const content = language === "en" ? contentEN : contentID
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === "id" ? "en" : "id")

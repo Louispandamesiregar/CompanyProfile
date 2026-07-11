@@ -17,7 +17,7 @@ export function SisterCompaniesSection() {
   const { content } = useLanguage()
   const loopingCompanies = React.useMemo(() => [...content.sisterCompanies.items, ...content.sisterCompanies.items], [content.sisterCompanies.items])
 
-  const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: false }))
+  const [plugin] = React.useState(() => Autoplay({ delay: 3000, stopOnInteraction: false }))
   const [api, setApi] = React.useState<CarouselApi>()
   const [tweenValues, setTweenValues] = React.useState<number[]>([])
   const [activeTab, setActiveTab] = React.useState<'carousel' | 'map'>('carousel')
@@ -48,9 +48,10 @@ export function SisterCompaniesSection() {
 
   React.useEffect(() => {
     if (!api) return
-    onScroll()
+    const initTimer = setTimeout(() => onScroll(), 0)
     api.on("scroll", onScroll)
     api.on("reInit", onScroll)
+    return () => clearTimeout(initTimer)
   }, [api, onScroll])
 
   return (
@@ -92,7 +93,7 @@ export function SisterCompaniesSection() {
           <div className="relative px-4 md:px-12 perspective-[1200px] animate-in fade-in zoom-in-95 duration-500">
             <Carousel
               setApi={setApi}
-              plugins={[plugin.current]}
+              plugins={[plugin]}
               opts={{
                 align: "center",
                 loop: true,

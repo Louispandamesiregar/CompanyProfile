@@ -14,14 +14,14 @@ import {
 } from "@/components/ui/carousel"
 
 function ServiceCarousel({ service, index }: { service: any, index: number }) {
-  const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: true }))
+  const [plugin] = React.useState(() => Autoplay({ delay: 3000, stopOnInteraction: true }))
 
   const direction = index % 2 === 0 ? "ltr" : "rtl"
 
   return (
     <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
       <Carousel
-        plugins={[plugin.current]}
+        plugins={[plugin]}
         opts={{ loop: true, direction, duration: 40 }}
         dir={direction}
         className="w-full h-full"
