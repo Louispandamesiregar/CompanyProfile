@@ -94,7 +94,7 @@ export function ServicesSection() {
                   </ul>
                   
                   <div className="pt-4">
-                    <Link href={`/services/${service.id}`} className={buttonVariants({ variant: "outline", size: "lg", className: "group font-bold" })}>
+                    <Link href={`/services/${service.id}`} className={buttonVariants({ size: "lg", className: "group font-bold bg-gradient-to-r from-[#35627A] to-teal-600 text-white shadow-md hover:shadow-lg hover:opacity-90 transition-all border-0" })}>
                       {language === 'id' ? 'Selengkapnya' : 'Learn More'}
                       <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
