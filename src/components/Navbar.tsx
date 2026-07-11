@@ -16,9 +16,10 @@ export function Navbar() {
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full flex flex-col shadow-sm">
-      {/* Main Navbar */}
-      <div className="w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 w-full flex flex-col shadow-sm">
+        {/* Main Navbar */}
+        <div className="w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
         <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
@@ -122,6 +123,9 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+      </header>
+      {/* Penyangga agar konten di bawah tidak tertutup oleh Navbar yang fixed */}
+      <div className="h-[65px] w-full shrink-0"></div>
+    </>
   )
 }
