@@ -28,10 +28,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
     return () => clearTimeout(initTimer)
   }, [])
-    if (stored === "id" || stored === "en") {
-      setLanguage(stored)
-    }
-  }, [])
 
   // Save to localStorage on change
   useEffect(() => {
