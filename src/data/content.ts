@@ -145,7 +145,7 @@ export const contentID = {
     ]
   },
   sisterCompanies: {
-    subtitle: "Ekosistem Bisnis Kami",
+    subtitle: "Unit Bisnis Nawasena Group",
     title: "PT Nawasena Jaya Group",
     items: [
       {
@@ -344,7 +344,7 @@ export const contentEN = {
     ]
   },
   sisterCompanies: {
-    subtitle: "Our Business Ecosystem",
+    subtitle: "Nawasena Group Business Units",
     title: "PT Nawasena Jaya Group",
     items: [
       {
