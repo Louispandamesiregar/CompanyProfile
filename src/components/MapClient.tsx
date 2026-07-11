@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from 'react'
-import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Tooltip, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useRouter } from 'next/navigation'
@@ -51,6 +51,19 @@ const LOCATIONS = [
   }
 ]
 
+function MapSizeFixer() {
+  const map = useMap()
+  useEffect(() => {
+    // invalidateSize forces the map to recalculate its container size
+    // timeout is needed to allow DOM layout to settle when switching tabs
+    const timer = setTimeout(() => {
+      map.invalidateSize()
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [map])
+  return null
+}
+
 export default function MapClient() {
   const router = useRouter()
 
@@ -74,6 +87,7 @@ export default function MapClient() {
         className="w-full h-full z-0"
         style={{ zIndex: 0 }}
       >
+        <MapSizeFixer />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
