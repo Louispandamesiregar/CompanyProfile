@@ -19,11 +19,11 @@ export function FloatingWhatsApp() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center animate-in fade-in slide-in-from-bottom-8 duration-700">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex items-center animate-in fade-in slide-in-from-bottom-8 duration-700">
       
-      {/* Balon Chat (Tooltip) */}
+      {/* Balon Chat (Tooltip) - Disembunyikan di Mobile agar tidak memakan layar */}
       <div 
-        className={`mr-4 bg-white dark:bg-card text-foreground px-4 py-3 rounded-2xl shadow-xl border border-border/50 text-sm font-medium transition-all duration-300 origin-right ${
+        className={`hidden md:block mr-4 bg-white dark:bg-card text-foreground px-4 py-3 rounded-2xl shadow-xl border border-border/50 text-sm font-medium transition-all duration-300 origin-right ${
           isHovered ? "opacity-100 scale-100 translate-x-0" : "opacity-0 scale-95 translate-x-4 pointer-events-none"
         }`}
       >
@@ -39,7 +39,7 @@ export function FloatingWhatsApp() {
         href="https://wa.me/6281388398303"
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-full text-white shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgba(20,184,166,0.4)] hover:scale-110 transition-all duration-300 group"
+        className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-full text-white shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgba(20,184,166,0.4)] md:hover:scale-110 transition-all duration-300 group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Chat via WhatsApp"
@@ -48,7 +48,7 @@ export function FloatingWhatsApp() {
         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-40"></span>
         
         {/* Ikon WhatsApp */}
-        <FaWhatsapp className="w-8 h-8 relative z-10 drop-shadow-sm group-hover:rotate-12 transition-transform duration-300" />
+        <FaWhatsapp className="w-6 h-6 md:w-8 md:h-8 relative z-10 drop-shadow-sm group-hover:rotate-12 transition-transform duration-300" />
       </a>
       
     </div>
