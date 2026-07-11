@@ -54,28 +54,34 @@ export function SisterCompaniesSection() {
   }, [api, onScroll])
 
   return (
-    <section id="group" className="py-24 bg-gradient-to-b from-background to-card/50 scroll-m-20 overflow-hidden relative">
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl">
+    <section id="group" className="py-24 md:py-32 bg-gradient-to-br from-[#12222b] to-[#0a1116] scroll-m-20 overflow-hidden relative border-y border-white/5 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.03] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
+      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl mix-blend-screen pointer-events-none -translate-y-1/2" />
+      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl mix-blend-screen pointer-events-none -translate-y-1/2" />
+      
+      <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-          <h3 className="text-sm font-bold tracking-[0.2em] bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent uppercase drop-shadow-sm">
+          <h3 className="text-sm font-bold tracking-[0.3em] text-teal-400 uppercase drop-shadow-[0_0_15px_rgba(45,212,191,0.5)]">
             {content.sisterCompanies.subtitle}
           </h3>
-          <h2 className="text-3xl md:text-4xl font-normal tracking-tight text-foreground">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-xl">
             {content.sisterCompanies.title}
           </h2>
         </div>
 
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex bg-muted/50 p-1.5 rounded-xl border border-border/50 shadow-inner">
+        <div className="flex justify-center mb-12 relative z-10">
+          <div className="inline-flex bg-white/5 p-1.5 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-md">
             <button 
               onClick={() => setActiveTab('carousel')}
-              className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${activeTab === 'carousel' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
+              className={`px-8 py-3 rounded-xl text-sm font-extrabold transition-all duration-300 ${activeTab === 'carousel' ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-[0_0_20px_rgba(20,184,166,0.4)] scale-105' : 'text-white/60 hover:text-white hover:bg-white/5'}`}
             >
               {language === 'id' ? 'Mode Etalase' : 'Showcase Mode'}
             </button>
             <button 
               onClick={() => setActiveTab('map')}
-              className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${activeTab === 'map' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
+              className={`px-8 py-3 rounded-xl text-sm font-extrabold transition-all duration-300 ${activeTab === 'map' ? 'bg-gradient-to-r from-teal-500 to-teal-600 text-white shadow-[0_0_20px_rgba(20,184,166,0.4)] scale-105' : 'text-white/60 hover:text-white hover:bg-white/5'}`}
             >
               {language === 'id' ? 'Mode Peta' : 'Map Mode'}
             </button>
@@ -123,24 +129,24 @@ export function SisterCompaniesSection() {
                         }}
                         className="h-full relative"
                       >
-                        <Link href={`/companies/${company.id}`} className="flex flex-col items-center justify-center p-6 h-full gap-4 group cursor-pointer bg-gradient-to-br from-white/10 to-white/0 dark:from-white/5 dark:to-transparent backdrop-blur-md rounded-3xl shadow-xl border border-white/20 dark:border-white/10">
-                        <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110">
+                        <Link href={`/companies/${company.id}`} className="flex flex-col items-center justify-center p-6 h-full gap-5 group cursor-pointer bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 hover:border-teal-400/50 hover:bg-white/10 hover:shadow-[0_0_40px_rgba(20,184,166,0.2)] transition-all duration-500">
+                        <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
                           {company.image ? (
                             <Image 
                               src={company.image} 
                               alt={company.name} 
                               fill 
-                              className="object-contain drop-shadow-xl" 
+                              className="object-contain p-2 drop-shadow-2xl" 
                             />
                           ) : (
-                            <span className="text-2xl font-bold text-primary text-center">
+                            <span className="text-3xl font-black text-white drop-shadow-lg text-center">
                               {company.name}
                             </span>
                           )}
                         </div>
-                        <div className="text-center mt-4">
-                          <h4 className="font-bold text-xl text-foreground group-hover:text-primary transition-colors">{company.name}</h4>
-                          <p className="text-sm text-muted-foreground font-medium mt-2">
+                        <div className="text-center mt-2 relative z-10 w-full">
+                          <h4 className="font-extrabold text-xl md:text-2xl text-white group-hover:text-teal-300 transition-colors drop-shadow-md">{company.name}</h4>
+                          <p className="text-sm md:text-base text-teal-100/70 font-semibold mt-2 tracking-wide uppercase">
                             {company.shortDesc}
                           </p>
                         </div>
