@@ -19,16 +19,38 @@ export function SisterCompaniesSection() {
 
   const [plugin] = React.useState(() => Autoplay({ delay: 3000, stopOnInteraction: false }))
   const [api, setApi] = React.useState<CarouselApi>()
-  const [tweenValues, setTweenValues] = React.useState<number[]>([])
   const [activeTab, setActiveTab] = React.useState<'carousel' | 'map'>('carousel')
   const { language } = useLanguage()
+
+  const tweenNode = React.useCallback(
+    (engine: any, slideProgress: number, index: number) => {
+      const slideNodes = engine.slideNodes
+      if (!slideNodes || !slideNodes[index]) return
+      
+      const slideNode = slideNodes[index]
+      const innerNode = slideNode.querySelector('.embla__slide__inner') as HTMLElement
+      if (!innerNode) return
+
+      const distance = slideProgress
+      const rotateY = Math.min(Math.max(distance * 80, -60), 60) 
+      const scale = Math.max(0.75, 1 - Math.abs(distance * 0.5))
+      const opacity = Math.max(0.3, 1 - Math.abs(distance * 0.8))
+      const zIndex = Math.round(100 - Math.abs(distance * 100))
+
+      innerNode.style.transform = `rotateY(${rotateY}deg) scale(${scale})`
+      innerNode.style.opacity = opacity.toString()
+      innerNode.style.zIndex = zIndex.toString()
+    },
+    []
+  )
 
   const onScroll = React.useCallback(() => {
     if (!api) return
     
     const engine = api.internalEngine()
     const scrollProgress = api.scrollProgress()
-    const slideProgress = api.scrollSnapList().map((scrollSnap, index) => {
+    
+    api.scrollSnapList().forEach((scrollSnap, index) => {
       let diffToTarget = scrollSnap - scrollProgress
       if (engine.options.loop) {
         engine.slideLooper.loopPoints.forEach((loopItem) => {
@@ -40,11 +62,9 @@ export function SisterCompaniesSection() {
           }
         })
       }
-      return diffToTarget
+      tweenNode(engine, diffToTarget, index)
     })
-    
-    setTweenValues(slideProgress)
-  }, [api])
+  }, [api, tweenNode])
 
   React.useEffect(() => {
     if (!api) return
@@ -103,32 +123,14 @@ export function SisterCompaniesSection() {
             >
               <CarouselContent className="transform-style-3d py-8">
                 {loopingCompanies.map((company, index) => {
-                  // Calculate 3D values safely bounded
-                  const distance = tweenValues[index] || 0
-                  
-                  // Limit maximum rotation to 60 degrees either way
-                  const rotateY = Math.min(Math.max(distance * 80, -60), 60) 
-                  
-                  // Prevent scale from going negative (minimum 0.75)
-                  const scale = Math.max(0.75, 1 - Math.abs(distance * 0.5))
-                  
-                  // Prevent opacity from going below 0.3
-                  const opacity = Math.max(0.3, 1 - Math.abs(distance * 0.8))
-                  
-                  const zIndex = Math.round(100 - Math.abs(distance * 100))
-
                   return (
                     <CarouselItem 
                       key={`${company.id}-${index}`} 
                       className="basis-2/3 md:basis-1/3"
                     >
                       <div
-                        style={{
-                          transform: `rotateY(${rotateY}deg) scale(${scale})`,
-                          opacity: opacity,
-                          zIndex: zIndex
-                        }}
-                        className="h-full relative"
+                        className="embla__slide__inner h-full relative"
+                        style={{ transform: 'rotateY(0deg) scale(0.75)', opacity: 0.3, zIndex: 0 }}
                       >
                         <Link href={`/companies/${company.id}`} className="flex flex-col items-center justify-center p-6 h-full gap-5 group cursor-pointer bg-white dark:bg-white/5 backdrop-blur-xl rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-border/50 hover:border-teal-400/50 hover:shadow-[0_20px_50px_rgba(20,184,166,0.15)] transition-all duration-500">
                         <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
