@@ -73,7 +73,7 @@ export function ServicesSection() {
                 <div className="w-full md:w-1/2 space-y-6">
                   <div className="flex items-center gap-4 mb-6">
                     <div 
-                      className="w-14 h-14 rounded-xl text-white flex items-center justify-center shrink-0 shadow-lg"
+                      className="w-14 h-14 min-w-[56px] min-h-[56px] flex-none rounded-xl text-white flex items-center justify-center shadow-lg"
                       style={{ backgroundColor: service.color }}
                     >
                       <service.icon className="w-7 h-7" />
