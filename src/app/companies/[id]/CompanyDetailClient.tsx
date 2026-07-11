@@ -23,7 +23,7 @@ export function CompanyDetailClient({ id }: { id: string }) {
   return (
     <>
       <Navbar />
-      <main className="flex-1 bg-background">
+      <main className="flex-1 bg-background">1
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] min-h-[350px] w-full flex items-center justify-center overflow-hidden bg-muted">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background/50" />

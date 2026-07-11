@@ -19,7 +19,7 @@ export function FloatingWhatsApp() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex items-center animate-in fade-in slide-in-from-bottom-8 duration-700">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex items-center animate-in fade-in duration-700">
       
       {/* Balon Chat (Tooltip) - Disembunyikan di Mobile agar tidak memakan layar */}
       <div 
