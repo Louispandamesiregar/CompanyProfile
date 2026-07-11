@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <body className={`${outfit.className} antialiased min-h-screen flex flex-col`}>
+      <body className={`${outfit.className} antialiased min-h-screen flex flex-col overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
