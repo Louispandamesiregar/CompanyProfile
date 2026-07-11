@@ -21,18 +21,7 @@ export function EcosystemMap() {
   const { language } = useLanguage()
 
   return (
-    <div className="w-full mt-24 mb-12">
-      <div className="text-center mb-10 space-y-4">
-        <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight text-foreground uppercase">
-          {language === 'id' ? 'Sebaran Bisnis Kami' : 'Our Business Distribution'}
-        </h3>
-        <p className="text-muted-foreground max-w-2xl mx-auto">
-          {language === 'id' 
-            ? 'Jaringan operasional PT Nawasena Jaya Group yang saling terintegrasi untuk memberikan pelayanan terbaik dan terjangkau di berbagai wilayah.'
-            : 'The integrated operational network of PT Nawasena Jaya Group to provide the best and accessible services across regions.'}
-        </p>
-      </div>
-
+    <div className="w-full mt-8 mb-4">
       <div className="relative w-full max-w-[1440px] mx-auto">
         <MapClient />
       </div>

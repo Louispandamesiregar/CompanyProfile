@@ -19,6 +19,8 @@ export function SisterCompaniesSection() {
   const plugin = React.useRef(Autoplay({ delay: 3000, stopOnInteraction: false }))
   const [api, setApi] = React.useState<CarouselApi>()
   const [tweenValues, setTweenValues] = React.useState<number[]>([])
+  const [activeTab, setActiveTab] = React.useState<'carousel' | 'map'>('carousel')
+  const { language } = useLanguage()
 
   const onScroll = React.useCallback(() => {
     if (!api) return
@@ -62,78 +64,99 @@ export function SisterCompaniesSection() {
           </h2>
         </div>
 
-        <div className="relative px-4 md:px-12 perspective-[1200px]">
-          <Carousel
-            setApi={setApi}
-            plugins={[plugin.current]}
-            opts={{
-              align: "center",
-              loop: true,
-              duration: 40,
-            }}
-            className="w-full max-w-[1440px] mx-auto"
-          >
-            <CarouselContent className="transform-style-3d py-8">
-              {loopingCompanies.map((company, index) => {
-                // Calculate 3D values safely bounded
-                const distance = tweenValues[index] || 0
-                
-                // Limit maximum rotation to 60 degrees either way
-                const rotateY = Math.min(Math.max(distance * 80, -60), 60) 
-                
-                // Prevent scale from going negative (minimum 0.75)
-                const scale = Math.max(0.75, 1 - Math.abs(distance * 0.5))
-                
-                // Prevent opacity from going below 0.3
-                const opacity = Math.max(0.3, 1 - Math.abs(distance * 0.8))
-                
-                const zIndex = Math.round(100 - Math.abs(distance * 100))
-
-                return (
-                  <CarouselItem 
-                    key={`${company.id}-${index}`} 
-                    className="basis-2/3 md:basis-1/3"
-                  >
-                    <div
-                      style={{
-                        transform: `rotateY(${rotateY}deg) scale(${scale})`,
-                        opacity: opacity,
-                        zIndex: zIndex
-                      }}
-                      className="h-full relative"
-                    >
-                      <div className="flex flex-col items-center justify-center p-6 h-full gap-4 group cursor-pointer bg-gradient-to-br from-white/10 to-white/0 dark:from-white/5 dark:to-transparent backdrop-blur-md rounded-3xl shadow-xl border border-white/20 dark:border-white/10">
-                      <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110">
-                        {company.image ? (
-                          <Image 
-                            src={company.image} 
-                            alt={company.name} 
-                            fill 
-                            className="object-contain drop-shadow-xl" 
-                          />
-                        ) : (
-                          <span className="text-2xl font-bold text-primary text-center">
-                            {company.name}
-                          </span>
-                        )}
-                      </div>
-                      <div className="text-center mt-4">
-                        <h4 className="font-bold text-xl text-foreground group-hover:text-primary transition-colors">{company.name}</h4>
-                        <p className="text-sm text-muted-foreground font-medium mt-2">
-                          {company.shortDesc}
-                        </p>
-                      </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                )
-              })}
-            </CarouselContent>
-            {/* Navigation buttons can be added here if needed */}
-          </Carousel>
+        <div className="flex justify-center mb-10">
+          <div className="inline-flex bg-muted/50 p-1.5 rounded-xl border border-border/50 shadow-inner">
+            <button 
+              onClick={() => setActiveTab('carousel')}
+              className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${activeTab === 'carousel' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
+            >
+              {language === 'id' ? 'Mode Etalase' : 'Showcase Mode'}
+            </button>
+            <button 
+              onClick={() => setActiveTab('map')}
+              className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all ${activeTab === 'map' ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:text-foreground'}`}
+            >
+              {language === 'id' ? 'Mode Peta' : 'Map Mode'}
+            </button>
+          </div>
         </div>
 
-        <EcosystemMap />
+        {activeTab === 'carousel' ? (
+          <div className="relative px-4 md:px-12 perspective-[1200px] animate-in fade-in zoom-in-95 duration-500">
+            <Carousel
+              setApi={setApi}
+              plugins={[plugin.current]}
+              opts={{
+                align: "center",
+                loop: true,
+                duration: 40,
+              }}
+              className="w-full max-w-[1440px] mx-auto"
+            >
+              <CarouselContent className="transform-style-3d py-8">
+                {loopingCompanies.map((company, index) => {
+                  // Calculate 3D values safely bounded
+                  const distance = tweenValues[index] || 0
+                  
+                  // Limit maximum rotation to 60 degrees either way
+                  const rotateY = Math.min(Math.max(distance * 80, -60), 60) 
+                  
+                  // Prevent scale from going negative (minimum 0.75)
+                  const scale = Math.max(0.75, 1 - Math.abs(distance * 0.5))
+                  
+                  // Prevent opacity from going below 0.3
+                  const opacity = Math.max(0.3, 1 - Math.abs(distance * 0.8))
+                  
+                  const zIndex = Math.round(100 - Math.abs(distance * 100))
+
+                  return (
+                    <CarouselItem 
+                      key={`${company.id}-${index}`} 
+                      className="basis-2/3 md:basis-1/3"
+                    >
+                      <div
+                        style={{
+                          transform: `rotateY(${rotateY}deg) scale(${scale})`,
+                          opacity: opacity,
+                          zIndex: zIndex
+                        }}
+                        className="h-full relative"
+                      >
+                        <div className="flex flex-col items-center justify-center p-6 h-full gap-4 group cursor-pointer bg-gradient-to-br from-white/10 to-white/0 dark:from-white/5 dark:to-transparent backdrop-blur-md rounded-3xl shadow-xl border border-white/20 dark:border-white/10">
+                        <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110">
+                          {company.image ? (
+                            <Image 
+                              src={company.image} 
+                              alt={company.name} 
+                              fill 
+                              className="object-contain drop-shadow-xl" 
+                            />
+                          ) : (
+                            <span className="text-2xl font-bold text-primary text-center">
+                              {company.name}
+                            </span>
+                          )}
+                        </div>
+                        <div className="text-center mt-4">
+                          <h4 className="font-bold text-xl text-foreground group-hover:text-primary transition-colors">{company.name}</h4>
+                          <p className="text-sm text-muted-foreground font-medium mt-2">
+                            {company.shortDesc}
+                          </p>
+                        </div>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  )
+                })}
+              </CarouselContent>
+              {/* Navigation buttons can be added here if needed */}
+            </Carousel>
+          </div>
+        ) : (
+          <div className="animate-in fade-in zoom-in-95 duration-500">
+            <EcosystemMap />
+          </div>
+        )}
       </div>
     </section>
   )
