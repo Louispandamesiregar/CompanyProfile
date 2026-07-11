@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <body className={`${outfit.className} antialiased min-h-screen flex flex-col overflow-x-hidden`}>
+      <body className={`${outfit.className} antialiased min-h-screen flex flex-col overscroll-none`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -27,7 +27,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <LanguageProvider>
-            {children}
+            <div className="flex flex-col min-h-screen overflow-x-hidden w-full max-w-[100vw]">
+              {children}
+            </div>
             <FloatingWhatsApp />
           </LanguageProvider>
         </ThemeProvider>
