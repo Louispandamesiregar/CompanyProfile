@@ -4,12 +4,16 @@ import * as React from "react"
 import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
 import { Truck, Package, Maximize, ArrowRight, CheckCircle2 } from "lucide-react"
+import blindVanImg from "../../public/fleet/blind-van.png"
+import cdeBoxImg from "../../public/fleet/cde-box.png"
+import cddBoxImg from "../../public/fleet/cdd-box.png"
+import trontonWingboxImg from "../../public/fleet/tronton-wingbox.png"
 
 const FLEET_DATA = [
   {
     id: "blind-van",
     name: "Blind Van",
-    image: "/fleet/blind-van.png",
+    image: blindVanImg,
     capacity: "700 kg",
     dimensions: "P: 2.1m | L: 1.4m | T: 1.3m",
     idealFor: "Pengiriman cepat dalam kota, paket kecil, dan dokumen bernilai tinggi.",
@@ -18,7 +22,7 @@ const FLEET_DATA = [
   {
     id: "cde-box",
     name: "Engkel Box (CDE)",
-    image: "/fleet/cde-box.png",
+    image: cdeBoxImg,
     capacity: "2.000 kg - 2.500 kg",
     dimensions: "P: 3.1m | L: 1.7m | T: 1.7m",
     idealFor: "Pengiriman kargo sedang, pindahan kantor, dan suplai barang retail.",
@@ -27,7 +31,7 @@ const FLEET_DATA = [
   {
     id: "cdd-box",
     name: "Double Box (CDD)",
-    image: "/fleet/cdd-box.png",
+    image: cddBoxImg,
     capacity: "4.000 kg - 5.000 kg",
     dimensions: "P: 4.2m | L: 2.0m | T: 2.0m",
     idealFor: "Distribusi barang industri, logistik antar kota, dan muatan palet.",
@@ -36,7 +40,7 @@ const FLEET_DATA = [
   {
     id: "tronton-wingbox",
     name: "Tronton Wingbox",
-    image: "/fleet/tronton-wingbox.png",
+    image: trontonWingboxImg,
     capacity: "18.000 kg - 25.000 kg",
     dimensions: "P: 9.5m | L: 2.45m | T: 2.5m",
     idealFor: "Kargo berat antar provinsi, distribusi pabrik, dan muatan curah.",
