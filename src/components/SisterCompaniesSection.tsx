@@ -15,7 +15,8 @@ import { EcosystemMap } from "./EcosystemMap"
 
 export function SisterCompaniesSection() {
   const { content } = useLanguage()
-  const loopingCompanies = React.useMemo(() => [...content.sisterCompanies.items, ...content.sisterCompanies.items], [content.sisterCompanies.items])
+  // Triple the items to ensure Embla has enough slides to loop without blank spaces
+  const loopingCompanies = React.useMemo(() => [...content.sisterCompanies.items, ...content.sisterCompanies.items, ...content.sisterCompanies.items], [content.sisterCompanies.items])
 
   const [plugin] = React.useState(() => Autoplay({ delay: 3000, stopOnInteraction: false }))
   const [api, setApi] = React.useState<CarouselApi>()
@@ -33,14 +34,17 @@ export function SisterCompaniesSection() {
       if (!innerNode) return
 
       const distance = slideProgress
-      const rotateY = Math.min(Math.max(distance * 80, -60), 60) 
-      const scale = Math.max(0.75, 1 - Math.abs(distance * 0.5))
-      const opacity = Math.max(0.3, 1 - Math.abs(distance * 0.8))
+      // Removed rotateY because 3D rotation + Box Shadows causes severe GPU lag on mobile devices.
+      // A pure Scale + Opacity tween (like Apple Music cover flow) is 10x lighter and smoother.
+      const scale = Math.max(0.75, 1 - Math.abs(distance * 0.25))
+      const opacity = Math.max(0.4, 1 - Math.abs(distance * 0.6))
       const zIndex = Math.round(100 - Math.abs(distance * 100))
 
-      innerNode.style.transform = `rotateY(${rotateY}deg) scale(${scale})`
+      // will-change-transform forces the browser to hardware-accelerate this node
+      innerNode.style.transform = `scale(${scale})`
       innerNode.style.opacity = opacity.toString()
       innerNode.style.zIndex = zIndex.toString()
+      innerNode.style.willChange = 'transform, opacity'
     },
     []
   )
@@ -133,9 +137,10 @@ export function SisterCompaniesSection() {
                     >
                       <div
                         className="embla__slide__inner h-full relative"
-                        style={{ transform: 'rotateY(0deg) scale(0.75)', opacity: 0.3, zIndex: 0 }}
+                        style={{ transform: 'scale(0.75)', opacity: 0.4, zIndex: 0 }}
                       >
-                        <Link href={`/companies/${company.id}`} className="flex flex-col items-center justify-center p-6 h-full gap-5 group cursor-pointer bg-white dark:bg-white/5 backdrop-blur-xl rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-border/50 hover:border-teal-400/50 hover:shadow-[0_20px_50px_rgba(20,184,166,0.15)] transition-all duration-500">
+                        {/* Removed backdrop-blur-xl because it causes massive GPU lag during scroll */}
+                        <Link href={`/companies/${company.id}`} className="flex flex-col items-center justify-center p-6 h-full gap-5 group cursor-pointer bg-white dark:bg-slate-900 rounded-3xl shadow-xl border border-border/50 hover:border-teal-400/50 hover:shadow-[0_20px_50px_rgba(20,184,166,0.15)] transition-all duration-300">
                         <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
                           {company.image ? (
                             <Image 
