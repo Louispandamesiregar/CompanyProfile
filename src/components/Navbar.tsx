@@ -30,7 +30,10 @@ export function Navbar() {
                 {companyInfo.logoText}
               </span>
             </Link>
+          </div>
 
+          {/* Right Side: Nav & Actions */}
+          <div className="flex items-center gap-4 md:gap-8">
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
               {navLinks.map((link) => (
@@ -72,10 +75,9 @@ export function Navbar() {
                 </div>
               ))}
             </nav>
-          </div>
 
-          {/* Right Actions */}
-          <div className="flex items-center gap-2 md:gap-4">
+            {/* Right Actions */}
+            <div className="flex items-center gap-2 md:gap-4">
             <div 
               onClick={toggleLanguage}
               className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity text-foreground/70 hover:text-teal-600 dark:hover:text-teal-400"
