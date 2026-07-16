@@ -123,6 +123,7 @@ export function Navbar() {
               </Sheet>
             </div>
           </div>
+          </div>
         </div>
       </div>
       </header>
