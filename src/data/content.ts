@@ -150,33 +150,24 @@ export const contentID = {
     items: [
       {
         id: 1,
-        name: "Nawasena Alkes",
-        shortDesc: "Alat Kesehatan",
-        fullDesc: "Menyediakan perlengkapan alat kesehatan berkualitas untuk instansi dan masyarakat.",
+        name: "Faenzone",
+        shortDesc: "F&B / Kuliner",
+        fullDesc: "Menyajikan makanan dan minuman berkualitas tinggi, nyaman untuk bersantai.",
         website: "#",
-        logoText: "NA",
+        logoText: "FZ",
         image: "./demo.jpg"
       },
       {
         id: 2,
-        name: "Nawasena ATK",
-        shortDesc: "Alat Tulis Kantor",
-        fullDesc: "Solusi alat tulis kantor dan sekolah yang lengkap dengan layanan pengiriman terbaik.",
+        name: "Warmindo",
+        shortDesc: "Warkop & Indomie",
+        fullDesc: "Tempat nongkrong santai dengan menu khas mi instan dan minuman segar.",
         website: "#",
-        logoText: "NATK",
+        logoText: "WMD",
         image: "./demo.jpg"
       },
       {
         id: 3,
-        name: "Faenzone & Warmindo",
-        shortDesc: "F&B / Kuliner",
-        fullDesc: "Menyajikan makanan dan minuman berkualitas tinggi, nyaman untuk bersantai.",
-        website: "#",
-        logoText: "FW",
-        image: "./demo.jpg"
-      },
-      {
-        id: 4,
         name: "Koling",
         shortDesc: "Kopi Keliling",
         fullDesc: "Menyajikan racikan kopi istimewa secara berkeliling dengan harga bersahabat.",
@@ -349,33 +340,24 @@ export const contentEN = {
     items: [
       {
         id: 1,
-        name: "Nawasena Alkes",
-        shortDesc: "Medical Equipment",
-        fullDesc: "Providing high quality medical equipment for institutions and public needs.",
+        name: "Faenzone",
+        shortDesc: "F&B / Culinary",
+        fullDesc: "Serving high quality food and beverages, perfect for relaxing.",
         website: "#",
-        logoText: "NA",
+        logoText: "FZ",
         image: "./demo.jpg"
       },
       {
         id: 2,
-        name: "Nawasena ATK",
-        shortDesc: "Office Supplies",
-        fullDesc: "Complete office and school supplies solution with the best delivery service.",
+        name: "Warmindo",
+        shortDesc: "Noodle & Coffee Shop",
+        fullDesc: "A casual hangout spot with signature instant noodles and refreshing drinks.",
         website: "#",
-        logoText: "NATK",
+        logoText: "WMD",
         image: "./demo.jpg"
       },
       {
         id: 3,
-        name: "Faenzone & Warmindo",
-        shortDesc: "F&B / Culinary",
-        fullDesc: "Serving high quality food and beverages, perfect for relaxing.",
-        website: "#",
-        logoText: "FW",
-        image: "./demo.jpg"
-      },
-      {
-        id: 4,
         name: "Koling",
         shortDesc: "Mobile Coffee",
         fullDesc: "Serving special coffee blends on the go with friendly prices.",
