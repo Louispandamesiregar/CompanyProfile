@@ -29,25 +29,25 @@ const LOCATIONS = [
     id: "jakarta",
     name: "Jakarta",
     position: [-6.2088, 106.8456] as [number, number],
-    businesses: [{ id: 1, name: "Nawasena Alkes" }]
+    businesses: [{ id: 1, name: "Faenzone" }]
   },
   {
     id: "tangerang",
     name: "Tangerang",
     position: [-6.1702, 106.6403] as [number, number],
-    businesses: [{ id: 2, name: "Nawasena ATK" }]
+    businesses: [{ id: 2, name: "Warmindo" }]
   },
   {
     id: "depok",
     name: "Depok",
     position: [-6.4025, 106.7942] as [number, number],
-    businesses: [{ id: 3, name: "Faenzone & Warmindo" }]
+    businesses: [{ id: 3, name: "Koling" }]
   },
   {
     id: "bekasi",
     name: "Bekasi",
     position: [-6.2383, 106.9756] as [number, number],
-    businesses: [{ id: 4, name: "Koling" }]
+    businesses: [{ id: 3, name: "Koling" }]
   }
 ]
 
