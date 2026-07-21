@@ -4,10 +4,10 @@ import * as React from "react"
 import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
 import { Truck, Package, Maximize, ArrowRight, CheckCircle2 } from "lucide-react"
-import blindVanImg from "../../public/fleet/blind-van.png"
-import cdeBoxImg from "../../public/fleet/cde-box.png"
-import cddBoxImg from "../../public/fleet/cdd-box.png"
-import trontonWingboxImg from "../../public/fleet/tronton-wingbox.png"
+import blindVanImg from "../../public/fleet/blind-van.webp"
+import cdeBoxImg from "../../public/fleet/cde-box.webp"
+import cddBoxImg from "../../public/fleet/cdd-box.webp"
+import trontonWingboxImg from "../../public/fleet/tronton-wingbox.webp"
 
 const FLEET_DATA = [
   {
