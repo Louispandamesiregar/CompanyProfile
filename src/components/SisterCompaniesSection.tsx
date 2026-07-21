@@ -218,7 +218,7 @@ export function SisterCompaniesSection() {
           >
             {expandedCompany && (
               <div className="relative w-full max-w-4xl mx-auto animate-in fade-in slide-in-from-top-4 duration-500">
-                <div className="relative bg-white dark:bg-slate-900/90 backdrop-blur-lg rounded-3xl shadow-2xl border border-teal-500/30 overflow-hidden">
+                <div className="relative bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-teal-500/30 overflow-hidden">
                   {/* Top accent gradient */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#35627A] via-teal-500 to-cyan-500" />
                   
@@ -235,10 +235,10 @@ export function SisterCompaniesSection() {
                           src={expandedCompany.image}
                           alt={expandedCompany.name}
                           fill
-                          className="object-contain p-4 drop-shadow-lg"
+                          className="object-contain p-4"
                         />
                       ) : (
-                        <span className="text-4xl font-black text-foreground drop-shadow-md">
+                        <span className="text-4xl font-black text-foreground">
                           {expandedCompany.logoText}
                         </span>
                       )}
