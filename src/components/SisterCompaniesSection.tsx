@@ -13,13 +13,12 @@ import {
 } from "@/components/ui/carousel"
 
 export function SisterCompaniesSection() {
-  const { content } = useLanguage()
-  // Triple the items to ensure Embla has enough slides to loop without blank spaces
-  const loopingCompanies = React.useMemo(() => [...content.sisterCompanies.items, ...content.sisterCompanies.items, ...content.sisterCompanies.items], [content.sisterCompanies.items])
+  const { content, language } = useLanguage()
+  // Double the items to ensure Embla has enough slides to loop (6 items total instead of 9 for better performance)
+  const loopingCompanies = React.useMemo(() => [...content.sisterCompanies.items, ...content.sisterCompanies.items], [content.sisterCompanies.items])
 
   const [plugin] = React.useState(() => Autoplay({ delay: 3000, stopOnInteraction: false }))
   const [api, setApi] = React.useState<CarouselApi>()
-  const { language } = useLanguage()
 
   // State for the currently expanded company (null = none expanded)
   const [expandedCompanyId, setExpandedCompanyId] = React.useState<number | null>(null)
@@ -73,11 +72,10 @@ export function SisterCompaniesSection() {
       const opacity = Math.max(0.4, 1 - Math.abs(distance * 0.6))
       const zIndex = Math.round(100 - Math.abs(distance * 100))
 
-      // will-change-transform forces the browser to hardware-accelerate this node
+      // will-change is removed to prevent allocating permanent GPU layers per slide which causes heavy VRAM usage on mobile
       innerNode.style.transform = `scale(${scale})`
       innerNode.style.opacity = opacity.toString()
       innerNode.style.zIndex = zIndex.toString()
-      innerNode.style.willChange = 'transform, opacity'
     },
     []
   )
@@ -117,10 +115,9 @@ export function SisterCompaniesSection() {
   return (
     <section id="group" className="py-24 md:py-32 bg-slate-50 dark:bg-[#0a1116] scroll-m-20 overflow-hidden relative border-y border-border/50">
       {/* Decorative Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-40 dark:opacity-[0.03] pointer-events-none" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
-      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
-      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
+      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(20,184,166,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
+      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(6,182,212,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
       
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">

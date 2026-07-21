@@ -16,7 +16,7 @@ export function ContactSection() {
           
           {/* Left: Big Typography */}
           <div className="flex-1 space-y-8 text-center lg:text-left relative">
-            <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 rounded-full blur-[80px] pointer-events-none" />
+            <div className="absolute -top-12 -left-12 w-64 h-64 bg-[radial-gradient(circle,rgba(20,184,166,0.1)_0%,transparent_70%)] rounded-full pointer-events-none" />
             <h2 className="text-5xl md:text-7xl font-extrabold tracking-tighter text-foreground leading-[1.1] relative z-10">
               {language === 'id' ? <>Mari <br className="hidden lg:block"/> Berkolaborasi</> : <>Let's <br className="hidden lg:block"/> Collaborate</>}
             </h2>

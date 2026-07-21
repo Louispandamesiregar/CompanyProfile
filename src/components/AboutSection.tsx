@@ -10,8 +10,7 @@ export function AboutSection() {
 
   return (
     <section id="about" className="py-24 md:py-32 bg-slate-50 dark:bg-[#0a1116] scroll-m-16 relative border-y border-border/50">
-      {/* Decorative dots */}
-      <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-50 dark:opacity-[0.03] pointer-events-none" />
+      {/* Decorative dots removed for performance */}
       
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="grid lg:grid-cols-12 gap-8 items-stretch">

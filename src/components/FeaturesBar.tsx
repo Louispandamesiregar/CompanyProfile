@@ -2,9 +2,11 @@
 
 import React from "react"
 import { Truck, Map, Users, Zap } from "lucide-react"
+import { useLanguage } from "@/context/LanguageContext"
 
 export function FeaturesBar() {
-  const features = [
+  const { language } = useLanguage()
+  const features = language === 'id' ? [
     {
       icon: Truck,
       title: "Armada",
@@ -25,7 +27,28 @@ export function FeaturesBar() {
       title: "Fast",
       subtitle: "Response",
     },
-  ]
+  ] : [
+    {
+      icon: Truck,
+      title: "Complete",
+      subtitle: "Fleet",
+    },
+    {
+      icon: Map,
+      title: "National",
+      subtitle: "Reach",
+    },
+    {
+      icon: Users,
+      title: "Corporate",
+      subtitle: "Service",
+    },
+    {
+      icon: Zap,
+      title: "Fast",
+      subtitle: "Response",
+    },
+  ];
 
   return (
     <div className="w-full bg-background border-b shadow-sm relative z-20">

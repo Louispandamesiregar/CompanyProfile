@@ -5,6 +5,7 @@ import { FeaturesBar } from "@/components/FeaturesBar"
 import { ServicesSection } from "@/components/ServicesSection"
 import { FleetSection } from "@/components/FleetSection"
 import { SisterCompaniesSection } from "@/components/SisterCompaniesSection"
+import { ContactSection } from "@/components/ContactSection"
 import { Footer } from "@/components/Footer"
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <ServicesSection />
         <FleetSection />
         <SisterCompaniesSection />
+        <ContactSection />
       </main>
       <Footer />
     </>

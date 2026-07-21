@@ -106,7 +106,7 @@ export function FleetSection() {
               <div className="flex-1 flex flex-col lg:flex-row items-center gap-8 relative z-10">
                 {/* 3D Image */}
                 <div className="w-full lg:w-1/2 flex justify-center relative min-h-[250px]">
-                  <div className="absolute inset-0 bg-teal-500/20 blur-[100px] rounded-full" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(20,184,166,0.15)_0%,transparent_70%)] rounded-full" />
                   <div className="relative w-full aspect-[4/3] max-w-[400px]">
                     <Image
                       key={activeFleet.id}

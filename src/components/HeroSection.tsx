@@ -16,10 +16,10 @@ import {
 } from "@/components/ui/carousel"
 
 export function HeroSection() {
-  const { content } = useLanguage()
+  const { content, language } = useLanguage()
   const { heroSlides } = content.companyInfo
   const { badges } = content
-  const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: true }))
+  const [plugin] = React.useState(() => Autoplay({ delay: 5000, stopOnInteraction: true }))
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
@@ -35,7 +35,7 @@ export function HeroSection() {
 
   return (
     <section className="w-full relative bg-background">
-      <Carousel setApi={setApi} plugins={[plugin.current]} className="w-full group" opts={{ loop: true, duration: 40 }}>
+      <Carousel setApi={setApi} plugins={[plugin]} className="w-full group" opts={{ loop: true, duration: 40 }}>
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id}>
@@ -63,7 +63,7 @@ export function HeroSection() {
                         {slide.headline}
                       </h1>
                       <p className="text-primary-foreground/90 text-sm md:text-xl font-medium max-w-lg">
-                        Kami menghadirkan solusi pengadaan ATK, Alat Kesehatan, dan layanan pengiriman barang dengan pelayanan cepat, ramah, dan profesional.
+                        {language === 'id' ? 'Kami menghadirkan solusi pengadaan ATK, Alat Kesehatan, dan layanan pengiriman barang dengan pelayanan cepat, ramah, dan profesional.' : 'We provide procurement solutions for Office Supplies, Medical Equipment, and freight forwarding services with fast, friendly, and professional service.'}
                       </p>
                       <div className="mt-2 flex flex-wrap gap-3">
                         <Link 
@@ -76,7 +76,7 @@ export function HeroSection() {
                           href="#contact"
                           className={buttonVariants({ variant: "outline", size: "default", className: "bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-6 md:px-8 md:h-11" })}
                         >
-                          Hubungi Kami
+                          {language === 'id' ? 'Hubungi Kami' : 'Contact Us'}
                         </Link>
                       </div>
                     </div>
