@@ -53,7 +53,7 @@ export function Navbar() {
 
                   {/* Mega Menu Dropdown */}
                   {link.hasDropdown && activeMenu === link.name && (
-                    <div className="absolute top-full left-0 w-[500px] bg-card text-card-foreground border shadow-xl rounded-b-xl p-6 grid grid-cols-2 gap-6 animate-in slide-in-from-top-2">
+                    <div className="absolute top-full right-0 w-[480px] bg-card text-card-foreground border shadow-xl rounded-b-xl p-6 grid grid-cols-2 gap-6 animate-in slide-in-from-top-2">
                       <div>
                         <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
                         <ul className="space-y-3">
