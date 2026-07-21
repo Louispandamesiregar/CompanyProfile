@@ -168,16 +168,16 @@ export function SisterCompaniesSection() {
                               src={company.image} 
                               alt={company.name} 
                               fill 
-                              className="object-contain p-2 drop-shadow-xl" 
+                              className="object-contain p-2" 
                             />
                           ) : (
-                            <span className="text-3xl font-black text-foreground drop-shadow-md text-center">
+                            <span className="text-3xl font-black text-foreground text-center">
                               {company.name}
                             </span>
                           )}
                         </div>
                         <div className="text-center mt-2 relative z-10 w-full">
-                          <h4 className={`font-extrabold text-xl md:text-2xl transition-colors drop-shadow-sm ${
+                          <h4 className={`font-extrabold text-xl md:text-2xl transition-colors ${
                             isExpanded
                               ? 'text-teal-600 dark:text-teal-300'
                               : 'text-foreground group-hover:text-teal-600 dark:group-hover:text-teal-300'

@@ -114,7 +114,7 @@ export function FleetSection() {
                       alt={activeFleet.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
-                      className="object-contain drop-shadow-2xl animate-in slide-in-from-right-8 fade-in duration-500"
+                      className="object-contain drop-shadow-md animate-in slide-in-from-right-8 fade-in duration-500"
                       priority
                     />
                   </div>

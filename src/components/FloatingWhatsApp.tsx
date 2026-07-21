@@ -44,8 +44,7 @@ export function FloatingWhatsApp() {
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Chat via WhatsApp"
       >
-        {/* Efek Ping (denyut) di belakang tombol */}
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-40"></span>
+
         
         {/* Ikon WhatsApp */}
         <FaWhatsapp className="w-6 h-6 md:w-8 md:h-8 relative z-10 drop-shadow-sm group-hover:rotate-12 transition-transform duration-300" />
