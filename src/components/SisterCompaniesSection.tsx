@@ -222,10 +222,6 @@ export function SisterCompaniesSection() {
                   {/* Top accent gradient */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#35627A] via-teal-500 to-cyan-500" />
                   
-                  {/* Decorative watermark */}
-                  <div className="absolute -top-8 -right-8 text-teal-500/[0.04] pointer-events-none select-none">
-                    <span className="text-[160px] font-black leading-none">{expandedCompany.logoText}</span>
-                  </div>
 
                   <div className="p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center relative z-10">
                     {/* Company Logo / Image */}
