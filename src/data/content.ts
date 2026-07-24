@@ -1,5 +1,11 @@
 import { FaTruck, FaBriefcase, FaStethoscope, FaPrint } from "react-icons/fa";
 
+import blindVanImg from "../../public/fleet/blind-van.webp";
+import cddBoxImg from "../../public/fleet/cdd-box.webp";
+import cdeBoxImg from "../../public/fleet/cde-box.webp";
+import trontonImg from "../../public/fleet/tronton-wingbox.webp";
+
+
 export const contentID = {
   navLinks: [
     { name: "Tentang Kami", href: "#about" },
@@ -14,21 +20,21 @@ export const contentID = {
         headline: "SOLUSI PENGADAAN &\nDISTRIBUSI TERPERCAYA",
         cta: "Layanan Kami",
         link: "#services",
-        image: "/fleet/blind-van.webp"
+        image: blindVanImg
       },
       {
         id: 2,
         headline: "PENGIRIMAN BARANG\nPULAU JAWA",
         cta: "Layanan Kami",
         link: "#services",
-        image: "/fleet/cdd-box.webp"
+        image: cddBoxImg
       },
       {
         id: 3,
         headline: "PENGADAAN ATK &\nALAT KESEHATAN",
         cta: "Layanan Kami",
         link: "#services",
-        image: "/fleet/cde-box.webp"
+        image: cdeBoxImg
       }
     ],
     about: {
@@ -82,7 +88,7 @@ export const contentID = {
         ],
         icon: FaTruck,
         color: "#4285F4",
-        images: ["/fleet/tronton-wingbox.webp", "/fleet/blind-van.webp", "/fleet/cdd-box.webp"]
+        images: [trontonImg, blindVanImg, cddBoxImg]
       },
       {
         id: 2,
@@ -101,7 +107,7 @@ export const contentID = {
         ],
         icon: FaBriefcase,
         color: "#EA4335",
-        images: ["/fleet/cde-box.webp", "/fleet/tronton-wingbox.webp", "/fleet/blind-van.webp"]
+        images: [cdeBoxImg, trontonImg, blindVanImg]
       },
       {
         id: 3,
@@ -120,7 +126,7 @@ export const contentID = {
         ],
         icon: FaStethoscope,
         color: "#34A853",
-        images: ["/fleet/cdd-box.webp", "/fleet/cde-box.webp", "/fleet/tronton-wingbox.webp"]
+        images: [cddBoxImg, cdeBoxImg, trontonImg]
       },
       {
         id: 4,
@@ -139,7 +145,7 @@ export const contentID = {
         ],
         icon: FaPrint,
         color: "#FBBC05",
-        images: ["/fleet/blind-van.webp", "/fleet/cdd-box.webp", "/fleet/cde-box.webp"]
+        images: [blindVanImg, cddBoxImg, cdeBoxImg]
       }
     ]
   },
@@ -154,7 +160,7 @@ export const contentID = {
         fullDesc: "Menyajikan makanan dan minuman berkualitas tinggi, nyaman untuk bersantai.",
         website: "#",
         logoText: "FZ",
-        image: "/fleet/tronton-wingbox.webp"
+        image: trontonImg
       },
       {
         id: 2,
@@ -163,7 +169,7 @@ export const contentID = {
         fullDesc: "Tempat nongkrong santai dengan menu khas mi instan dan minuman segar.",
         website: "#",
         logoText: "WMD",
-        image: "/fleet/blind-van.webp"
+        image: blindVanImg
       },
       {
         id: 3,
@@ -172,7 +178,7 @@ export const contentID = {
         fullDesc: "Menyajikan racikan kopi istimewa secara berkeliling dengan harga bersahabat.",
         website: "#",
         logoText: "KLG",
-        image: "/fleet/cdd-box.webp"
+        image: cddBoxImg
       }
     ]
   },
@@ -203,21 +209,21 @@ export const contentEN = {
         headline: "TRUSTED PROCUREMENT &\nDISTRIBUTION SOLUTION",
         cta: "Our Services",
         link: "#services",
-        image: "/fleet/cde-box.webp"
+        image: cdeBoxImg
       },
       {
         id: 2,
         headline: "FREIGHT FORWARDING\nACROSS JAVA ISLAND",
         cta: "Our Services",
         link: "#services",
-        image: "/fleet/tronton-wingbox.webp"
+        image: trontonImg
       },
       {
         id: 3,
         headline: "MEDICAL & OFFICE\nSUPPLIES PROCUREMENT",
         cta: "Our Services",
         link: "#services",
-        image: "/fleet/blind-van.webp"
+        image: blindVanImg
       }
     ],
     about: {
@@ -271,7 +277,7 @@ export const contentEN = {
         ],
         icon: FaTruck,
         color: "#4285F4",
-        images: ["/fleet/cdd-box.webp", "/fleet/cde-box.webp", "/fleet/tronton-wingbox.webp"]
+        images: [cddBoxImg, cdeBoxImg, trontonImg]
       },
       {
         id: 2,
@@ -290,7 +296,7 @@ export const contentEN = {
         ],
         icon: FaBriefcase,
         color: "#EA4335",
-        images: ["/fleet/blind-van.webp", "/fleet/cdd-box.webp", "/fleet/cde-box.webp"]
+        images: [blindVanImg, cddBoxImg, cdeBoxImg]
       },
       {
         id: 3,
@@ -309,7 +315,7 @@ export const contentEN = {
         ],
         icon: FaStethoscope,
         color: "#34A853",
-        images: ["/fleet/tronton-wingbox.webp", "/fleet/blind-van.webp", "/fleet/cdd-box.webp"]
+        images: [trontonImg, blindVanImg, cddBoxImg]
       },
       {
         id: 4,
@@ -328,7 +334,7 @@ export const contentEN = {
         ],
         icon: FaPrint,
         color: "#FBBC05",
-        images: ["/fleet/cde-box.webp", "/fleet/tronton-wingbox.webp", "/fleet/blind-van.webp"]
+        images: [cdeBoxImg, trontonImg, blindVanImg]
       }
     ]
   },
@@ -343,7 +349,7 @@ export const contentEN = {
         fullDesc: "Serving high quality food and beverages, perfect for relaxing.",
         website: "#",
         logoText: "FZ",
-        image: "/fleet/cdd-box.webp"
+        image: cddBoxImg
       },
       {
         id: 2,
@@ -352,7 +358,7 @@ export const contentEN = {
         fullDesc: "A casual hangout spot with signature instant noodles and refreshing drinks.",
         website: "#",
         logoText: "WMD",
-        image: "/fleet/cde-box.webp"
+        image: cdeBoxImg
       },
       {
         id: 3,
@@ -361,7 +367,7 @@ export const contentEN = {
         fullDesc: "Serving special coffee blends on the go with friendly prices.",
         website: "#",
         logoText: "KLG",
-        image: "/fleet/tronton-wingbox.webp"
+        image: trontonImg
       }
     ]
   },
