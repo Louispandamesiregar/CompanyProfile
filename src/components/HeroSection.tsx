@@ -72,12 +72,6 @@ export function HeroSection() {
                         >
                           {slide.cta}
                         </Link>
-                        <Link 
-                          href="#contact"
-                          className={buttonVariants({ variant: "outline", size: "default", className: "bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-6 md:px-8 md:h-11" })}
-                        >
-                          {language === 'id' ? 'Hubungi Kami' : 'Contact Us'}
-                        </Link>
                       </div>
                     </div>
                   </div>

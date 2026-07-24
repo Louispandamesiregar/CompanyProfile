@@ -47,7 +47,6 @@ export function Footer() {
             <ul className="space-y-4">
               <li><Link href="#about" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Tentang Kami' : 'About Us'}</Link></li>
               <li><Link href="#services" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}</Link></li>
-              <li><Link href="#contact" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Hubungi Kami' : 'Contact Us'}</Link></li>
             </ul>
           </div>
 
