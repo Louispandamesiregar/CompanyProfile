@@ -157,7 +157,8 @@ export const contentID = {
         id: 1,
         name: "Faenzone",
         shortDesc: "F&B / Kuliner",
-        fullDesc: "Menyajikan makanan dan minuman berkualitas tinggi, nyaman untuk bersantai.",
+        fullDesc: "Faenzone hadir sebagai destinasi F&B premium yang menyajikan perpaduan kuliner modern dan tradisional. Dengan komitmen pada bahan baku berkualitas tinggi dan suasana restoran yang nyaman, Faenzone menjadi pilihan utama untuk bersantai bersama keluarga, rapat santai dengan klien, maupun acara komunitas.",
+        address: "Jl. Raya F&B No. 12, Jakarta Timur, 13410",
         website: "#",
         logoText: "FZ",
         image: trontonImg
@@ -166,7 +167,8 @@ export const contentID = {
         id: 2,
         name: "Warmindo",
         shortDesc: "Warkop & Indomie",
-        fullDesc: "Tempat nongkrong santai dengan menu khas mi instan dan minuman segar.",
+        fullDesc: "Warmindo Nawasena menawarkan pengalaman nongkrong kekinian dengan menu andalan mi instan Nusantara yang diracik khusus dengan bumbu rahasia. Mengusung konsep warkop modern yang bersih, fasilitas Wi-Fi cepat, dan harga yang sangat bersahabat, menjadikannya spot favorit berkumpulnya anak muda dan pekerja kantoran.",
+        address: "Jl. Santai Blok A No. 5, Jakarta Selatan, 12240",
         website: "#",
         logoText: "WMD",
         image: blindVanImg
@@ -175,7 +177,8 @@ export const contentID = {
         id: 3,
         name: "Koling",
         shortDesc: "Kopi Keliling",
-        fullDesc: "Menyajikan racikan kopi istimewa secara berkeliling dengan harga bersahabat.",
+        fullDesc: "Koling (Kopi Keliling) adalah unit bisnis inovatif yang mendekatkan cita rasa kopi Nusantara langsung ke para pelanggan. Menggunakan armada modifikasi khusus, Koling menyajikan berbagai racikan kopi espresso-based dan minuman kekinian dengan mobilitas tinggi di berbagai titik strategis perkotaan dan event-event lokal.",
+        address: "Mobile Fleet - Beroperasi di area Jabodetabek",
         website: "#",
         logoText: "KLG",
         image: cddBoxImg
@@ -346,7 +349,8 @@ export const contentEN = {
         id: 1,
         name: "Faenzone",
         shortDesc: "F&B / Culinary",
-        fullDesc: "Serving high quality food and beverages, perfect for relaxing.",
+        fullDesc: "Faenzone presents a premium F&B destination offering a blend of modern and traditional culinary delights. With a commitment to high-quality ingredients and a cozy restaurant atmosphere, Faenzone is the top choice for relaxing with family, casual meetings with clients, or community events.",
+        address: "Jl. Raya F&B No. 12, East Jakarta, 13410",
         website: "#",
         logoText: "FZ",
         image: cddBoxImg
@@ -355,7 +359,8 @@ export const contentEN = {
         id: 2,
         name: "Warmindo",
         shortDesc: "Noodle & Coffee Shop",
-        fullDesc: "A casual hangout spot with signature instant noodles and refreshing drinks.",
+        fullDesc: "Warmindo Nawasena offers a modern hangout experience with our signature Indonesian instant noodles mixed with secret spices. Featuring a clean modern coffee shop concept, fast Wi-Fi, and very affordable prices, it has become a favorite spot for youth and office workers to gather.",
+        address: "Jl. Santai Blok A No. 5, South Jakarta, 12240",
         website: "#",
         logoText: "WMD",
         image: cdeBoxImg
@@ -364,7 +369,8 @@ export const contentEN = {
         id: 3,
         name: "Koling",
         shortDesc: "Mobile Coffee",
-        fullDesc: "Serving special coffee blends on the go with friendly prices.",
+        fullDesc: "Koling (Mobile Coffee) is an innovative business unit bringing the taste of archipelago coffee directly to customers. Using specially modified fleets, Koling serves various espresso-based blends and modern beverages with high mobility across strategic urban spots and local events.",
+        address: "Mobile Fleet - Operating in Greater Jakarta",
         website: "#",
         logoText: "KLG",
         image: trontonImg

@@ -4,7 +4,7 @@ import * as React from "react"
 import { useLanguage } from "@/context/LanguageContext"
 import Image from "next/image"
 import Autoplay from "embla-carousel-autoplay"
-import { X } from "lucide-react"
+import { X, MapPin } from "lucide-react"
 import {
   Carousel,
   CarouselContent,
@@ -250,9 +250,15 @@ export function SisterCompaniesSection() {
                           {expandedCompany.shortDesc}
                         </span>
                       </div>
-                      <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-medium">
+                      <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-medium mb-4">
                         {expandedCompany.fullDesc}
                       </p>
+                      {expandedCompany.address && (
+                        <div className="flex items-start gap-2 justify-center md:justify-start text-sm text-muted-foreground/80 font-medium">
+                          <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-teal-600" />
+                          <span>{expandedCompany.address}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
 
