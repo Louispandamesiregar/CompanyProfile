@@ -18,10 +18,10 @@ export function Footer() {
           {/* Column 1: Company Info */}
           <div className="space-y-6">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 rounded-bl-lg rounded-tr-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-                <span className="text-white dark:text-[#1C323E] text-sm font-black">NJ</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-bl-lg rounded-tr-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
+                <span className="text-white#1C323E] text-sm font-black">NJ</span>
               </div>
-              <span className="bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent drop-shadow-sm">
+              <span className="bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent drop-shadow-sm">
                 {companyInfo.logoText}
               </span>
             </Link>

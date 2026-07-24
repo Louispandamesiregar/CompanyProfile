@@ -54,13 +54,13 @@ export function FleetSection() {
   const { language } = useLanguage()
 
   return (
-    <section className="py-24 bg-white dark:bg-background relative overflow-hidden border-t border-border/50">
+    <section className="py-24 bg-white relative overflow-hidden border-t border-border/50">
       {/* Background Ornaments */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-slate-50 to-transparent dark:from-white/[0.02] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-slate-50 to-transparent pointer-events-none" />
       
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-          <h3 className="text-sm font-bold tracking-[0.3em] text-[#35627A] dark:text-teal-400 uppercase drop-shadow-sm">
+          <h3 className="text-sm font-bold tracking-[0.3em] text-[#35627A] uppercase drop-shadow-sm">
             {language === 'id' ? 'Kapasitas Armada' : 'Fleet Capacity'}
           </h3>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight text-foreground drop-shadow-sm">
@@ -101,7 +101,7 @@ export function FleetSection() {
 
           {/* Right Column: Display */}
           <div className="lg:col-span-8">
-            <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-white/5 dark:to-transparent border border-border/50 rounded-3xl p-8 md:p-12 h-full flex flex-col relative overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-br from-slate-50 to-slate-100 border border-border/50 rounded-3xl p-8 md:p-12 h-full flex flex-col relative overflow-hidden shadow-2xl">
               
               <div className="flex-1 flex flex-col lg:flex-row items-center gap-8 relative z-10">
                 {/* 3D Image */}
@@ -128,16 +128,16 @@ export function FleetSection() {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-in slide-in-from-bottom-4 fade-in duration-500 delay-200">
-                    <div className="bg-white dark:bg-white/5 p-4 rounded-2xl border border-border/50 shadow-sm">
-                      <div className="flex items-center gap-2 text-teal-600 dark:text-teal-400 mb-1">
+                    <div className="bg-white p-4 rounded-2xl border border-border/50 shadow-sm">
+                      <div className="flex items-center gap-2 text-teal-600 mb-1">
                         <Package className="w-4 h-4" />
                         <span className="text-xs font-bold uppercase tracking-wider">Kapasitas</span>
                       </div>
                       <div className="font-bold text-foreground">{activeFleet.capacity}</div>
                     </div>
                     
-                    <div className="bg-white dark:bg-white/5 p-4 rounded-2xl border border-border/50 shadow-sm">
-                      <div className="flex items-center gap-2 text-[#35627A] dark:text-cyan-400 mb-1">
+                    <div className="bg-white p-4 rounded-2xl border border-border/50 shadow-sm">
+                      <div className="flex items-center gap-2 text-[#35627A] mb-1">
                         <Maximize className="w-4 h-4" />
                         <span className="text-xs font-bold uppercase tracking-wider">Dimensi</span>
                       </div>

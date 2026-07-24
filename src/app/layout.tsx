@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+
 import { LanguageProvider } from "@/context/LanguageContext";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
@@ -20,19 +20,12 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <body className={`${outfit.className} antialiased min-h-screen flex flex-col overscroll-none`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
           <LanguageProvider>
             <div className="flex flex-col min-h-screen overflow-x-hidden w-full max-w-[100vw]">
               {children}
             </div>
             <FloatingWhatsApp />
           </LanguageProvider>
-        </ThemeProvider>
       </body>
     </html>
   );

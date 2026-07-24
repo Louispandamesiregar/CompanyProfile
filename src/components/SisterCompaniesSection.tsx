@@ -113,15 +113,15 @@ export function SisterCompaniesSection() {
   }, [api, onScroll])
 
   return (
-    <section id="group" className="py-24 md:py-32 bg-slate-50 dark:bg-[#0a1116] scroll-m-20 overflow-hidden relative border-y border-border/50">
+    <section id="group" className="py-24 md:py-32 bg-slate-50#0a1116] scroll-m-20 overflow-hidden relative border-y border-border/50">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
-      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(20,184,166,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
-      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(6,182,212,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply dark:mix-blend-screen pointer-events-none -translate-y-1/2" />
+      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(20,184,166,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
+      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(6,182,212,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
       
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-          <h3 className="text-sm font-bold tracking-[0.3em] text-[#35627A] dark:text-teal-400 uppercase drop-shadow-sm">
+          <h3 className="text-sm font-bold tracking-[0.3em] text-[#35627A] uppercase drop-shadow-sm">
             {content.sisterCompanies.subtitle}
           </h3>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground drop-shadow-sm">
@@ -156,7 +156,7 @@ export function SisterCompaniesSection() {
                         {/* Removed backdrop-blur-xl because it causes massive GPU lag during scroll */}
                         <button
                           onClick={() => handleCardClick(company.id)}
-                          className={`flex flex-col items-center justify-center p-6 h-full w-full gap-5 group cursor-pointer bg-white dark:bg-slate-900 rounded-3xl shadow-xl border transition-all duration-300 text-left ${
+                          className={`flex flex-col items-center justify-center p-6 h-full w-full gap-5 group cursor-pointer bg-white rounded-3xl shadow-xl border transition-all duration-300 text-left ${
                             isExpanded
                               ? 'border-teal-500 shadow-[0_20px_50px_rgba(20,184,166,0.25)] ring-2 ring-teal-500/30'
                               : 'border-border/50 hover:border-teal-400/50 hover:shadow-[0_20px_50px_rgba(20,184,166,0.15)]'
@@ -179,8 +179,8 @@ export function SisterCompaniesSection() {
                         <div className="text-center mt-2 relative z-10 w-full">
                           <h4 className={`font-extrabold text-xl md:text-2xl transition-colors ${
                             isExpanded
-                              ? 'text-teal-600 dark:text-teal-300'
-                              : 'text-foreground group-hover:text-teal-600 dark:group-hover:text-teal-300'
+                              ? 'text-teal-600'
+                              : 'text-foreground group-hover:text-teal-600:text-teal-300'
                           }`}>{company.name}</h4>
                           <p className="text-sm md:text-base text-muted-foreground font-semibold mt-2 tracking-wide uppercase">
                             {company.shortDesc}
@@ -189,7 +189,7 @@ export function SisterCompaniesSection() {
                         {/* Expand indicator */}
                         <div className={`flex items-center gap-1.5 text-xs font-bold tracking-wider uppercase transition-all duration-300 ${
                           isExpanded
-                            ? 'text-teal-600 dark:text-teal-400'
+                            ? 'text-teal-600'
                             : 'text-muted-foreground/60 group-hover:text-teal-500'
                         }`}>
                           <span>{isExpanded ? (language === 'id' ? 'Tutup' : 'Close') : (language === 'id' ? 'Lihat Detail' : 'View Detail')}</span>
@@ -218,14 +218,14 @@ export function SisterCompaniesSection() {
           >
             {expandedCompany && (
               <div className="relative w-full max-w-4xl mx-auto animate-in fade-in slide-in-from-top-4 duration-500">
-                <div className="relative bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-teal-500/30 overflow-hidden">
+                <div className="relative bg-white rounded-3xl shadow-2xl border border-teal-500/30 overflow-hidden">
                   {/* Top accent gradient */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#35627A] via-teal-500 to-cyan-500" />
                   
 
                   <div className="p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center relative z-10">
                     {/* Company Logo / Image */}
-                    <div className="w-32 h-32 md:w-44 md:h-44 relative shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-800/50 rounded-2xl border border-border/50 shadow-lg flex items-center justify-center p-4">
+                    <div className="w-32 h-32 md:w-44 md:h-44 relative shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl border border-border/50 shadow-lg flex items-center justify-center p-4">
                       {expandedCompany.image ? (
                         <Image
                           src={expandedCompany.image}
@@ -246,7 +246,7 @@ export function SisterCompaniesSection() {
                         <h3 className="text-2xl md:text-3xl font-black text-foreground tracking-tight">
                           {expandedCompany.name}
                         </h3>
-                        <span className="inline-flex items-center self-center md:self-auto px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20">
+                        <span className="inline-flex items-center self-center md:self-auto px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-500/10 text-teal-600 border border-teal-500/20">
                           {expandedCompany.shortDesc}
                         </span>
                       </div>
@@ -259,7 +259,7 @@ export function SisterCompaniesSection() {
                   {/* Close button */}
                   <button
                     onClick={() => setExpandedCompanyId(null)}
-                    className="absolute top-4 right-4 p-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-red-50 dark:hover:bg-red-950/50 text-muted-foreground hover:text-red-500 transition-all duration-200 shadow-sm border border-border/50 hover:border-red-300/50 z-20"
+                    className="absolute top-4 right-4 p-2 rounded-xl bg-slate-100 hover:bg-red-50:bg-red-950/50 text-muted-foreground hover:text-red-500 transition-all duration-200 shadow-sm border border-border/50 hover:border-red-300/50 z-20"
                     aria-label={language === 'id' ? 'Tutup detail' : 'Close detail'}
                   >
                     <X className="w-5 h-5" />

@@ -9,7 +9,7 @@ export function AboutSection() {
   const { about, misi } = content.companyInfo
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-slate-50 dark:bg-[#0a1116] scroll-m-16 relative border-y border-border/50">
+    <section id="about" className="py-24 md:py-32 bg-slate-50#0a1116] scroll-m-16 relative border-y border-border/50">
       {/* Decorative dots removed for performance */}
       
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
@@ -38,20 +38,20 @@ export function AboutSection() {
           {/* Misi Kami (Bento Grid - Right) */}
           <div className="lg:col-span-7 space-y-6 lg:pl-8 lg:py-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <div className="flex items-center space-x-6 mb-8">
-              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-[#35627A] dark:text-teal-400">
+              <h2 className="text-3xl md:text-4xl font-black tracking-tight text-[#35627A]">
                 {misi.title}
               </h2>
-              <div className="flex-1 h-px bg-border/80 dark:bg-white/10" />
+              <div className="flex-1 h-px bg-border/80" />
             </div>
             
             <div className="grid sm:grid-cols-2 gap-6">
               {misi.items.map((item, index) => (
                 <div 
                   key={index} 
-                  className="bg-white dark:bg-white/5 rounded-2xl p-6 shadow-lg border border-border/50 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(20,184,166,0.15)] hover:border-teal-400/50 transition-all duration-300 group"
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-border/50 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(20,184,166,0.15)] hover:border-teal-400/50 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-teal-50 dark:bg-teal-900/30 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-teal-100 dark:group-hover:bg-teal-900/50 transition-transform duration-300">
-                    <Target className="w-6 h-6 text-[#35627A] dark:text-teal-400" />
+                  <div className="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-teal-100:bg-teal-900/50 transition-transform duration-300">
+                    <Target className="w-6 h-6 text-[#35627A]" />
                   </div>
                   <p className="text-muted-foreground font-medium leading-relaxed group-hover:text-foreground transition-colors">
                     {item}

@@ -23,15 +23,15 @@ export function FloatingWhatsApp() {
       
       {/* Balon Chat (Tooltip) - Disembunyikan di Mobile agar tidak memakan layar */}
       <div 
-        className={`hidden md:block mr-4 bg-white dark:bg-card text-foreground px-4 py-3 rounded-2xl shadow-xl border border-border/50 text-sm font-medium transition-all duration-300 origin-right ${
+        className={`hidden md:block mr-4 bg-white text-foreground px-4 py-3 rounded-2xl shadow-xl border border-border/50 text-sm font-medium transition-all duration-300 origin-right ${
           isHovered ? "opacity-100 scale-100 translate-x-0" : "opacity-0 scale-95 translate-x-4 pointer-events-none"
         }`}
       >
         <span className="block mb-0.5">Butuh bantuan?</span>
-        <span className="text-teal-600 dark:text-teal-400 font-bold">Silakan chat kami di sini</span>
+        <span className="text-teal-600 font-bold">Silakan chat kami di sini</span>
         
         {/* Segitiga panah menunjuk ke tombol */}
-        <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 bg-white dark:bg-card border-t border-r border-border/50 rotate-45 rounded-sm"></div>
+        <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 bg-white border-t border-r border-border/50 rotate-45 rounded-sm"></div>
       </div>
 
       {/* Tombol WhatsApp Utama */}

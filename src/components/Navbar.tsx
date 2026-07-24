@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { Globe, Menu, ChevronDown } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
-import { ThemeToggle } from "./ThemeToggle"
+
 import { Button } from "./ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 
@@ -23,10 +23,10 @@ export function Navbar() {
         <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 rounded-bl-lg rounded-tr-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-                <span className="text-white dark:text-[#1C323E] text-sm font-black">NJ</span>
+              <div className="w-8 h-8 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-bl-lg rounded-tr-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
+                <span className="text-white#1C323E] text-sm font-black">NJ</span>
               </div>
-              <span className="bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent drop-shadow-sm">
+              <span className="bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent drop-shadow-sm">
                 {companyInfo.logoText}
               </span>
             </Link>
@@ -45,7 +45,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-teal-600 dark:hover:text-teal-400 rounded-md"
+                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-teal-600:text-teal-400 rounded-md"
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}
@@ -55,7 +55,7 @@ export function Navbar() {
                   {link.hasDropdown && activeMenu === link.name && (
                     <div className="absolute top-full right-0 w-[480px] bg-card text-card-foreground border shadow-xl rounded-b-xl p-6 grid grid-cols-2 gap-6 animate-in slide-in-from-top-2">
                       <div>
-                        <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
+                        <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
                         <ul className="space-y-3">
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Alat Tulis Kantor (ATK)' : 'Office Supplies (ATK)'}</Link></li>
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Alat Kesehatan (Alkes)' : 'Medical Equipment'}</Link></li>
@@ -63,7 +63,7 @@ export function Navbar() {
                         </ul>
                       </div>
                       <div>
-                        <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 dark:from-teal-400 dark:to-cyan-200 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Distribusi' : 'Distribution'}</h4>
+                        <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Distribusi' : 'Distribution'}</h4>
                         <ul className="space-y-3">
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Pengiriman Barang (Box)' : 'Freight Forwarding (Box)'}</Link></li>
                           <li><Link href="#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Jalur Darat (Jawa)' : 'Land Route (Java)'}</Link></li>
@@ -80,14 +80,11 @@ export function Navbar() {
             <div className="flex items-center gap-2 md:gap-4">
             <div 
               onClick={toggleLanguage}
-              className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity text-foreground/70 hover:text-teal-600 dark:hover:text-teal-400"
+              className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity text-foreground/70 hover:text-teal-600:text-teal-400"
             >
               <Globe className="w-4 h-4" />
               <span className="text-sm font-semibold">{language.toUpperCase()}</span>
             </div>
-
-            <ThemeToggle />
-
 
             {/* Mobile Nav Toggle */}
             <div className="flex items-center gap-2 lg:hidden">
@@ -103,7 +100,7 @@ export function Navbar() {
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
-                        className="text-lg font-semibold text-foreground/80 hover:text-teal-600 dark:hover:text-teal-400 border-b pb-2 transition-colors"
+                        className="text-lg font-semibold text-foreground/80 hover:text-teal-600:text-teal-400 border-b pb-2 transition-colors"
                       >
                         {link.name}
                       </Link>
@@ -114,8 +111,8 @@ export function Navbar() {
                     <div className="flex items-center justify-between text-sm text-muted-foreground mt-4">
                       <span>Language</span>
                       <div className="flex gap-2 font-semibold cursor-pointer" onClick={toggleLanguage}>
-                        <span className={language === 'id' ? 'text-teal-600 dark:text-teal-400' : 'hover:text-teal-600 dark:hover:text-teal-400 transition-colors'}>ID</span> | 
-                        <span className={language === 'en' ? 'text-teal-600 dark:text-teal-400' : 'hover:text-teal-600 dark:hover:text-teal-400 transition-colors'}>EN</span>
+                        <span className={language === 'id' ? 'text-teal-600' : 'hover:text-teal-600:text-teal-400 transition-colors'}>ID</span> | 
+                        <span className={language === 'en' ? 'text-teal-600' : 'hover:text-teal-600:text-teal-400 transition-colors'}>EN</span>
                       </div>
                     </div>
                   </div>
