@@ -1,9 +1,9 @@
 import { FaTruck, FaBriefcase, FaStethoscope, FaPrint } from "react-icons/fa";
 
-import blindVanImg from "../../public/fleet/blind-van.webp";
-import cddBoxImg from "../../public/fleet/cdd-box.webp";
-import cdeBoxImg from "../../public/fleet/cde-box.webp";
-import trontonImg from "../../public/fleet/tronton-wingbox.webp";
+import blindVanImg from "../assets/fleet/blind-van.webp";
+import cddBoxImg from "../assets/fleet/cdd-box.webp";
+import cdeBoxImg from "../assets/fleet/cde-box.webp";
+import trontonImg from "../assets/fleet/tronton-wingbox.webp";
 
 
 export const contentID = {

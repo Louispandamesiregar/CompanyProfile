@@ -8,6 +8,8 @@ import { ArrowLeft, CheckCircle2 } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
 import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
+import cddBoxImg from "@/assets/fleet/cdd-box.webp";
+import cdeBoxImg from "@/assets/fleet/cde-box.webp";
 import { buttonVariants } from "@/components/ui/button"
 
 export function ServiceDetailClient({ id }: { id: string }) {
