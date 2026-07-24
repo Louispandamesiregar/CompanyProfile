@@ -112,12 +112,14 @@ export function ServiceDetailClient({ id }: { id: string }) {
                       ? 'Tertarik dengan layanan ini? Hubungi tim kami sekarang untuk penawaran terbaik.' 
                       : 'Interested in this service? Contact our team now for the best offer.'}
                   </p>
-                  <Link 
-                    href="/#contact" 
+                  <a 
+                    href="https://wa.me/6281388398303" 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={buttonVariants({ variant: "default", size: "lg", className: "w-full font-bold shadow-lg" })}
                   >
-                    {language === 'id' ? 'Hubungi Kami' : 'Contact Us'}
-                  </Link>
+                    {language === 'id' ? 'Hubungi Kami via WhatsApp' : 'Contact Us via WhatsApp'}
+                  </a>
                 </div>
               </div>
             </div>
