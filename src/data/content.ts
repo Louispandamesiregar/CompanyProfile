@@ -4,7 +4,6 @@ export const contentID = {
   navLinks: [
     { name: "Tentang Kami", href: "#about" },
     { name: "Layanan", href: "#services", hasDropdown: true },
-    { name: "Kontak", href: "#contact" },
   ],
   companyInfo: {
     name: "PT. Nawasena Jaya Group",
@@ -20,15 +19,15 @@ export const contentID = {
       {
         id: 2,
         headline: "PENGIRIMAN BARANG\nPULAU JAWA",
-        cta: "Hubungi Kami",
-        link: "#contact",
+        cta: "Layanan Kami",
+        link: "#services",
         image: "./demo.jpg"
       },
       {
         id: 3,
         headline: "PENGADAAN ATK &\nALAT KESEHATAN",
-        cta: "Tentang Kami",
-        link: "#about",
+        cta: "Layanan Kami",
+        link: "#services",
         image: "./demo.jpg"
       }
     ],
@@ -194,7 +193,6 @@ export const contentEN = {
   navLinks: [
     { name: "About Us", href: "#about" },
     { name: "Services", href: "#services", hasDropdown: true },
-    { name: "Contact", href: "#contact" },
   ],
   companyInfo: {
     name: "PT. Nawasena Jaya Group",
@@ -210,15 +208,15 @@ export const contentEN = {
       {
         id: 2,
         headline: "FREIGHT FORWARDING\nACROSS JAVA ISLAND",
-        cta: "Contact Us",
-        link: "#contact",
+        cta: "Our Services",
+        link: "#services",
         image: "./demo.jpg"
       },
       {
         id: 3,
         headline: "MEDICAL & OFFICE\nSUPPLIES PROCUREMENT",
-        cta: "About Us",
-        link: "#about",
+        cta: "Our Services",
+        link: "#services",
         image: "./demo.jpg"
       }
     ],
