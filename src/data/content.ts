@@ -6,6 +6,23 @@ import cdeBoxImg from "../assets/fleet/cde-box.webp";
 import trontonImg from "../assets/fleet/tronton-wingbox.webp";
 
 
+const clientsData = {
+  titleID: "Klien & Mitra Kami",
+  titleEN: "Our Clients & Partners",
+  subtitleID: "Mereka yang mempercayakan solusi pengadaan dan logistik kepada kami",
+  subtitleEN: "Those who trust our procurement and logistics solutions",
+  items: [
+    { id: 1, name: "PT Pertamina", logoText: "PTM", color: "#E32227", serviceIds: [1] },
+    { id: 2, name: "Kementerian Kesehatan", logoText: "KEMKES", color: "#00A859", serviceIds: [3] },
+    { id: 3, name: "RS Hermina", logoText: "RSH", color: "#005BAA", serviceIds: [3] },
+    { id: 4, name: "PT Telkom Indonesia", logoText: "TLKM", color: "#EE3124", serviceIds: [1, 2, 4] },
+    { id: 5, name: "Bank Mandiri", logoText: "MNDR", color: "#0F4C81", serviceIds: [2, 4] },
+    { id: 6, name: "Dinas Pendidikan", logoText: "DIKNAS", color: "#1D4ED8", serviceIds: [2, 4] },
+    { id: 7, name: "PT Unilever", logoText: "UNVR", color: "#001E60", serviceIds: [1] },
+    { id: 8, name: "RS Mitra Keluarga", logoText: "MIKA", color: "#0693E3", serviceIds: [3] },
+  ]
+};
+
 export const contentID = {
   navLinks: [
     { name: "Tentang Kami", href: "#about" },
@@ -184,6 +201,11 @@ export const contentID = {
         image: cddBoxImg
       }
     ]
+  },
+  clients: {
+    title: clientsData.titleID,
+    subtitle: clientsData.subtitleID,
+    items: clientsData.items
   },
   footer: {
     description: "Partner pengadaan dan distribusi terpercaya Anda untuk kebutuhan bisnis, instansi, dan sekolah yang lebih efisien.",
@@ -376,6 +398,11 @@ export const contentEN = {
         image: trontonImg
       }
     ]
+  },
+  clients: {
+    title: clientsData.titleEN,
+    subtitle: clientsData.subtitleEN,
+    items: clientsData.items
   },
   footer: {
     description: "Your trusted procurement and distribution partner for more efficient business, institutional, and school needs.",
