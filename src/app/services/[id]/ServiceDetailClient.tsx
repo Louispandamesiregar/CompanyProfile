@@ -127,41 +127,42 @@ export function ServiceDetailClient({ id }: { id: string }) {
               </div>
             </div>
             
-            {/* Trusted By Section */}
-            {serviceClients.length > 0 && (
-              <div className="mt-16 bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-border/50 shadow-sm">
-                <div className="text-center mb-8">
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                    {language === 'id' ? 'Dipercaya Oleh' : 'Trusted By'}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    {language === 'id' 
-                      ? 'Mitra yang telah bekerjasama dengan kami untuk layanan ini' 
-                      : 'Partners who have collaborated with us for this service'}
-                  </p>
-                </div>
-                
-                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                  {serviceClients.map((client: any) => (
-                    <div 
-                      key={client.id}
-                      className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 group w-[140px] md:w-[180px] shrink-0"
-                    >
-                      <div 
-                        className="w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white shadow-sm mb-3 group-hover:scale-110 transition-transform duration-300"
-                        style={{ backgroundColor: client.color }}
-                      >
-                        <span className="font-black text-lg md:text-xl tracking-tighter drop-shadow-sm">{client.logoText}</span>
-                      </div>
-                      <span className="text-xs md:text-sm font-semibold text-center text-foreground/80 leading-tight">
-                        {client.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
+
+          {/* Trusted By Section */}
+          {serviceClients.length > 0 && (
+            <div className="mt-16 bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-border/50 shadow-sm">
+              <div className="text-center mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-foreground">
+                  {language === 'id' ? 'Dipercaya Oleh' : 'Trusted By'}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-2">
+                  {language === 'id' 
+                    ? 'Mitra yang telah bekerjasama dengan kami untuk layanan ini' 
+                    : 'Partners who have collaborated with us for this service'}
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                {serviceClients.map((client: any) => (
+                  <div 
+                    key={client.id}
+                    className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 group w-[140px] md:w-[180px] shrink-0"
+                  >
+                    <div 
+                      className="w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white shadow-sm mb-3 group-hover:scale-110 transition-transform duration-300"
+                      style={{ backgroundColor: client.color }}
+                    >
+                      <span className="font-black text-lg md:text-xl tracking-tighter drop-shadow-sm">{client.logoText}</span>
+                    </div>
+                    <span className="text-xs md:text-sm font-semibold text-center text-foreground/80 leading-tight">
+                      {client.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
       </main>
       <Footer />
