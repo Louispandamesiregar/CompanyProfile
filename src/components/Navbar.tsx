@@ -23,8 +23,12 @@ export function Navbar() {
         <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-bl-lg rounded-tr-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
-                <span className="text-white#1C323E] text-sm font-black">NJ</span>
+              <div className="relative w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#35627A]/40 to-teal-500/40 blur-md rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.15)] group-hover:shadow-[0_4px_25px_rgba(20,184,166,0.3)] transition-all duration-500 rotate-3 group-hover:rotate-6" />
+                <div className="absolute inset-[2px] bg-gradient-to-tl from-[#2A4D60] to-teal-500 rounded-lg -rotate-3 group-hover:-rotate-6 transition-transform duration-500 flex items-center justify-center border border-white/10">
+                  <span className="text-white text-base font-black tracking-tighter drop-shadow-md relative z-10">NJ</span>
+                </div>
               </div>
               <span className="bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent drop-shadow-sm">
                 {companyInfo.logoText}
