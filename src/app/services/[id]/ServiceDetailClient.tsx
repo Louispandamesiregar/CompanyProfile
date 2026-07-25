@@ -64,7 +64,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
         </section>
 
         {/* Content Section */}
-        <section className="py-16 md:py-24 container mx-auto px-6 md:px-12 max-w-5xl">
+        <section className="py-16 md:py-24 w-full container mx-auto px-6 md:px-12 max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             
             {/* Description */}
@@ -126,44 +126,45 @@ export function ServiceDetailClient({ id }: { id: string }) {
                 </div>
               </div>
             </div>
-            
-          </div>
+            </div>
+        </section>
 
-          {/* Trusted By Section */}
-          {serviceClients.length > 0 && (
-            <div className="mt-16 bg-white/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-border/50 shadow-sm">
-              <div className="text-center mb-8">
-                <h3 className="text-xl md:text-2xl font-bold text-foreground">
+        {/* Trusted By Section - Redesigned */}
+        {serviceClients.length > 0 && (
+          <section className="w-full bg-slate-50 border-y border-slate-200 py-16 md:py-24">
+            <div className="container mx-auto px-6 max-w-5xl">
+              <div className="text-center mb-10">
+                <h3 className="text-2xl md:text-3xl font-black text-foreground tracking-tight">
                   {language === 'id' ? 'Dipercaya Oleh' : 'Trusted By'}
                 </h3>
-                <p className="text-sm text-muted-foreground mt-2">
+                <p className="text-sm md:text-base text-muted-foreground mt-3 font-medium">
                   {language === 'id' 
-                    ? 'Mitra yang telah bekerjasama dengan kami untuk layanan ini' 
-                    : 'Partners who have collaborated with us for this service'}
+                    ? 'Mitra unggulan yang telah mengandalkan layanan kami' 
+                    : 'Premier partners who rely on our services'}
                 </p>
               </div>
               
-              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <div className="flex flex-wrap justify-center gap-6 md:gap-10">
                 {serviceClients.map((client: any) => (
                   <div 
                     key={client.id}
-                    className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 group w-[140px] md:w-[180px] shrink-0"
+                    className="flex flex-col items-center justify-center p-6 md:p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group w-[150px] md:w-[200px]"
                   >
                     <div 
-                      className="w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white shadow-sm mb-3 group-hover:scale-110 transition-transform duration-300"
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center text-white shadow-inner mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"
                       style={{ backgroundColor: client.color }}
                     >
-                      <span className="font-black text-lg md:text-xl tracking-tighter drop-shadow-sm">{client.logoText}</span>
+                      <span className="font-black text-xl md:text-2xl tracking-tighter drop-shadow-md">{client.logoText}</span>
                     </div>
-                    <span className="text-xs md:text-sm font-semibold text-center text-foreground/80 leading-tight">
+                    <span className="text-sm md:text-base font-bold text-center text-foreground/80 leading-tight">
                       {client.name}
                     </span>
                   </div>
                 ))}
               </div>
             </div>
-          )}
-        </section>
+          </section>
+        )}
       </main>
       <Footer />
     </>
