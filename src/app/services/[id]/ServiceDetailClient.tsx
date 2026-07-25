@@ -141,11 +141,11 @@ export function ServiceDetailClient({ id }: { id: string }) {
                   </p>
                 </div>
                 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                   {serviceClients.map((client: any) => (
                     <div 
                       key={client.id}
-                      className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 group"
+                      className="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 group w-[140px] md:w-[180px] shrink-0"
                     >
                       <div 
                         className="w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center text-white shadow-sm mb-3 group-hover:scale-110 transition-transform duration-300"
