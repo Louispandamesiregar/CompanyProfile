@@ -213,7 +213,7 @@ export function SisterCompaniesSection() {
           <div
             ref={detailPanelRef}
             className={`transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden ${
-              expandedCompany ? 'max-h-[600px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
+              expandedCompany ? 'max-h-[2000px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
             }`}
           >
             {expandedCompany && (
