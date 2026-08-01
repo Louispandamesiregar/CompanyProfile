@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext"
 import { Truck, Package, Maximize, ArrowRight, CheckCircle2 } from "lucide-react"
 import blindVanImg from "@/assets/fleet/blind-van.webp"
 import cdeBoxImg from "@/assets/fleet/cde-box.webp"
-import cddBoxImg from "@/assets/fleet/cdd-box.webp"
+import cddBoxImg from "@/assets/fleet/cdd-box.png"
 import trontonWingboxImg from "@/assets/fleet/tronton-wingbox.webp"
 
 const FLEET_DATA = [
@@ -54,7 +54,7 @@ export function FleetSection() {
   const { language } = useLanguage()
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden border-t border-border/50">
+    <section className="pt-12 md:pt-16 pb-12 md:pb-16 bg-white relative overflow-hidden border-t border-border/50">
       {/* Background Ornaments */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-slate-50 to-transparent pointer-events-none" />
       
@@ -82,19 +82,19 @@ export function FleetSection() {
                 onClick={() => setActiveId(fleet.id)}
                 className={`w-full text-left p-5 rounded-2xl transition-all duration-300 flex items-center justify-between group ${
                   activeId === fleet.id 
-                    ? 'bg-gradient-to-r from-[#35627A] to-teal-700 text-white shadow-xl shadow-teal-900/20 scale-[1.02]' 
-                    : 'bg-card border border-border/50 hover:border-teal-500/30 hover:bg-muted text-foreground'
+                    ? 'bg-gradient-to-r from-blue-700 to-slate-900 text-white shadow-xl shadow-blue-900/20 scale-[1.02]' 
+                    : 'bg-card border border-border/50 hover:border-blue-500/30 hover:bg-muted text-foreground'
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-xl transition-colors ${activeId === fleet.id ? 'bg-white/20' : 'bg-muted-foreground/10 group-hover:bg-teal-500/10'}`}>
-                    <Truck className={`w-6 h-6 transition-colors ${activeId === fleet.id ? 'text-white' : 'text-muted-foreground group-hover:text-teal-600'}`} />
+                  <div className={`p-3 rounded-xl transition-colors ${activeId === fleet.id ? 'bg-white/20' : 'bg-muted-foreground/10 group-hover:bg-blue-500/10'}`}>
+                    <Truck className={`w-6 h-6 transition-colors ${activeId === fleet.id ? 'text-white' : 'text-muted-foreground group-hover:text-primary'}`} />
                   </div>
                   <span className={`font-bold text-lg transition-colors ${activeId === fleet.id ? 'text-white' : ''}`}>
                     {fleet.name}
                   </span>
                 </div>
-                <ArrowRight className={`w-5 h-5 transition-all duration-300 ${activeId === fleet.id ? 'opacity-100 translate-x-0 text-white' : 'opacity-0 -translate-x-4 text-teal-600 group-hover:opacity-100 group-hover:translate-x-0'}`} />
+                <ArrowRight className={`w-5 h-5 transition-all duration-300 ${activeId === fleet.id ? 'opacity-100 translate-x-0 text-white' : 'opacity-0 -translate-x-4 text-primary group-hover:opacity-100 group-hover:translate-x-0'}`} />
               </button>
             ))}
           </div>
@@ -106,7 +106,7 @@ export function FleetSection() {
               <div className="flex-1 flex flex-col lg:flex-row items-center gap-8 relative z-10">
                 {/* 3D Image */}
                 <div className="w-full lg:w-1/2 flex justify-center relative min-h-[250px]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(20,184,166,0.15)_0%,transparent_70%)] rounded-full" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(37,99,235,0.15)_0%,transparent_70%)] rounded-full" />
                   <div className="relative w-full aspect-[4/3] max-w-[400px]">
                     <Image
                       key={activeFleet.id}
@@ -129,7 +129,7 @@ export function FleetSection() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-in slide-in-from-bottom-4 fade-in duration-500 delay-200">
                     <div className="bg-white p-4 rounded-2xl border border-border/50 shadow-sm">
-                      <div className="flex items-center gap-2 text-teal-600 mb-1">
+                      <div className="flex items-center gap-2 text-primary mb-1">
                         <Package className="w-4 h-4" />
                         <span className="text-xs font-bold uppercase tracking-wider">Kapasitas</span>
                       </div>

@@ -16,10 +16,10 @@ export default function Home() {
         <HeroSection />
         <FeaturesBar />
         <AboutSection />
-        <ClientMarquee />
         <ServicesSection />
         <FleetSection />
         <SisterCompaniesSection />
+        <ClientMarquee />
       </main>
       <Footer />
     </>

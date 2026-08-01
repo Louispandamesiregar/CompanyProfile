@@ -56,10 +56,10 @@ export function FeaturesBar() {
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border">
           {features.map((feat, i) => (
             <div key={i} className="flex items-center justify-center gap-3 py-6 md:py-8 px-4 hover:bg-muted/20 transition-colors group cursor-default">
-              <feat.icon className="w-9 h-9 md:w-11 md:h-11 text-teal-600 shrink-0 group-hover:scale-110 transition-transform duration-300" strokeWidth={2} />
+              <feat.icon className="w-9 h-9 md:w-11 md:h-11 text-primary shrink-0 group-hover:scale-110 transition-transform duration-300" strokeWidth={2} />
               <div className="flex flex-col">
-                <span className="text-[#35627A] font-bold leading-tight text-base md:text-lg tracking-tight">{feat.title}</span>
-                <span className="text-[#35627A] font-bold leading-tight text-base md:text-lg tracking-tight">{feat.subtitle}</span>
+                <span className="text-slate-900 font-bold leading-tight text-base md:text-lg tracking-tight">{feat.title}</span>
+                <span className="text-slate-900 font-bold leading-tight text-base md:text-lg tracking-tight">{feat.subtitle}</span>
               </div>
             </div>
           ))}

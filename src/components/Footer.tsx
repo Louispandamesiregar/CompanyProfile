@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
 import { Phone, Mail, MapPin } from "lucide-react"
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
@@ -12,34 +13,30 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-card text-card-foreground border-t border-border/50">
+    <footer className="bg-white text-foreground border-t border-border">
       <div className="container mx-auto px-6 md:px-12 py-16 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Column 1: Company Info */}
           <div className="space-y-6">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
-              <div className="relative w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#35627A]/40 to-teal-500/40 blur-md rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.15)] group-hover:shadow-[0_4px_25px_rgba(20,184,166,0.3)] transition-all duration-500 rotate-3 group-hover:rotate-6" />
-                <div className="absolute inset-[2px] bg-gradient-to-tl from-[#2A4D60] to-teal-500 rounded-lg -rotate-3 group-hover:-rotate-6 transition-transform duration-500 flex items-center justify-center border border-white/10">
-                  <span className="text-white text-base font-black tracking-tighter drop-shadow-md relative z-10">NJ</span>
-                </div>
+              <div className="relative w-24 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
+                <Image src="/njg_logo.png" alt="Nawasena Jaya Group" fill className="object-contain" />
               </div>
-              <span className="bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent drop-shadow-sm">
+              <span className="bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent drop-shadow-sm ml-1 hidden md:block">
                 {companyInfo.logoText}
               </span>
             </Link>
-            <p className="text-sm text-card-foreground/70 leading-relaxed pr-4">
+            <p className="text-[15px] text-muted-foreground leading-relaxed pr-4">
               {footer.description}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-100 border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-muted-foreground">
                 <FaFacebook className="w-4 h-4" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-100 border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-muted-foreground">
                 <FaTwitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="https://www.instagram.com/njg_trans" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-100 border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-muted-foreground">
                 <FaInstagram className="w-4 h-4" />
               </a>
             </div>
@@ -49,8 +46,8 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">{footer.quickLinksTitle}</h4>
             <ul className="space-y-4">
-              <li><Link href="#about" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Tentang Kami' : 'About Us'}</Link></li>
-              <li><Link href="#services" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}</Link></li>
+              <li><Link href="#about" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tentang Kami' : 'About Us'}</Link></li>
+              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}</Link></li>
             </ul>
           </div>
 
@@ -58,10 +55,10 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">{language === 'id' ? 'Layanan Kami' : 'Our Services'}</h4>
             <ul className="space-y-4">
-              <li><Link href="#services" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Pengiriman Barang' : 'Freight Forwarding'}</Link></li>
-              <li><Link href="#services" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan ATK' : 'Office Supplies'}</Link></li>
-              <li><Link href="#services" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan Alkes' : 'Medical Equipment'}</Link></li>
-              <li><Link href="#services" className="text-sm text-card-foreground/70 hover:text-primary transition-colors">{language === 'id' ? 'Tinta & Printer' : 'Ink & Printers'}</Link></li>
+              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengiriman Barang' : 'Freight Forwarding'}</Link></li>
+              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan ATK' : 'Office Supplies'}</Link></li>
+              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan Alkes' : 'Medical Equipment'}</Link></li>
+              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tinta & Printer' : 'Ink & Printers'}</Link></li>
             </ul>
           </div>
 
@@ -70,16 +67,16 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-6">{footer.contactTitle}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm text-card-foreground/70 leading-relaxed">{companyInfo.contact.address}</span>
+                <MapPin className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
+                <span className="text-[15px] text-card-foreground/70 leading-relaxed">{companyInfo.contact.address}</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-sm text-card-foreground/70">{companyInfo.contact.contacts[0].whatsapp}</span>
+                <Phone className="w-5 h-5 text-muted-foreground shrink-0" />
+                <span className="text-[15px] text-card-foreground/70">{companyInfo.contact.contacts[0].whatsapp}</span>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-sm text-card-foreground/70">{companyInfo.contact.email}</span>
+                <Mail className="w-5 h-5 text-muted-foreground shrink-0" />
+                <span className="text-[15px] text-card-foreground/70">{companyInfo.contact.email}</span>
               </li>
             </ul>
           </div>
@@ -87,15 +84,15 @@ export function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border/50 bg-muted/30">
+      <div className="border-t border-border bg-slate-50">
         <div className="container mx-auto px-6 md:px-12 py-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-card-foreground/60 font-medium">
+          <p className="text-sm text-card-foreground/60 font-medium">
             &copy; {year} {footer.copyright}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link href="#" className="text-xs text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Syarat & Ketentuan' : 'Terms & Conditions'}</Link>
-            <Link href="#" className="text-xs text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Kebijakan Privasi' : 'Privacy Policy'}</Link>
-            <Link href="#" className="text-xs text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Peta Situs' : 'Sitemap'}</Link>
+            <Link href="#" className="text-sm text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Syarat & Ketentuan' : 'Terms & Conditions'}</Link>
+            <Link href="#" className="text-sm text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Kebijakan Privasi' : 'Privacy Policy'}</Link>
+            <Link href="#" className="text-sm text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Peta Situs' : 'Sitemap'}</Link>
           </div>
         </div>
       </div>

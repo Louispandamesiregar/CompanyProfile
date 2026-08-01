@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Globe, Menu, ChevronDown } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
 
@@ -23,14 +24,10 @@ export function Navbar() {
         <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-8">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
-              <div className="relative w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#35627A]/40 to-teal-500/40 blur-md rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-xl shadow-[0_4px_20px_rgb(0,0,0,0.15)] group-hover:shadow-[0_4px_25px_rgba(20,184,166,0.3)] transition-all duration-500 rotate-3 group-hover:rotate-6" />
-                <div className="absolute inset-[2px] bg-gradient-to-tl from-[#2A4D60] to-teal-500 rounded-lg -rotate-3 group-hover:-rotate-6 transition-transform duration-500 flex items-center justify-center border border-white/10">
-                  <span className="text-white text-base font-black tracking-tighter drop-shadow-md relative z-10">NJ</span>
-                </div>
+              <div className="relative w-24 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
+                <Image src="/njg_logo.png" alt="Nawasena Jaya Group" fill className="object-contain" />
               </div>
-              <span className="bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent drop-shadow-sm">
+              <span className="bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent drop-shadow-sm ml-1 hidden md:block">
                 {companyInfo.logoText}
               </span>
             </Link>
@@ -49,7 +46,7 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-teal-600:text-teal-400 rounded-md"
+                    className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary rounded-md"
                   >
                     {link.name}
                     {link.hasDropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}

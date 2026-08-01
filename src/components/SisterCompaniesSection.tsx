@@ -113,15 +113,15 @@ export function SisterCompaniesSection() {
   }, [api, onScroll])
 
   return (
-    <section id="group" className="py-24 md:py-32 bg-slate-50#0a1116] scroll-m-20 overflow-hidden relative border-y border-border/50">
+    <section id="group" className="pt-12 md:pt-16 pb-12 md:pb-16 bg-slate-50 scroll-m-20 overflow-hidden relative border-y border-border/50">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-teal-500/30 to-transparent" />
-      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(20,184,166,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
-      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(6,182,212,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute -left-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(37,99,235,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
+      <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(29,78,216,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
       
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
-          <h3 className="text-sm font-bold tracking-[0.3em] text-[#35627A] uppercase drop-shadow-sm">
+          <h3 className="text-sm font-bold tracking-[0.3em] text-primary uppercase drop-shadow-sm">
             {content.sisterCompanies.subtitle}
           </h3>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground drop-shadow-sm">
@@ -158,8 +158,8 @@ export function SisterCompaniesSection() {
                           onClick={() => handleCardClick(company.id)}
                           className={`flex flex-col items-center justify-center p-6 h-full w-full gap-5 group cursor-pointer bg-white rounded-3xl shadow-xl border transition-all duration-300 text-left ${
                             isExpanded
-                              ? 'border-teal-500 shadow-[0_20px_50px_rgba(20,184,166,0.25)] ring-2 ring-teal-500/30'
-                              : 'border-border/50 hover:border-teal-400/50 hover:shadow-[0_20px_50px_rgba(20,184,166,0.15)]'
+                              ? 'border-primary shadow-[0_20px_50px_rgba(37,99,235,0.25)] ring-2 ring-primary/30'
+                              : 'border-border/50 hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)]'
                           }`}
                         >
                         <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
@@ -179,8 +179,8 @@ export function SisterCompaniesSection() {
                         <div className="text-center mt-2 relative z-10 w-full">
                           <h4 className={`font-extrabold text-xl md:text-2xl transition-colors ${
                             isExpanded
-                              ? 'text-teal-600'
-                              : 'text-foreground group-hover:text-teal-600:text-teal-300'
+                              ? 'text-primary'
+                              : 'text-foreground group-hover:text-primary'
                           }`}>{company.name}</h4>
                           <p className="text-sm md:text-base text-muted-foreground font-semibold mt-2 tracking-wide uppercase">
                             {company.shortDesc}
@@ -189,8 +189,8 @@ export function SisterCompaniesSection() {
                         {/* Expand indicator */}
                         <div className={`flex items-center gap-1.5 text-xs font-bold tracking-wider uppercase transition-all duration-300 ${
                           isExpanded
-                            ? 'text-teal-600'
-                            : 'text-muted-foreground/60 group-hover:text-teal-500'
+                            ? 'text-primary'
+                            : 'text-muted-foreground/60 group-hover:text-blue-500'
                         }`}>
                           <span>{isExpanded ? (language === 'id' ? 'Tutup' : 'Close') : (language === 'id' ? 'Lihat Detail' : 'View Detail')}</span>
                           <svg
@@ -218,27 +218,42 @@ export function SisterCompaniesSection() {
           >
             {expandedCompany && (
               <div className="relative w-full max-w-4xl mx-auto animate-in fade-in slide-in-from-top-4 duration-500">
-                <div className="relative bg-white rounded-3xl shadow-2xl border border-teal-500/30 overflow-hidden">
-                  {/* Top accent gradient */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#35627A] via-teal-500 to-cyan-500" />
+                <div className="relative bg-white rounded-3xl shadow-2xl border border-primary/30 overflow-hidden">
+                  {/* Card top accent */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/80 to-secondary" />
                   
 
                   <div className="p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center relative z-10">
-                    {/* Company Logo / Image */}
-                    <div className="w-32 h-32 md:w-44 md:h-44 relative shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl border border-border/50 shadow-lg flex items-center justify-center p-4">
-                      {expandedCompany.image ? (
-                        <Image
-                          src={expandedCompany.image}
-                          alt={expandedCompany.name}
-                          fill
-                          className="object-contain p-4"
-                        />
-                      ) : (
-                        <span className="text-4xl font-black text-foreground">
-                          {expandedCompany.logoText}
-                        </span>
-                      )}
-                    </div>
+                    {/* Company Logo / Image / Gallery */}
+                    {expandedCompany.gallery && expandedCompany.gallery.length > 0 ? (
+                      <div className="flex flex-wrap gap-3 md:gap-4 shrink-0 max-w-[280px] md:max-w-[420px] justify-center md:justify-start">
+                        {expandedCompany.gallery.map((img: any, idx: number) => (
+                          <div key={idx} className="w-20 h-20 md:w-28 md:h-28 relative bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl md:rounded-2xl border border-border/50 shadow-md flex items-center justify-center p-2 hover:scale-105 transition-transform">
+                            <Image
+                              src={img}
+                              alt={`${expandedCompany.name} asset ${idx + 1}`}
+                              fill
+                              className="object-contain p-2 md:p-3"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="w-32 h-32 md:w-44 md:h-44 relative shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl border border-border/50 shadow-lg flex items-center justify-center p-4">
+                        {expandedCompany.image ? (
+                          <Image
+                            src={expandedCompany.image}
+                            alt={expandedCompany.name}
+                            fill
+                            className="object-contain p-4"
+                          />
+                        ) : (
+                          <span className="text-4xl font-black text-foreground">
+                            {expandedCompany.logoText}
+                          </span>
+                        )}
+                      </div>
+                    )}
 
                     {/* Company Details */}
                     <div className="flex-1 text-center md:text-left">
@@ -246,7 +261,7 @@ export function SisterCompaniesSection() {
                         <h3 className="text-2xl md:text-3xl font-black text-foreground tracking-tight">
                           {expandedCompany.name}
                         </h3>
-                        <span className="inline-flex items-center self-center md:self-auto px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-500/10 text-teal-600 border border-teal-500/20">
+                        <span className="inline-flex items-center self-center md:self-auto px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-primary/10 text-primary border border-primary/20">
                           {expandedCompany.shortDesc}
                         </span>
                       </div>
@@ -255,7 +270,7 @@ export function SisterCompaniesSection() {
                       </p>
                       {expandedCompany.address && (
                         <div className="flex items-start gap-2 justify-center md:justify-start text-sm text-muted-foreground/80 font-medium">
-                          <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-teal-600" />
+                          <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-primary" />
                           <span>{expandedCompany.address}</span>
                         </div>
                       )}

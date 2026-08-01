@@ -46,7 +46,7 @@ export function ServicesSection() {
   const services = content.services.items
 
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-card/50 to-background scroll-m-20 relative">
+    <section id="services" className="pt-12 md:pt-16 pb-12 md:pb-16 bg-gradient-to-b from-card/50 to-background scroll-m-20 relative">
       <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
         <div className="text-center mb-16 space-y-6">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground uppercase">
@@ -55,12 +55,12 @@ export function ServicesSection() {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
-        <div className="space-y-24 md:space-y-32">
+        <div className="space-y-16 md:space-y-24">
           {services.map((service, index) => {
             const isEven = index % 2 === 0
             
             return (
-              <div key={service.id} className={`flex flex-col gap-10 md:gap-16 items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div key={service.id} className={`flex flex-col gap-8 md:gap-10 items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 
                 {/* Image Side with Autoplay Carousel */}
                 <ServiceCarousel service={service} index={index} />
@@ -84,13 +84,13 @@ export function ServicesSection() {
                           className="w-6 h-6 mr-4 shrink-0 mt-0.5" 
                           style={{ color: service.color }}
                         />
-                        <span className="text-lg text-muted-foreground leading-relaxed font-medium">{item}</span>
+                        <span className="text-lg text-foreground leading-relaxed font-medium">{item}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <div className="pt-4">
-                    <Link href={`/services/${service.id}`} className={buttonVariants({ size: "lg", className: "group font-bold bg-gradient-to-r from-[#35627A] to-teal-600 text-white shadow-md hover:shadow-lg hover:opacity-90 transition-all border-0" })}>
+                    <Link href={`/services/${service.id}`} className={buttonVariants({ size: "lg", className: "group font-bold bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:bg-primary/90 transition-all border-0" })}>
                       {language === 'id' ? 'Selengkapnya' : 'Learn More'}
                       <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>

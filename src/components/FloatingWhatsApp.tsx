@@ -28,7 +28,7 @@ export function FloatingWhatsApp() {
         }`}
       >
         <span className="block mb-0.5">Butuh bantuan?</span>
-        <span className="text-teal-600 font-bold">Silakan chat kami di sini</span>
+        <span className="text-primary font-bold">Silakan chat kami di sini</span>
         
         {/* Segitiga panah menunjuk ke tombol */}
         <div className="absolute top-1/2 -right-2 -translate-y-1/2 w-4 h-4 bg-white border-t border-r border-border/50 rotate-45 rounded-sm"></div>
@@ -39,7 +39,7 @@ export function FloatingWhatsApp() {
         href="https://wa.me/6281388398303"
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#35627A] to-teal-600 rounded-full text-white shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgba(20,184,166,0.4)] md:hover:scale-110 transition-all duration-300 group"
+        className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-full text-white shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_30px_rgba(37,211,102,0.4)] md:hover:scale-110 transition-all duration-300 group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Chat via WhatsApp"

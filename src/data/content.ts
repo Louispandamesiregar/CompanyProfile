@@ -1,11 +1,16 @@
 import { FaTruck, FaBriefcase, FaStethoscope, FaPrint } from "react-icons/fa";
 
 import blindVanImg from "../assets/fleet/blind-van.webp";
-import cddBoxImg from "../assets/fleet/cdd-box.webp";
+import cddBoxImg from "../assets/fleet/cdd-box.png";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
 import trontonImg from "../assets/fleet/tronton-wingbox.webp";
 
-
+// Faenzone Assets
+import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.png";
+import faenzoneCoffeeImg from "../assets/faenzone/faenzone-coffee.png";
+import seqataCoffeeImg from "../assets/faenzone/seqata-coffee.png";
+import kopiKitaImg from "../assets/faenzone/kopi-kita.png";
+import faenzoneCartImg from "../assets/faenzone/coffee-cart.jpg";
 const clientsData = {
   titleID: "Klien & Mitra Kami",
   titleEN: "Our Clients & Partners",
@@ -58,8 +63,12 @@ export const contentID = {
       title: "Tentang Kami",
       description: "PT. Nawasena Jaya Group adalah solusi pengadaan dan distribusi terpercaya yang berbasis di Jakarta Timur dengan jangkauan pengiriman ke seluruh Indonesia. Kami menyediakan layanan pengiriman barang, pengadaan Alat Tulis Kantor (ATK), dan Alat Kesehatan (Alkes). Keunggulan kami meliputi fast response, harga grosir yang fleksibel, stok barang yang selalu tersedia, dan legalitas yang lengkap (NPWP, NIB, Izin Edar Kemenkes / BPOM). Kami siap melayani instansi pemerintah, swasta, sekolah, klinik, hingga UMKM."
     },
+    visi: {
+      title: "Visi",
+      description: "Menjadi perusahaan penyedia solusi pengadaan dan distribusi terbaik di Indonesia yang terpercaya, inovatif, dan berorientasi pada kepuasan pelanggan."
+    },
     misi: {
-      title: "Misi Kami",
+      title: "Misi",
       items: [
         "Menyediakan produk ATK dan tinta printer yang lengkap, berkualitas, dan siap pakai untuk kebutuhan kantor dan sekolah.",
         "Memberikan pelayanan cepat, ramah, dan profesional dengan respon maksimal 2 jam kerja.",
@@ -178,27 +187,24 @@ export const contentID = {
         address: "Jl. Raya F&B No. 12, Jakarta Timur, 13410",
         website: "#",
         logoText: "FZ",
-        image: trontonImg
+        image: faenzoneAyamGeprekImg, // Used as the primary fallback/thumbnail
+        gallery: [
+          faenzoneAyamGeprekImg,
+          faenzoneCoffeeImg,
+          seqataCoffeeImg,
+          kopiKitaImg,
+          faenzoneCartImg
+        ]
       },
       {
         id: 2,
-        name: "Warmindo",
-        shortDesc: "Warkop & Indomie",
-        fullDesc: "Warmindo Nawasena menawarkan pengalaman nongkrong kekinian dengan menu andalan mi instan Nusantara yang diracik khusus dengan bumbu rahasia. Mengusung konsep warkop modern yang bersih, fasilitas Wi-Fi cepat, dan harga yang sangat bersahabat, menjadikannya spot favorit berkumpulnya anak muda dan pekerja kantoran.",
-        address: "Jl. Santai Blok A No. 5, Jakarta Selatan, 12240",
+        name: "Airin's Parfume",
+        shortDesc: "Parfum & Wewangian",
+        fullDesc: "[DRAFT] Airin's Parfume menyediakan koleksi wewangian premium yang diracik khusus untuk memberikan kesan elegan dan memikat. Dengan menggunakan bibit parfum berkualitas tinggi, kami menjamin aroma yang tahan lama dan sesuai dengan karakter Anda.",
+        address: "[DRAFT] Jl. Raya Wangi No. 1, Jakarta",
         website: "#",
-        logoText: "WMD",
-        image: blindVanImg
-      },
-      {
-        id: 3,
-        name: "Koling",
-        shortDesc: "Kopi Keliling",
-        fullDesc: "Koling (Kopi Keliling) adalah unit bisnis inovatif yang mendekatkan cita rasa kopi Nusantara langsung ke para pelanggan. Menggunakan armada modifikasi khusus, Koling menyajikan berbagai racikan kopi espresso-based dan minuman kekinian dengan mobilitas tinggi di berbagai titik strategis perkotaan dan event-event lokal.",
-        address: "Mobile Fleet - Beroperasi di area Jabodetabek",
-        website: "#",
-        logoText: "KLG",
-        image: cddBoxImg
+        logoText: "AP",
+        image: blindVanImg, // Placeholder until the user provides the real image
       }
     ]
   },
@@ -254,6 +260,10 @@ export const contentEN = {
     about: {
       title: "About Us",
       description: "PT. Nawasena Jaya Group is a trusted procurement and distribution solution based in East Jakarta, with nationwide delivery coverage across Indonesia. We provide freight forwarding services, office supplies (ATK) procurement, and medical equipment (Alkes). Our competitive advantages include fast response times, flexible wholesale pricing, high stock availability, and complete legal compliance (Tax ID, Business Reg, Ministry of Health / BPOM distribution permits). We are ready to serve government agencies, private sectors, schools, clinics, and SMEs."
+    },
+    visi: {
+      title: "Our Vision",
+      description: "To become the most trusted, innovative, and customer-oriented procurement and distribution solutions provider in Indonesia."
     },
     misi: {
       title: "Our Mission",
