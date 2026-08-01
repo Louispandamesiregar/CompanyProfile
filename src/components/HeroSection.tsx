@@ -62,8 +62,8 @@ export function HeroSection() {
                   priority={index === 0}
                 />
                 
-                {/* Corporate Gradient Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/70 to-transparent" />
+                {/* Corporate Gradient Overlay for Text Readability - Lighter for better image visibility */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
 
                 {/* Content Container */}
                 <div className="absolute inset-0 flex items-center pb-24 md:pb-16">
