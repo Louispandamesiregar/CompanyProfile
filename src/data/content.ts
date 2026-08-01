@@ -11,6 +11,9 @@ import faenzoneCoffeeImg from "../assets/faenzone/faenzone-coffee.png";
 import seqataCoffeeImg from "../assets/faenzone/seqata-coffee.png";
 import kopiKitaImg from "../assets/faenzone/kopi-kita.png";
 import faenzoneCartImg from "../assets/faenzone/coffee-cart.jpg";
+
+// Other Companies
+import airinsParfumeImg from "../assets/companies/airins-parfume.png";
 const clientsData = {
   titleID: "Klien & Mitra Kami",
   titleEN: "Our Clients & Partners",
@@ -204,7 +207,7 @@ export const contentID = {
         address: "[DRAFT] Jl. Raya Wangi No. 1, Jakarta",
         website: "#",
         logoText: "AP",
-        image: blindVanImg, // Placeholder until the user provides the real image
+        image: airinsParfumeImg,
       }
     ]
   },
