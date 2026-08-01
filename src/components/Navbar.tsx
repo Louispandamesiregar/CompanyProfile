@@ -5,8 +5,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { Globe, Menu, ChevronDown } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
-
+import { ThemeToggle } from "./ThemeToggle"
 import { Button } from "./ui/button"
+import njgLogo from "@/assets/njg_logo.png"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 
 export function Navbar() {
@@ -25,7 +26,7 @@ export function Navbar() {
           <div className="flex items-center gap-8">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
               <div className="relative w-24 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
-                <Image src="/njg_logo.png" alt="Nawasena Jaya Group" fill className="object-contain" />
+                <Image src={njgLogo} alt="Nawasena Jaya Group" fill className="object-contain" />
               </div>
               <span className="bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent drop-shadow-sm ml-1 hidden md:block">
                 {companyInfo.logoText}
