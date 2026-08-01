@@ -39,7 +39,7 @@ export function HeroSection() {
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id}>
-              <div className="relative h-[65vh] md:h-[600px] w-full overflow-hidden">
+              <div className="relative h-[60vh] md:h-[500px] lg:h-[540px] w-full overflow-hidden">
                 {/* Full width background image */}
                 <Image 
                   src={slide.image}
