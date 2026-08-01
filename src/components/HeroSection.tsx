@@ -86,22 +86,23 @@ export function HeroSection() {
                           {slide.cta}
                         </Link>
                       </div>
-
-                      {/* Embedded Features */}
-                      <div className="mt-6 md:mt-8 pt-6 border-t border-white/20 grid grid-cols-2 gap-4 md:gap-6 w-full max-w-xl">
-                        {features.map((feat, i) => (
-                          <div key={i} className="flex items-center gap-3 md:gap-4">
-                            <div className="p-2 md:p-2.5 rounded-lg md:rounded-xl bg-white/10 text-white backdrop-blur-sm border border-white/10">
-                              <feat.icon className="w-5 h-5 md:w-6 md:h-6 shrink-0" strokeWidth={1.5} />
-                            </div>
-                            <div className="flex flex-col">
-                              <span className="text-white font-bold text-sm md:text-base leading-tight tracking-tight">{feat.title}</span>
-                              <span className="text-white/80 font-medium text-xs md:text-sm">{feat.subtitle}</span>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
                     </div>
+
+                    {/* Embedded Features (Full Width Row) */}
+                    <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full animate-in slide-in-from-bottom-8 duration-700 delay-150">
+                      {features.map((feat, i) => (
+                        <div key={i} className="flex items-center gap-3 md:gap-4">
+                          <div className="p-2 md:p-3 rounded-lg md:rounded-xl bg-white/10 text-white backdrop-blur-md border border-white/10 hover:bg-white/20 transition-colors">
+                            <feat.icon className="w-6 h-6 md:w-7 md:h-7 shrink-0" strokeWidth={1.5} />
+                          </div>
+                          <div className="flex flex-col">
+                            <span className="text-white font-bold text-base md:text-lg leading-tight tracking-tight">{feat.title}</span>
+                            <span className="text-white/80 font-medium text-xs md:text-sm">{feat.subtitle}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
                   </div>
                 </div>
               </div>
