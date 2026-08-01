@@ -69,7 +69,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 flex items-center pt-8 md:pt-12 pb-12 md:pb-16">
                   <div className="container mx-auto px-6 md:px-12 w-full">
                     <div className="w-full md:w-1/2 flex flex-col gap-6 animate-in slide-in-from-left-8 duration-700">
-                      <div className="inline-block px-3 py-1 bg-secondary/90 text-secondary-foreground text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">
+                      <div className="inline-block px-3 py-1 bg-white/20 text-white backdrop-blur-md border border-white/30 text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">
                         {slide.id === 1 ? badges.slide1 : slide.id === 2 ? badges.slide2 : badges.slide3}
                       </div>
                       <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-primary-foreground leading-[1.1]">
@@ -81,7 +81,7 @@ export function HeroSection() {
                       <div className="mt-2 flex flex-wrap gap-3">
                         <Link 
                           href={slide.link}
-                          className={buttonVariants({ size: "default", className: "bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold px-6 shadow-lg md:px-8 md:h-11" })}
+                          className={buttonVariants({ size: "default", className: "bg-white text-primary hover:bg-slate-100 font-bold px-6 shadow-lg md:px-8 md:h-11 transition-colors" })}
                         >
                           {slide.cta}
                         </Link>
