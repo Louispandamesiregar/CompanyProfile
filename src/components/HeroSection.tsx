@@ -81,7 +81,7 @@ export function HeroSection() {
                       <div className="mt-2 flex flex-wrap gap-3">
                         <Link 
                           href={slide.link}
-                          className={buttonVariants({ size: "default", className: "bg-white text-primary hover:bg-slate-100 font-bold px-6 shadow-lg md:px-8 md:h-11 transition-colors" })}
+                          className={buttonVariants({ size: "default", className: "!bg-white !text-primary hover:!bg-slate-100 font-bold px-6 shadow-lg md:px-8 md:h-11 transition-colors" })}
                         >
                           {slide.cta}
                         </Link>
