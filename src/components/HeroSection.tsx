@@ -3,6 +3,7 @@
 import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { Truck, Globe, Building2, Clock } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
 import { buttonVariants, Button } from "./ui/button"
 import Autoplay from "embla-carousel-autoplay"
@@ -23,6 +24,18 @@ export function HeroSection() {
   const [api, setApi] = React.useState<CarouselApi>()
   const [current, setCurrent] = React.useState(0)
   const [count, setCount] = React.useState(0)
+
+  const features = language === 'id' ? [
+    { icon: Truck, title: "Armada", subtitle: "Lengkap" },
+    { icon: Globe, title: "Jangkauan", subtitle: "Nasional" },
+    { icon: Building2, title: "Layanan", subtitle: "Corporate" },
+    { icon: Clock, title: "Fast", subtitle: "Response" },
+  ] : [
+    { icon: Truck, title: "Complete", subtitle: "Fleet" },
+    { icon: Globe, title: "National", subtitle: "Reach" },
+    { icon: Building2, title: "Corporate", subtitle: "Service" },
+    { icon: Clock, title: "Fast", subtitle: "Response" },
+  ];
 
   React.useEffect(() => {
     if (!api) return
@@ -72,6 +85,21 @@ export function HeroSection() {
                         >
                           {slide.cta}
                         </Link>
+                      </div>
+
+                      {/* Embedded Features */}
+                      <div className="mt-6 md:mt-8 pt-6 border-t border-white/20 grid grid-cols-2 gap-4 md:gap-6 w-full max-w-xl">
+                        {features.map((feat, i) => (
+                          <div key={i} className="flex items-center gap-3 md:gap-4">
+                            <div className="p-2 md:p-2.5 rounded-lg md:rounded-xl bg-white/10 text-white backdrop-blur-sm border border-white/10">
+                              <feat.icon className="w-5 h-5 md:w-6 md:h-6 shrink-0" strokeWidth={1.5} />
+                            </div>
+                            <div className="flex flex-col">
+                              <span className="text-white font-bold text-sm md:text-base leading-tight tracking-tight">{feat.title}</span>
+                              <span className="text-white/80 font-medium text-xs md:text-sm">{feat.subtitle}</span>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>
