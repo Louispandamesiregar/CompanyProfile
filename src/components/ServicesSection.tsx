@@ -16,7 +16,7 @@ function ServiceCarousel({ service, index }: { service: any, index: number }) {
   const direction = index % 2 === 0 ? "ltr" : "rtl"
 
   return (
-    <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl group">
+    <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px] rounded-none overflow-hidden shadow-2xl group">
       <Carousel
         opts={{ loop: true, direction, duration: 40 }}
         dir={direction}
