@@ -52,7 +52,7 @@ export function HeroSection() {
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id}>
-              <div className="relative h-[60vh] md:h-[500px] lg:h-[540px] w-full overflow-hidden">
+              <div className="relative h-[75vh] md:h-[550px] lg:h-[600px] w-full overflow-hidden">
                 {/* Full width background image */}
                 <Image 
                   src={slide.image}
@@ -66,7 +66,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
 
                 {/* Content Container */}
-                <div className="absolute inset-0 flex items-center pb-24 md:pb-16">
+                <div className="absolute inset-0 flex items-center pt-8 md:pt-12">
                   <div className="container mx-auto px-6 md:px-12 w-full">
                     <div className="w-full md:w-1/2 flex flex-col gap-6 animate-in slide-in-from-left-8 duration-700">
                       <div className="inline-block px-3 py-1 bg-secondary/90 text-secondary-foreground text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">
