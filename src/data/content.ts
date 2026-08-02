@@ -1,4 +1,4 @@
-import { FaTruck, FaBriefcase, FaStethoscope, FaPrint } from "react-icons/fa";
+import { Truck, Briefcase, Stethoscope, Printer } from "lucide-react";
 
 import blindVanImg from "../assets/fleet/blind-van.webp";
 import cddBoxImg from "../assets/fleet/cdd-box.png";
@@ -117,7 +117,7 @@ export const contentID = {
           "Jalur Laut (kerja sama ekspedisi): Kalimantan, Sulawesi, Bali",
           "Dilengkapi GPS tracking & asuransi pengiriman"
         ],
-        icon: FaTruck,
+        icon: Truck,
         color: "#4285F4",
         images: [trontonImg, blindVanImg, cddBoxImg]
       },
@@ -136,7 +136,7 @@ export const contentID = {
           "Amplop coklat & putih, bak stempel",
           "Kertas HVS, label, tinta printer"
         ],
-        icon: FaBriefcase,
+        icon: Briefcase,
         color: "#EA4335",
         images: [atkImg]
       },
@@ -155,7 +155,7 @@ export const contentID = {
           "Alat tensi, termometer",
           "Masker medis, sarung tangan steril"
         ],
-        icon: FaStethoscope,
+        icon: Stethoscope,
         color: "#34A853",
         images: [alkesImg]
       },
@@ -174,7 +174,7 @@ export const contentID = {
           "Cartridge original dan kompatibel",
           "Kertas foto, label stiker, barcode, paket grosir"
         ],
-        icon: FaPrint,
+        icon: Printer,
         color: "#FBBC05",
         images: [blindVanImg, cddBoxImg, cdeBoxImg]
       }
