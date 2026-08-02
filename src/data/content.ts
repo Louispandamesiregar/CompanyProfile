@@ -13,14 +13,14 @@ import alkes1 from "../assets/services/alkes.webp";
 import printer1 from "../assets/services/printer-perlengkapan.webp";
 
 // Faenzone Assets
-import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.png";
-import faenzoneCoffeeImg from "../assets/faenzone/faenzone-coffee.png";
-import seqataCoffeeImg from "../assets/faenzone/seqata-coffee.png";
-import kopiKitaImg from "../assets/faenzone/kopi-kita.png";
-import faenzoneCartImg from "../assets/faenzone/coffee-cart.jpg";
+import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.webp";
+import faenzoneCoffeeImg from "../assets/faenzone/faenzone-coffee.webp";
+import seqataCoffeeImg from "../assets/faenzone/seqata-coffee.webp";
+import kopiKitaImg from "../assets/faenzone/kopi-kita.webp";
+import faenzoneCartImg from "../assets/faenzone/coffee-cart.webp";
 
-// Other Companies
-import airinsParfumeImg from "../assets/companies/airins-parfume.png";
+// Other Sister Companies
+import airinsParfumeImg from "../assets/companies/airins-parfume.webp";
 const clientsData = {
   titleID: "Klien & Mitra Kami",
   titleEN: "Our Clients & Partners",

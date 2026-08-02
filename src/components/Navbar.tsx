@@ -6,7 +6,7 @@ import Image from "next/image"
 import { Globe, Menu, ChevronDown } from "lucide-react"
 import { useLanguage } from "@/context/LanguageContext"
 import { Button } from "./ui/button"
-import njgLogo from "@/assets/njg_logo.png"
+import njgLogo from "@/assets/njg_logo.webp"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 
 export function Navbar() {
