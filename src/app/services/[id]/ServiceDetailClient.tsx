@@ -87,12 +87,12 @@ export function ServiceDetailClient({ id }: { id: string }) {
                 )}
               </div>
 
-              {/* Gallery (using the remaining images) */}
+              {/* Extra Images (replaces old gallery) */}
               {service.images.length > 1 && (
-                <div className="grid grid-cols-2 gap-4 mt-8">
-                  {service.images.slice(1, 3).map((img: any, idx: number) => (
-                    <div key={idx} className="relative h-48 rounded-xl overflow-hidden shadow-md">
-                      <Image src={img} alt={`Gallery ${idx}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
+                <div className="flex flex-col gap-8 mt-8">
+                  {service.images.slice(1).map((img: any, idx: number) => (
+                    <div key={idx} className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden shadow-md">
+                      <Image src={img} alt={`${service.title} Image ${idx + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
                     </div>
                   ))}
                 </div>
