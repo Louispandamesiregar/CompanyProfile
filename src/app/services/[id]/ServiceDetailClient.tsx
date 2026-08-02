@@ -32,7 +32,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[60vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden">
           <Image 
-            src={cddBoxImg} 
+            src={service.images?.[0] || cddBoxImg} 
             alt={service.title} 
             fill 
             className="object-cover" 
