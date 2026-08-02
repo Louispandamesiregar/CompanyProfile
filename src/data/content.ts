@@ -5,7 +5,7 @@ import cdeBoxImg from "../assets/fleet/cde-box.webp";
 import engkelBoxMuatanImg from "../assets/engkelbox_muatan.webp";
 
 // Dedicated Service Images
-import pengiriman1 from "../assets/services/pengiriman-1.webp";
+import pengiriman1 from "../assets/box2.png";
 import pengiriman2 from "../assets/services/pengiriman-2.webp";
 import pengiriman3 from "../assets/services/pengiriman-3.webp";
 import atk1 from "../assets/services/atk.webp";
