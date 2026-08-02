@@ -90,7 +90,7 @@ export function ServicesSection() {
                   </ul>
                   
                   <div className="pt-4">
-                    <Link href={`/services/${service.id}`} className={buttonVariants({ size: "lg", className: "group font-bold bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:bg-primary/90 transition-all border-0" })}>
+                    <Link href={`/services/${service.id}`} className={buttonVariants({ variant: "outline", size: "lg", className: "group font-bold bg-transparent text-primary border-2 border-primary/20 hover:border-primary hover:bg-primary/5 shadow-none transition-all" })}>
                       {language === 'id' ? 'Selengkapnya' : 'Learn More'}
                       <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
