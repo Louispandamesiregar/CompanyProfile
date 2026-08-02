@@ -16,7 +16,7 @@ function ServiceCarousel({ service, index }: { service: any, index: number }) {
   const direction = index % 2 === 0 ? "ltr" : "rtl"
 
   return (
-    <div className="w-full md:w-1/2 relative h-[250px] md:h-[300px] rounded-none overflow-hidden shadow-2xl group">
+    <div className="w-full md:w-[45%] lg:w-[500px] shrink-0 relative h-[250px] md:h-[300px] rounded-none overflow-hidden shadow-2xl group">
       <Carousel
         opts={{ loop: true, direction, duration: 40 }}
         dir={direction}
@@ -60,13 +60,13 @@ export function ServicesSection() {
             const isEven = index % 2 === 0
             
             return (
-              <div key={service.id} className={`flex flex-col gap-6 md:gap-6 lg:gap-8 items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div key={service.id} className={`flex flex-col gap-8 md:gap-12 lg:gap-16 items-center justify-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 
                 {/* Image Side with Autoplay Carousel */}
                 <ServiceCarousel service={service} index={index} />
 
                 {/* Text Side */}
-                <div className="w-full md:w-1/2 space-y-6">
+                <div className="w-full md:w-[50%] lg:w-[500px] space-y-6">
                   <div className="flex items-center gap-4 mb-6">
                     <div 
                       className="w-14 h-14 min-w-[56px] min-h-[56px] flex-none rounded-xl text-white flex items-center justify-center shadow-lg"
