@@ -1,9 +1,7 @@
 import { MdLocalShipping, MdBusinessCenter, MdMedicalServices, MdPrint } from "react-icons/md";
 
-import blindVanImg from "../assets/fleet/blind-van.webp";
 import cddBoxImg from "../assets/fleet/cdd-box.webp";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
-import trontonImg from "../assets/fleet/tronton-wingbox.webp";
 
 // Dedicated Service Images
 import pengiriman1 from "../assets/services/pengiriman-1.webp";
@@ -53,7 +51,7 @@ export const contentID = {
         headline: "SOLUSI PENGADAAN &\nDISTRIBUSI TERPERCAYA",
         cta: "Layanan Kami",
         link: "#services",
-        image: blindVanImg
+        image: cdeBoxImg
       },
       {
         id: 2,
@@ -76,7 +74,12 @@ export const contentID = {
     },
     visi: {
       title: "Visi",
-      description: "Menjadi perusahaan penyedia solusi pengadaan dan distribusi terbaik di Indonesia yang terpercaya, inovatif, dan berorientasi pada kepuasan pelanggan."
+      items: [
+        "Membentuk jaringan (jalur distribusi) yang efisien dan efektif.",
+        "Menjadi Perusahaan Logistic dengan pelayanan cepat dan aman.",
+        "Mengembangkan kualitas layanan yang saling menguntungkan.",
+        "Membangun hubungan yang baik dengan setiap pihak yang mengutamakan musyawarah dalam setiap kendala yang dihadapi agar tercipta kenyamanan di kedua belah pihak."
+      ]
     },
     misi: {
       title: "Misi",
@@ -258,14 +261,14 @@ export const contentEN = {
         headline: "FREIGHT FORWARDING\nACROSS JAVA ISLAND",
         cta: "Our Services",
         link: "#services",
-        image: trontonImg
+        image: cddBoxImg
       },
       {
         id: 3,
         headline: "MEDICAL & OFFICE\nSUPPLIES PROCUREMENT",
         cta: "Our Services",
         link: "#services",
-        image: blindVanImg
+        image: cdeBoxImg
       }
     ],
     about: {
@@ -274,7 +277,12 @@ export const contentEN = {
     },
     visi: {
       title: "Our Vision",
-      description: "To become the most trusted, innovative, and customer-oriented procurement and distribution solutions provider in Indonesia."
+      items: [
+        "Establishing an efficient and effective distribution network.",
+        "Becoming a Logistics Company with fast and secure services.",
+        "Developing mutually beneficial service quality.",
+        "Building good relationships with all parties by prioritizing deliberation in every obstacle to create comfort for both parties."
+      ]
     },
     misi: {
       title: "Our Mission",
@@ -396,27 +404,24 @@ export const contentEN = {
         address: "Jl. Raya F&B No. 12, East Jakarta, 13410",
         website: "#",
         logoText: "FZ",
-        image: cddBoxImg
+        image: faenzoneAyamGeprekImg, // Used as the primary fallback/thumbnail
+        gallery: [
+          faenzoneAyamGeprekImg,
+          faenzoneCoffeeImg,
+          seqataCoffeeImg,
+          kopiKitaImg,
+          faenzoneCartImg
+        ]
       },
       {
         id: 2,
-        name: "Warmindo",
-        shortDesc: "Noodle & Coffee Shop",
-        fullDesc: "Warmindo Nawasena offers a modern hangout experience with our signature Indonesian instant noodles mixed with secret spices. Featuring a clean modern coffee shop concept, fast Wi-Fi, and very affordable prices, it has become a favorite spot for youth and office workers to gather.",
-        address: "Jl. Santai Blok A No. 5, South Jakarta, 12240",
+        name: "Airin's Parfume",
+        shortDesc: "Perfume & Fragrance",
+        fullDesc: "[DRAFT] Airin's Parfume provides a premium fragrance collection specially blended to give an elegant and captivating impression. Using high-quality perfume essences, we guarantee long-lasting scents that suit your character.",
+        address: "[DRAFT] Jl. Raya Wangi No. 1, Jakarta",
         website: "#",
-        logoText: "WMD",
-        image: cdeBoxImg
-      },
-      {
-        id: 3,
-        name: "Koling",
-        shortDesc: "Mobile Coffee",
-        fullDesc: "Koling (Mobile Coffee) is an innovative business unit bringing the taste of archipelago coffee directly to customers. Using specially modified fleets, Koling serves various espresso-based blends and modern beverages with high mobility across strategic urban spots and local events.",
-        address: "Mobile Fleet - Operating in Greater Jakarta",
-        website: "#",
-        logoText: "KLG",
-        image: trontonImg
+        logoText: "AP",
+        image: airinsParfumeImg,
       }
     ]
   },

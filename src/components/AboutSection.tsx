@@ -29,9 +29,18 @@ export function AboutSection() {
               <h2 className="text-3xl font-semibold text-foreground mb-4">
                 {visi.title}
               </h2>
-              <p className="text-base md:text-lg text-foreground leading-relaxed italic border-l-4 border-slate-200 pl-4 py-1 text-justify">
-                &ldquo;{visi.description}&rdquo;
-              </p>
+              <div className="space-y-4">
+                {visi.items?.map((item: string, index: number) => (
+                  <div key={index} className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/80 border border-slate-100 hover:border-blue-200 shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm shadow-inner">
+                      {index + 1}
+                    </div>
+                    <p className="text-base md:text-lg text-foreground leading-relaxed pt-0.5 text-justify">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

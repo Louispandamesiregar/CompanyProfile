@@ -4,21 +4,11 @@ import * as React from "react"
 import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
 import { Truck, Package, Maximize, ArrowRight, CheckCircle2 } from "lucide-react"
-import blindVanImg from "@/assets/fleet/blind-van.webp"
 import cdeBoxImg from "@/assets/fleet/cde-box.webp"
 import cddBoxImg from "@/assets/fleet/cdd-box.webp"
-import trontonWingboxImg from "@/assets/fleet/tronton-wingbox.webp"
 
 const FLEET_DATA = [
-  {
-    id: "blind-van",
-    name: "Blind Van",
-    image: blindVanImg,
-    capacity: "700 kg",
-    dimensions: "P: 2.1m | L: 1.4m | T: 1.3m",
-    idealFor: "Pengiriman cepat dalam kota, paket kecil, dan dokumen bernilai tinggi.",
-    features: ["Bebas ganjil genap", "Akses jalan sempit", "Tertutup aman"]
-  },
+
   {
     id: "cde-box",
     name: "Engkel Box (CDE)",
@@ -37,15 +27,7 @@ const FLEET_DATA = [
     idealFor: "Distribusi barang industri, logistik antar kota, dan muatan palet.",
     features: ["Kapasitas muat besar", "Stabil antar kota", "Muat 12 CBM"]
   },
-  {
-    id: "tronton-wingbox",
-    name: "Tronton Wingbox",
-    image: trontonWingboxImg,
-    capacity: "18.000 kg - 25.000 kg",
-    dimensions: "P: 9.5m | L: 2.45m | T: 2.5m",
-    idealFor: "Kargo berat antar provinsi, distribusi pabrik, dan muatan curah.",
-    features: ["Bongkar muat 3 sisi", "Ekstra aman", "Muat 45 CBM"]
-  }
+
 ]
 
 export function FleetSection() {
