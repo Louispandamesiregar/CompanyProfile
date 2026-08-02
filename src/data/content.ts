@@ -8,8 +8,8 @@ import engkelBoxMuatanImg from "../assets/engkelbox_muatan.png";
 import pengiriman1 from "../assets/services/pengiriman-1.webp";
 import pengiriman2 from "../assets/services/pengiriman-2.webp";
 import pengiriman3 from "../assets/services/pengiriman-3.webp";
-import atk1 from "../assets/services/atk-1.jpg";
-import alkes1 from "../assets/services/alkes-1.jpg";
+import atk1 from "../assets/services/ATK.png";
+import alkes1 from "../assets/services/Alkes.png";
 import printer1 from "../assets/services/printer-perlengkapan.png";
 
 // Faenzone Assets
@@ -66,7 +66,7 @@ export const contentID = {
         headline: "PENGADAAN ATK &\nALAT KESEHATAN",
         cta: "Layanan Kami",
         link: "#services",
-        image: cdeBoxImg
+        image: atk1
       }
     ],
     about: {
@@ -269,7 +269,7 @@ export const contentEN = {
         headline: "MEDICAL & OFFICE\nSUPPLIES PROCUREMENT",
         cta: "Our Services",
         link: "#services",
-        image: cdeBoxImg
+        image: atk1
       }
     ],
     about: {
