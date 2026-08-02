@@ -47,8 +47,18 @@ export function ServicesSection() {
   const services = content.services.items
 
   return (
-    <section id="services" className="pt-12 md:pt-16 pb-12 md:pb-16 bg-gradient-to-b from-card/50 to-background scroll-m-20 relative font-jakarta">
-      <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
+    <section id="services" className="pt-12 md:pt-16 pb-12 md:pb-16 bg-slate-50/50 scroll-m-20 relative font-jakarta overflow-hidden">
+      {/* Subtle Dotted Background Pattern */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-[0.4]"
+        style={{
+          backgroundImage: "radial-gradient(#94a3b8 1.5px, transparent 1.5px)",
+          backgroundSize: "32px 32px",
+          maskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)",
+          WebkitMaskImage: "linear-gradient(to bottom, transparent, black 10%, black 90%, transparent)"
+        }}
+      />
+      <div className="container mx-auto px-6 md:px-12 max-w-[1440px] relative z-10">
         <div className="text-center mb-16 space-y-6">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground uppercase">
             {content.services.title}
