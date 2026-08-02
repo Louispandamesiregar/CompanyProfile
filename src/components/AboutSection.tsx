@@ -26,7 +26,7 @@ export function AboutSection() {
               className="object-cover z-0 blur-sm"
             />
             {/* Overlay Warna Biru */}
-            <div className="absolute inset-0 bg-primary/75 z-0"></div>
+            <div className="absolute inset-0 bg-primary/50 z-0"></div>
             
             {/* Konten Text */}
             <div className="relative z-10">
