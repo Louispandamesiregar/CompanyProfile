@@ -4,6 +4,7 @@ import blindVanImg from "../assets/fleet/blind-van.webp";
 import cddBoxImg from "../assets/fleet/cdd-box.png";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
 import trontonImg from "../assets/fleet/tronton-wingbox.webp";
+import alkesImg from "../assets/alkes.jpg";
 
 // Faenzone Assets
 import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.png";
@@ -155,7 +156,7 @@ export const contentID = {
         ],
         icon: FaStethoscope,
         color: "#34A853",
-        images: [cddBoxImg, cdeBoxImg, trontonImg]
+        images: [alkesImg]
       },
       {
         id: 4,
