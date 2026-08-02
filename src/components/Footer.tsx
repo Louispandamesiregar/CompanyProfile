@@ -6,7 +6,7 @@ import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
 import { Phone, Mail, MapPin } from "lucide-react"
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
-import njgLogoFooter from "@/assets/Logo_NJG.png"
+import njgLogoFooter from "@/assets/Logo_NJG.webp"
 
 export function Footer() {
   const { content, language } = useLanguage()

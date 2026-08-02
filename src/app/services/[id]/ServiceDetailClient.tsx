@@ -11,8 +11,8 @@ import { Footer } from "@/components/Footer"
 import cddBoxImg from "@/assets/fleet/cdd-box.webp";
 import cdeBoxImg from "@/assets/fleet/cde-box.webp";
 import engkelboxImg from "@/assets/engkel_box.webp";
-import boxImg from "@/assets/box.png";
-import atk1DetailImg from "@/assets/ATK1.png";
+import boxImg from "@/assets/box.webp";
+import atk1DetailImg from "@/assets/atk1.webp";
 import { buttonVariants } from "@/components/ui/button"
 
 export function ServiceDetailClient({ id }: { id: string }) {
