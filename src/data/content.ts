@@ -1,7 +1,7 @@
 import { MdLocalShipping, MdBusinessCenter, MdMedicalServices, MdPrint } from "react-icons/md";
 
 import blindVanImg from "../assets/fleet/blind-van.webp";
-import cddBoxImg from "../assets/fleet/cdd-box.png";
+import cddBoxImg from "../assets/fleet/cdd-box.webp";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
 import trontonImg from "../assets/fleet/tronton-wingbox.webp";
 import alkesImg from "../assets/alkes.jpg";

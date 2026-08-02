@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext"
 import { Truck, Package, Maximize, ArrowRight, CheckCircle2 } from "lucide-react"
 import blindVanImg from "@/assets/fleet/blind-van.webp"
 import cdeBoxImg from "@/assets/fleet/cde-box.webp"
-import cddBoxImg from "@/assets/fleet/cdd-box.png"
+import cddBoxImg from "@/assets/fleet/cdd-box.webp"
 import trontonWingboxImg from "@/assets/fleet/tronton-wingbox.webp"
 
 const FLEET_DATA = [
