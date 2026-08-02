@@ -12,6 +12,7 @@ import cddBoxImg from "@/assets/fleet/cdd-box.webp";
 import cdeBoxImg from "@/assets/fleet/cde-box.webp";
 import engkelboxImg from "@/assets/engkel_box.webp";
 import boxImg from "@/assets/box.png";
+import atk1DetailImg from "@/assets/ATK1.png";
 import { buttonVariants } from "@/components/ui/button"
 
 export function ServiceDetailClient({ id }: { id: string }) {
@@ -79,6 +80,11 @@ export function ServiceDetailClient({ id }: { id: string }) {
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {service.fullDescription}
                 </p>
+                {serviceId === 2 && (
+                  <div className="mt-8 relative w-full h-64 md:h-96 rounded-xl overflow-hidden shadow-md">
+                    <Image src={atk1DetailImg} alt="Pengadaan ATK" fill className="object-cover" />
+                  </div>
+                )}
               </div>
 
               {/* Gallery (using the remaining images) */}
