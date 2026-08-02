@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
+import boxDeretImg from "@/assets/Box_deret.webp"
 
 export function AboutSection() {
   const { content } = useLanguage()
@@ -15,14 +17,27 @@ export function AboutSection() {
         <div className="relative w-full flex flex-col lg:flex-row">
           
           {/* KOTAK KIRI (Tentang Kami) */}
-          <div className="w-full lg:w-7/12 h-fit bg-white border border-gray-200 p-8 md:p-12 lg:p-16 lg:pr-40 z-10 shadow-sm animate-fade-in-up rounded-none">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 uppercase tracking-tight">
-              {about.title}
-            </h2>
-            <div className="w-16 h-1 bg-primary mb-6"></div>
-            <p className="text-base md:text-lg text-foreground/90 leading-normal text-justify">
-              {about.description}
-            </p>
+          <div className="w-full lg:w-7/12 h-fit relative p-8 md:p-12 lg:p-16 lg:pr-40 z-10 shadow-sm animate-fade-in-up rounded-none overflow-hidden">
+            {/* Latar Belakang Gambar */}
+            <Image 
+              src={boxDeretImg}
+              alt="Latar Belakang Tentang Kami"
+              fill
+              className="object-cover z-0"
+            />
+            {/* Overlay Warna Biru */}
+            <div className="absolute inset-0 bg-primary/90 z-0"></div>
+            
+            {/* Konten Text */}
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 uppercase tracking-tight">
+                {about.title}
+              </h2>
+              <div className="w-16 h-1 bg-white mb-6"></div>
+              <p className="text-base md:text-lg text-white/95 leading-normal text-justify">
+                {about.description}
+              </p>
+            </div>
           </div>
 
           {/* KOTAK KANAN (Visi & Misi - Overlapping) */}
