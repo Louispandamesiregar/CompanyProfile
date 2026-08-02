@@ -11,6 +11,7 @@ import { Footer } from "@/components/Footer"
 import cddBoxImg from "@/assets/fleet/cdd-box.webp";
 import cdeBoxImg from "@/assets/fleet/cde-box.webp";
 import engkelboxImg from "@/assets/engkel_box.webp";
+import boxImg from "@/assets/box.png";
 import { buttonVariants } from "@/components/ui/button"
 
 export function ServiceDetailClient({ id }: { id: string }) {
@@ -33,14 +34,13 @@ export function ServiceDetailClient({ id }: { id: string }) {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[60vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden">
           <Image 
-            src={service.images?.[0] || engkelboxImg} 
+            src={boxImg} 
             alt={service.title} 
             fill 
             sizes="100vw"
             className="object-cover" 
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20" />
           
           <div className="container mx-auto px-6 md:px-12 relative z-10 pt-20">
             <Link 
