@@ -5,6 +5,7 @@ import cddBoxImg from "../assets/fleet/cdd-box.png";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
 import trontonImg from "../assets/fleet/tronton-wingbox.webp";
 import alkesImg from "../assets/alkes.jpg";
+import atkImg from "../assets/atk.jpg";
 
 // Faenzone Assets
 import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.png";
@@ -137,7 +138,7 @@ export const contentID = {
         ],
         icon: FaBriefcase,
         color: "#EA4335",
-        images: [cdeBoxImg, trontonImg, blindVanImg]
+        images: [atkImg]
       },
       {
         id: 3,
