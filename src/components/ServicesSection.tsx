@@ -71,7 +71,7 @@ export function ServicesSection() {
             const isEven = index % 2 === 0
             
             return (
-              <div key={service.id} className={`flex flex-col gap-8 md:gap-12 lg:gap-16 items-center justify-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div key={service.id} className={`flex flex-col gap-6 md:gap-8 lg:gap-10 items-center justify-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 
                 {/* Image Side with Autoplay Carousel */}
                 <ServiceCarousel service={service} index={index} />
