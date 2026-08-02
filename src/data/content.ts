@@ -2,6 +2,7 @@ import { MdLocalShipping, MdBusinessCenter, MdMedicalServices, MdPrint } from "r
 
 import cddBoxImg from "../assets/fleet/cdd-box.webp";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
+import engkelBoxMuatanImg from "../assets/engkelbox_muatan.png";
 
 // Dedicated Service Images
 import pengiriman1 from "../assets/services/pengiriman-1.webp";
@@ -51,7 +52,7 @@ export const contentID = {
         headline: "SOLUSI PENGADAAN &\nDISTRIBUSI TERPERCAYA",
         cta: "Layanan Kami",
         link: "#services",
-        image: cdeBoxImg
+        image: engkelBoxMuatanImg
       },
       {
         id: 2,
@@ -254,7 +255,7 @@ export const contentEN = {
         headline: "TRUSTED PROCUREMENT &\nDISTRIBUTION SOLUTION",
         cta: "Our Services",
         link: "#services",
-        image: cdeBoxImg
+        image: engkelBoxMuatanImg
       },
       {
         id: 2,
