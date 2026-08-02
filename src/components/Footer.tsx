@@ -6,7 +6,7 @@ import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
 import { Phone, Mail, MapPin } from "lucide-react"
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
-import njgLogo from "@/assets/njg_logo.png"
+import njgLogoFooter from "@/assets/Logo_NJG.png"
 
 export function Footer() {
   const { content, language } = useLanguage()
@@ -21,7 +21,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
               <div className="relative w-24 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
-                <Image src={njgLogo} alt="Nawasena Jaya Group" fill className="object-contain" />
+                <Image src={njgLogoFooter} alt="Nawasena Jaya Group" fill className="object-contain" />
               </div>
               <span className="bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent drop-shadow-sm ml-1 hidden md:block">
                 {companyInfo.logoText}
