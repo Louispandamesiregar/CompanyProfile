@@ -1,4 +1,4 @@
-import { Truck, Briefcase, Stethoscope, Printer } from "lucide-react";
+import { MdLocalShipping, MdBusinessCenter, MdMedicalServices, MdPrint } from "react-icons/md";
 
 import blindVanImg from "../assets/fleet/blind-van.webp";
 import cddBoxImg from "../assets/fleet/cdd-box.png";
@@ -117,7 +117,7 @@ export const contentID = {
           "Jalur Laut (kerja sama ekspedisi): Kalimantan, Sulawesi, Bali",
           "Dilengkapi GPS tracking & asuransi pengiriman"
         ],
-        icon: Truck,
+        icon: MdLocalShipping,
         color: "#4285F4",
         images: [trontonImg, blindVanImg, cddBoxImg]
       },
@@ -136,7 +136,7 @@ export const contentID = {
           "Amplop coklat & putih, bak stempel",
           "Kertas HVS, label, tinta printer"
         ],
-        icon: Briefcase,
+        icon: MdBusinessCenter,
         color: "#EA4335",
         images: [atkImg]
       },
@@ -155,7 +155,7 @@ export const contentID = {
           "Alat tensi, termometer",
           "Masker medis, sarung tangan steril"
         ],
-        icon: Stethoscope,
+        icon: MdMedicalServices,
         color: "#34A853",
         images: [alkesImg]
       },
@@ -174,7 +174,7 @@ export const contentID = {
           "Cartridge original dan kompatibel",
           "Kertas foto, label stiker, barcode, paket grosir"
         ],
-        icon: Printer,
+        icon: MdPrint,
         color: "#FBBC05",
         images: [blindVanImg, cddBoxImg, cdeBoxImg]
       }
@@ -315,7 +315,7 @@ export const contentEN = {
           "Sea Route (partnered logistics): Kalimantan, Sulawesi, Bali",
           "Equipped with GPS tracking & shipping insurance"
         ],
-        icon: Truck,
+        icon: MdLocalShipping,
         color: "#4285F4",
         images: [cddBoxImg, cdeBoxImg, trontonImg]
       },
@@ -334,7 +334,7 @@ export const contentEN = {
           "Brown & white envelopes, stamp pads",
           "A4 Paper, labels, printer ink"
         ],
-        icon: Briefcase,
+        icon: MdBusinessCenter,
         color: "#EA4335",
         images: [atkImg]
       },
@@ -353,7 +353,7 @@ export const contentEN = {
           "Blood pressure monitors, thermometers",
           "Medical masks, sterile gloves"
         ],
-        icon: Stethoscope,
+        icon: MdMedicalServices,
         color: "#34A853",
         images: [alkesImg]
       },
@@ -372,7 +372,7 @@ export const contentEN = {
           "Original and compatible cartridges",
           "Photo paper, sticker labels, barcode, wholesale packages"
         ],
-        icon: Printer,
+        icon: MdPrint,
         color: "#FBBC05",
         images: [blindVanImg, cddBoxImg, cdeBoxImg]
       }

@@ -5,7 +5,8 @@ import { useLanguage } from "@/context/LanguageContext"
 import Image from "next/image"
 import Link from "next/link"
 import { buttonVariants } from "./ui/button"
-import { ChevronRight, Check } from "lucide-react"
+import { ChevronRight } from "lucide-react"
+import { MdCheckCircle } from "react-icons/md"
 
 import {
   Carousel,
@@ -80,7 +81,7 @@ export function ServicesSection() {
                   <ul className="space-y-5">
                     {service.items?.map((item: string, i: number) => (
                       <li key={i} className="flex items-start">
-                        <Check 
+                        <MdCheckCircle 
                           className="w-6 h-6 mr-4 shrink-0 mt-0.5" 
                           style={{ color: service.color }}
                         />
