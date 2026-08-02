@@ -315,7 +315,7 @@ export const contentEN = {
           "Sea Route (partnered logistics): Kalimantan, Sulawesi, Bali",
           "Equipped with GPS tracking & shipping insurance"
         ],
-        icon: FaTruck,
+        icon: Truck,
         color: "#4285F4",
         images: [cddBoxImg, cdeBoxImg, trontonImg]
       },
@@ -334,9 +334,9 @@ export const contentEN = {
           "Brown & white envelopes, stamp pads",
           "A4 Paper, labels, printer ink"
         ],
-        icon: FaBriefcase,
+        icon: Briefcase,
         color: "#EA4335",
-        images: [blindVanImg, cddBoxImg, cdeBoxImg]
+        images: [atkImg]
       },
       {
         id: 3,
@@ -353,9 +353,9 @@ export const contentEN = {
           "Blood pressure monitors, thermometers",
           "Medical masks, sterile gloves"
         ],
-        icon: FaStethoscope,
+        icon: Stethoscope,
         color: "#34A853",
-        images: [trontonImg, blindVanImg, cddBoxImg]
+        images: [alkesImg]
       },
       {
         id: 4,
@@ -372,9 +372,9 @@ export const contentEN = {
           "Original and compatible cartridges",
           "Photo paper, sticker labels, barcode, wholesale packages"
         ],
-        icon: FaPrint,
+        icon: Printer,
         color: "#FBBC05",
-        images: [cdeBoxImg, trontonImg, blindVanImg]
+        images: [blindVanImg, cddBoxImg, cdeBoxImg]
       }
     ]
   },
