@@ -2,15 +2,15 @@ import { MdLocalShipping, MdBusinessCenter, MdMedicalServices, MdPrint } from "r
 
 import cddBoxImg from "../assets/fleet/cdd-box.webp";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
-import engkelBoxMuatanImg from "../assets/engkelbox_muatan.png";
+import engkelBoxMuatanImg from "../assets/engkelbox_muatan.webp";
 
 // Dedicated Service Images
 import pengiriman1 from "../assets/services/pengiriman-1.webp";
 import pengiriman2 from "../assets/services/pengiriman-2.webp";
 import pengiriman3 from "../assets/services/pengiriman-3.webp";
-import atk1 from "../assets/services/ATK.png";
-import alkes1 from "../assets/services/Alkes.png";
-import printer1 from "../assets/services/printer-perlengkapan.png";
+import atk1 from "../assets/services/atk.webp";
+import alkes1 from "../assets/services/alkes.webp";
+import printer1 from "../assets/services/printer-perlengkapan.webp";
 
 // Faenzone Assets
 import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.png";

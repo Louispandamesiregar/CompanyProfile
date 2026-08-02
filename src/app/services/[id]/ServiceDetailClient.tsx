@@ -10,7 +10,7 @@ import { Navbar } from "@/components/Navbar"
 import { Footer } from "@/components/Footer"
 import cddBoxImg from "@/assets/fleet/cdd-box.webp";
 import cdeBoxImg from "@/assets/fleet/cde-box.webp";
-import engkelboxImg from "@/assets/engkel_box.png";
+import engkelboxImg from "@/assets/engkel_box.webp";
 import { buttonVariants } from "@/components/ui/button"
 
 export function ServiceDetailClient({ id }: { id: string }) {
@@ -36,6 +36,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
             src={service.images?.[0] || engkelboxImg} 
             alt={service.title} 
             fill 
+            sizes="100vw"
             className="object-cover" 
             priority
           />

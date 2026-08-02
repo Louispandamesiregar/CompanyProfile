@@ -58,6 +58,7 @@ export function HeroSection() {
                   src={slide.image}
                   alt={slide.headline}
                   fill
+                  sizes="100vw"
                   className="object-cover"
                   priority={index === 0}
                 />
