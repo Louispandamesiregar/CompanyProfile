@@ -46,7 +46,7 @@ export function ServicesSection() {
   const services = content.services.items
 
   return (
-    <section id="services" className="pt-12 md:pt-16 pb-12 md:pb-16 bg-gradient-to-b from-card/50 to-background scroll-m-20 relative">
+    <section id="services" className="pt-12 md:pt-16 pb-12 md:pb-16 bg-gradient-to-b from-card/50 to-background scroll-m-20 relative font-jakarta">
       <div className="container mx-auto px-6 md:px-12 max-w-[1440px]">
         <div className="text-center mb-16 space-y-6">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground uppercase">
