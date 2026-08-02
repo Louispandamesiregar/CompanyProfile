@@ -81,7 +81,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
                   {service.fullDescription}
                 </p>
                 {serviceId === 2 && (
-                  <div className="mt-8 relative w-full h-64 md:h-96 rounded-xl overflow-hidden shadow-md">
+                  <div className="mt-8 relative w-full h-64 md:h-96 rounded-none overflow-hidden shadow-md">
                     <Image src={atk1DetailImg} alt="Pengadaan ATK" fill className="object-cover" />
                   </div>
                 )}
@@ -91,7 +91,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
               {service.images.length > 1 && (
                 <div className="flex flex-col gap-8 mt-8">
                   {service.images.slice(1).map((img: any, idx: number) => (
-                    <div key={idx} className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden shadow-md">
+                    <div key={idx} className="relative w-full h-64 md:h-96 rounded-none overflow-hidden shadow-md">
                       <Image src={img} alt={`${service.title} Image ${idx + 1}`} fill className="object-cover hover:scale-105 transition-transform duration-500" />
                     </div>
                   ))}
