@@ -4,8 +4,16 @@ import blindVanImg from "../assets/fleet/blind-van.webp";
 import cddBoxImg from "../assets/fleet/cdd-box.webp";
 import cdeBoxImg from "../assets/fleet/cde-box.webp";
 import trontonImg from "../assets/fleet/tronton-wingbox.webp";
-import alkesImg from "../assets/alkes.jpg";
-import atkImg from "../assets/atk.jpg";
+
+// Dedicated Service Images
+import pengiriman1 from "../assets/services/pengiriman-1.webp";
+import pengiriman2 from "../assets/services/pengiriman-2.webp";
+import pengiriman3 from "../assets/services/pengiriman-3.webp";
+import atk1 from "../assets/services/atk-1.jpg";
+import alkes1 from "../assets/services/alkes-1.jpg";
+import printer1 from "../assets/services/printer-1.png";
+import printer2 from "../assets/services/printer-2.png";
+import printer3 from "../assets/services/printer-3.png";
 
 // Faenzone Assets
 import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.png";
@@ -119,7 +127,7 @@ export const contentID = {
         ],
         icon: MdLocalShipping,
         color: "#4285F4",
-        images: [trontonImg, blindVanImg, cddBoxImg]
+        images: [pengiriman3, pengiriman1, pengiriman2]
       },
       {
         id: 2,
@@ -138,7 +146,7 @@ export const contentID = {
         ],
         icon: MdBusinessCenter,
         color: "#EA4335",
-        images: [atkImg]
+        images: [atk1]
       },
       {
         id: 3,
@@ -157,7 +165,7 @@ export const contentID = {
         ],
         icon: MdMedicalServices,
         color: "#34A853",
-        images: [alkesImg]
+        images: [alkes1]
       },
       {
         id: 4,
@@ -176,7 +184,7 @@ export const contentID = {
         ],
         icon: MdPrint,
         color: "#FBBC05",
-        images: [blindVanImg, cddBoxImg, cdeBoxImg]
+        images: [printer1, printer2, printer3]
       }
     ]
   },
@@ -317,7 +325,7 @@ export const contentEN = {
         ],
         icon: MdLocalShipping,
         color: "#4285F4",
-        images: [cddBoxImg, cdeBoxImg, trontonImg]
+        images: [pengiriman2, pengiriman1, pengiriman3]
       },
       {
         id: 2,
@@ -336,7 +344,7 @@ export const contentEN = {
         ],
         icon: MdBusinessCenter,
         color: "#EA4335",
-        images: [atkImg]
+        images: [atk1]
       },
       {
         id: 3,
@@ -355,7 +363,7 @@ export const contentEN = {
         ],
         icon: MdMedicalServices,
         color: "#34A853",
-        images: [alkesImg]
+        images: [alkes1]
       },
       {
         id: 4,
@@ -374,7 +382,7 @@ export const contentEN = {
         ],
         icon: MdPrint,
         color: "#FBBC05",
-        images: [blindVanImg, cddBoxImg, cdeBoxImg]
+        images: [printer1, printer2, printer3]
       }
     ]
   },
