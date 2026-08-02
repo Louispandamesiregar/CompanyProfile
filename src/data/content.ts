@@ -11,9 +11,7 @@ import pengiriman2 from "../assets/services/pengiriman-2.webp";
 import pengiriman3 from "../assets/services/pengiriman-3.webp";
 import atk1 from "../assets/services/atk-1.jpg";
 import alkes1 from "../assets/services/alkes-1.jpg";
-import printer1 from "../assets/services/printer-1.png";
-import printer2 from "../assets/services/printer-2.png";
-import printer3 from "../assets/services/printer-3.png";
+import printer1 from "../assets/services/printer-perlengkapan.png";
 
 // Faenzone Assets
 import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.png";
@@ -184,7 +182,7 @@ export const contentID = {
         ],
         icon: MdPrint,
         color: "#FBBC05",
-        images: [printer1, printer2, printer3]
+        images: [printer1]
       }
     ]
   },
@@ -382,7 +380,7 @@ export const contentEN = {
         ],
         icon: MdPrint,
         color: "#FBBC05",
-        images: [printer1, printer2, printer3]
+        images: [printer1]
       }
     ]
   },
