@@ -36,11 +36,11 @@ export function FleetSection() {
   const { language } = useLanguage()
 
   return (
-    <section className="pt-12 md:pt-16 pb-12 md:pb-16 bg-white relative overflow-hidden border-t border-border/50">
+    <section className="pt-8 md:pt-12 pb-8 md:pb-12 bg-white relative overflow-hidden border-t border-border/50">
       {/* Background Ornaments */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-slate-50 to-transparent pointer-events-none" />
       
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
+      <div className="container mx-auto px-6 md:px-12 max-w-[1600px] relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
           <h3 className="text-sm font-bold tracking-[0.3em] text-[#35627A] uppercase drop-shadow-sm">
             {language === 'id' ? 'Kapasitas Armada' : 'Fleet Capacity'}

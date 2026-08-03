@@ -67,7 +67,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
 
                 {/* Content Container */}
-                <div className="absolute inset-0 flex items-center pt-8 md:pt-12 pb-12 md:pb-16">
+                <div className="absolute inset-0 flex items-center pt-8 md:pt-12 pb-8 md:pb-12">
                   <div className="container mx-auto px-6 md:px-12 w-full">
                     <div className="w-full md:w-1/2 flex flex-col gap-6 animate-in slide-in-from-left-8 duration-700">
                       <div className="inline-block px-3 py-1 bg-white/20 text-white backdrop-blur-md border border-white/30 text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">

@@ -52,7 +52,7 @@ export function FeaturesBar() {
 
   return (
     <div className="w-full relative z-30 -mt-12 md:-mt-16 px-4">
-      <div className="container mx-auto max-w-[1440px] bg-white rounded-3xl shadow-xl shadow-black/5 border border-slate-100/50 overflow-hidden relative backdrop-blur-xl">
+      <div className="container mx-auto max-w-[1600px] bg-white rounded-3xl shadow-xl shadow-black/5 border border-slate-100/50 overflow-hidden relative backdrop-blur-xl">
         <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 py-4 md:py-6 relative z-10">
           {features.map((feat, i) => (

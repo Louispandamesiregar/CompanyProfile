@@ -11,7 +11,7 @@ export function ClientMarquee() {
   const scrollItems = [...clients.items, ...clients.items, ...clients.items]
 
   return (
-    <section className="pt-8 md:pt-10 pb-16 bg-white overflow-hidden border-y border-border/40">
+    <section className="pt-8 md:pt-10 pb-10 bg-white overflow-hidden border-y border-border/40">
       <div className="container mx-auto px-4 text-center mb-10">
         <h3 className="text-sm md:text-base font-bold tracking-widest uppercase text-muted-foreground/80 mb-2">
           {clients.subtitle}

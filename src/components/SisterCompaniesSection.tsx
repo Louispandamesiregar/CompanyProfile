@@ -113,13 +113,13 @@ export function SisterCompaniesSection() {
   }, [api, onScroll])
 
   return (
-    <section id="group" className="pt-12 md:pt-16 pb-12 md:pb-16 bg-slate-50 scroll-m-20 overflow-hidden relative border-y border-border/50">
+    <section id="group" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-slate-50 scroll-m-20 overflow-hidden relative border-y border-border/50">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute -left-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(37,99,235,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
       <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(29,78,216,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
       
-      <div className="container mx-auto px-6 md:px-12 max-w-7xl relative z-10">
+      <div className="container mx-auto px-6 md:px-12 max-w-[1600px] relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
           <h3 className="text-sm font-bold tracking-[0.3em] text-primary uppercase drop-shadow-sm">
             {content.sisterCompanies.subtitle}
@@ -139,7 +139,7 @@ export function SisterCompaniesSection() {
                 loop: true,
                 duration: 40,
               }}
-              className="w-full max-w-[1440px] mx-auto"
+              className="w-full max-w-[1600px] mx-auto"
             >
               <CarouselContent className="transform-style-3d py-8">
                 {loopingCompanies.map((company, index) => {

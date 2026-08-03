@@ -15,7 +15,7 @@ export function Footer() {
 
   return (
     <footer className="bg-white text-foreground border-t border-border">
-      <div className="container mx-auto px-6 md:px-12 py-16 max-w-7xl">
+      <div className="container mx-auto px-6 md:px-12 py-10 max-w-[1600px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Column 1: Company Info */}
           <div className="space-y-6">
@@ -93,7 +93,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-border bg-slate-50">
-        <div className="container mx-auto px-6 md:px-12 py-6 max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="container mx-auto px-6 md:px-12 py-6 max-w-[1600px] flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-card-foreground/60 font-medium">
             &copy; {year} {footer.copyright}
           </p>
