@@ -7,10 +7,10 @@ import engkelBoxMuatanImg from "../assets/engkelbox_muatan.webp";
 // Dedicated Service Images
 import pengiriman1 from "../assets/box2.webp";
 import pengiriman2 from "../assets/box3.webp";
-import pengiriman3 from "../assets/services/pengiriman-3.webp";
+import pengiriman3 from "../assets/box.webp";
 import atk1 from "../assets/services/atk.webp";
 import alkes1 from "../assets/services/alkes.webp";
-import printer1 from "../assets/services/printer-perlengkapan.webp";
+import printer1 from "../assets/perlengkapan_printer.webp";
 
 // Faenzone Assets
 import faenzoneAyamGeprekImg from "../assets/faenzone/ayam-geprek.webp";
