@@ -52,13 +52,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
               {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
             </Link>
             
-            <div className="flex items-center gap-4 mb-4">
-              <div 
-                className="w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-xl"
-                style={{ backgroundColor: service.color }}
-              >
-                <service.icon className="w-8 h-8" />
-              </div>
+            <div className="mb-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase text-foreground">
                 {service.title}
               </h1>
