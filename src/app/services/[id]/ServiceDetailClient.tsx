@@ -33,30 +33,32 @@ export function ServiceDetailClient({ id }: { id: string }) {
       <Navbar />
       <main className="flex-1 bg-background">
         {/* Hero Section */}
-        <section className="relative h-[40vh] md:h-[60vh] min-h-[400px] w-full flex items-center justify-center overflow-hidden">
-          <Image 
-            src={service.images?.[0] || engkelboxImg} 
-            alt={service.title} 
-            fill 
-            sizes="100vw"
-            className="object-cover" 
-            priority
-          />
+        <section className="relative h-[40vh] md:h-[60vh] min-h-[400px] w-full flex items-center overflow-hidden">
+          {/* Latar Belakang Gambar dengan Overlay Gelap */}
+          <div className="absolute inset-0 z-0">
+            <Image 
+              src={service.images?.[0] || engkelboxImg} 
+              alt={service.title} 
+              fill 
+              sizes="100vw"
+              className="object-cover" 
+              priority
+            />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
           
-          <div className="container mx-auto px-6 md:px-12 relative z-10 pt-20 flex justify-start">
-            <div className="bg-white/95 backdrop-blur-md p-8 md:p-12 shadow-2xl rounded-none border-l-4" style={{ borderColor: service.color }}>
-              <Link 
-                href="/" 
-                className="inline-flex items-center text-sm font-bold text-muted-foreground hover:text-primary transition-colors mb-4"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
-              </Link>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase text-foreground leading-tight">
-                {service.title}
-              </h1>
-            </div>
+          <div className="container mx-auto px-6 md:px-12 relative z-10 pt-20">
+            <Link 
+              href="/" 
+              className="inline-flex items-center text-sm font-bold text-white/70 hover:text-white transition-colors mb-4"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
+            </Link>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase text-white leading-tight">
+              {service.title}
+            </h1>
           </div>
         </section>
 
