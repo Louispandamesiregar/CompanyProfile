@@ -69,7 +69,14 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
-                <span className="text-[15px] text-card-foreground/70 leading-relaxed">{companyInfo.contact.address}</span>
+                <a 
+                  href="https://maps.app.goo.gl/TBCoP7Cm9VJTt5rz6" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[15px] text-card-foreground/70 leading-relaxed hover:text-primary transition-colors cursor-pointer"
+                >
+                  {companyInfo.contact.address}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-muted-foreground shrink-0" />
