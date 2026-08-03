@@ -10,7 +10,7 @@ export function AboutSection() {
   const { about, visi, misi } = content.companyInfo
 
   return (
-    <section id="about" className="pt-16 md:pt-24 pb-16 md:pb-32 bg-white scroll-m-16 border-t border-border/40 relative overflow-hidden">
+    <section id="about" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-white scroll-m-16 border-t border-border/40 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 max-w-7xl relative">
         
         {/* Kontainer Relatif untuk Overlapping */}
