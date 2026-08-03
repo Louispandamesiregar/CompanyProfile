@@ -78,15 +78,7 @@ export function ServicesSection() {
 
                 {/* Text Side */}
                 <div className="w-full md:w-[50%] lg:w-[500px] space-y-6">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div 
-                      className="w-14 h-14 min-w-[56px] min-h-[56px] flex-none rounded-xl text-white flex items-center justify-center shadow-lg"
-                      style={{ backgroundColor: service.color }}
-                    >
-                      <service.icon className="w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight">{service.title}</h3>
-                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-6">{service.title}</h3>
                   
                   <ul className="space-y-5">
                     {service.items?.map((item: string, i: number) => (
