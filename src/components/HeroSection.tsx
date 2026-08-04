@@ -90,7 +90,7 @@ export function HeroSection() {
                     </div>
 
                     {/* Embedded Features (Full Width Row) */}
-                    <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full animate-in slide-in-from-bottom-8 duration-700 delay-150">
+                    <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full animate-in slide-in-from-bottom-8 duration-700 delay-150">
                       {features.map((feat, i) => (
                         <div key={i} className="flex items-center gap-3 md:gap-4">
                           <div className="p-2 md:p-3 rounded-lg md:rounded-xl bg-white/10 text-white backdrop-blur-md border border-white/10 hover:bg-white/20 transition-colors">
