@@ -47,7 +47,7 @@ export function ServicesSection() {
   const services = content.services.items
 
   return (
-    <section id="services" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-slate-50/50 scroll-m-20 relative font-jakarta overflow-hidden">
+    <section id="services" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-slate-50/50 scroll-m-20 relative overflow-hidden">
       {/* Subtle Dotted Background Pattern */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-[0.4]"
@@ -78,16 +78,12 @@ export function ServicesSection() {
 
                 {/* Text Side */}
                 <div className="w-full md:w-[50%] lg:w-[500px] space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight mb-6">{service.title}</h3>
+                  <h3 className="text-2xl md:text-4xl font-extrabold uppercase tracking-tight mb-6 text-slate-800">{service.title}</h3>
                   
-                  <ul className="space-y-5">
+                  <ul className="space-y-4 list-disc pl-6 marker:text-primary/60">
                     {service.items?.map((item: string, i: number) => (
-                      <li key={i} className="flex items-start">
-                        <MdCheckCircle 
-                          className="w-6 h-6 mr-4 shrink-0 mt-0.5" 
-                          style={{ color: service.color }}
-                        />
-                        <span className="text-lg text-foreground leading-relaxed font-medium">{item}</span>
+                      <li key={i} className="text-base md:text-lg text-foreground/80 leading-relaxed font-normal">
+                        {item}
                       </li>
                     ))}
                   </ul>
