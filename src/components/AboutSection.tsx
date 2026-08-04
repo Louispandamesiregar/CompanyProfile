@@ -41,10 +41,20 @@ export function AboutSection() {
           </div>
 
           {/* KOTAK KANAN (Visi & Misi - Overlapping) */}
-          <div className="w-full lg:w-7/12 bg-slate-50 p-8 md:p-12 lg:p-16 z-20 shadow-2xl animate-fade-in-up mt-8 lg:-ml-32 lg:mt-24 border border-slate-100 rounded-none" style={{ animationDelay: '0.2s' }}>
+          <div className="w-full lg:w-7/12 bg-slate-50 p-8 md:p-12 lg:p-16 z-20 shadow-2xl animate-fade-in-up mt-8 lg:-ml-32 lg:mt-24 border border-slate-100 rounded-none relative" style={{ animationDelay: '0.2s' }}>
             
+            {/* Layer Ornamen Geometris (Hanya untuk estetika latar belakang) */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {/* Motif Garis-garis diagonal di pojok kanan atas */}
+              <div className="absolute -top-12 -right-12 w-48 h-48 opacity-[0.05] rotate-12" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 10px)' }}></div>
+              {/* Ornamen Lingkaran Geometris di kiri bawah */}
+              <div className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full border-[30px] border-primary/[0.04]"></div>
+              {/* Motif Dot Grid Samar di area tengah yang memudar di pinggir */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle,rgba(37,99,235,0.05)_1.5px,transparent_1.5px)] [background-size:24px_24px] [mask-image:radial-gradient(ellipse_at_center,black_10%,transparent_70%)]"></div>
+            </div>
+
             {/* Grid 2 Kolom untuk Visi dan Misi agar berjajar kiri-kanan */}
-            <div className="grid md:grid-cols-2 gap-10 md:gap-8">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-8 relative z-10">
               
               {/* Kolom Kiri: Visi */}
               <div>
