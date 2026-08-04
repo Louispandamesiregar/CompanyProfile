@@ -17,16 +17,22 @@ export function AboutSection() {
         <div className="relative w-full flex flex-col lg:flex-row">
           
           {/* KOTAK KIRI (Tentang Kami) */}
-          <div className="w-full lg:w-7/12 h-fit relative p-8 md:p-12 lg:p-16 lg:pr-40 z-10 shadow-sm animate-fade-in-up rounded-none overflow-hidden">
-            {/* Latar Belakang Gambar */}
+          <div className="w-full lg:w-7/12 h-fit relative p-8 md:p-12 lg:p-16 lg:pr-40 z-10 shadow-sm animate-fade-in-up rounded-none overflow-hidden bg-slate-900">
+            {/* Latar Belakang Gambar (Tanpa Blur agar Kontras) */}
             <Image 
               src={boxDeretImg}
               alt="Latar Belakang Tentang Kami"
               fill
-              className="object-cover z-0 blur-sm"
+              className="object-cover z-0 opacity-70 mix-blend-luminosity"
             />
-            {/* Overlay Warna Biru */}
-            <div className="absolute inset-0 bg-primary/50 z-0"></div>
+            {/* Overlay Gelap Dasar */}
+            <div className="absolute inset-0 bg-slate-900/30 z-0"></div>
+            
+            {/* Overlay Biru Miring (Slanted Polygon) */}
+            <div className="absolute inset-0 bg-primary/95 z-0" style={{ clipPath: 'polygon(0 0, 85% 0, 55% 100%, 0 100%)' }}></div>
+            
+            {/* Garis Aksen Miring */}
+            <div className="absolute inset-0 bg-primary/60 z-0" style={{ clipPath: 'polygon(85% 0, 87% 0, 57% 100%, 55% 100%)' }}></div>
             
             {/* Konten Text */}
             <div className="relative z-10">
