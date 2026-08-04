@@ -50,22 +50,22 @@ export const contentID = {
       {
         id: 1,
         headline: "SOLUSI PENGADAAN &\nDISTRIBUSI TERPERCAYA",
-        cta: "Layanan Kami",
-        link: "#services",
+        cta: "Hubungi Kami",
+        link: "https://wa.me/6281388398303",
         image: engkelBoxMuatanImg
       },
       {
         id: 2,
         headline: "PENGIRIMAN BARANG\nPULAU JAWA",
-        cta: "Layanan Kami",
-        link: "#services",
+        cta: "Hubungi Kami",
+        link: "https://wa.me/6281388398303",
         image: cddBoxImg
       },
       {
         id: 3,
         headline: "PENGADAAN ATK &\nALAT KESEHATAN",
-        cta: "Layanan Kami",
-        link: "#services",
+        cta: "Hubungi Kami",
+        link: "https://wa.me/6281388398303",
         image: atk1
       }
     ],
@@ -286,22 +286,22 @@ export const contentEN = {
       {
         id: 1,
         headline: "TRUSTED PROCUREMENT &\nDISTRIBUTION SOLUTION",
-        cta: "Our Services",
-        link: "#services",
+        cta: "Contact Us",
+        link: "https://wa.me/6281388398303",
         image: engkelBoxMuatanImg
       },
       {
         id: 2,
         headline: "FREIGHT FORWARDING\nACROSS JAVA ISLAND",
-        cta: "Our Services",
-        link: "#services",
+        cta: "Contact Us",
+        link: "https://wa.me/6281388398303",
         image: cddBoxImg
       },
       {
         id: 3,
         headline: "MEDICAL & OFFICE\nSUPPLIES PROCUREMENT",
-        cta: "Our Services",
-        link: "#services",
+        cta: "Contact Us",
+        link: "https://wa.me/6281388398303",
         image: atk1
       }
     ],
