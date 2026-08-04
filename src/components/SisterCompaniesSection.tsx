@@ -139,7 +139,7 @@ export function SisterCompaniesSection() {
                 loop: true,
                 duration: 40,
               }}
-              className="w-full max-w-[1600px] mx-auto"
+              className="w-full max-w-[1200px] mx-auto"
             >
               <CarouselContent className="transform-style-3d py-8">
                 {loopingCompanies.map((company, index) => {
@@ -147,7 +147,7 @@ export function SisterCompaniesSection() {
                   return (
                     <CarouselItem 
                       key={`${company.id}-${index}`} 
-                      className="basis-2/3 md:basis-1/3"
+                      className="basis-1/2 lg:basis-1/4"
                     >
                       <div
                         className="embla__slide__inner h-full relative"
@@ -156,13 +156,13 @@ export function SisterCompaniesSection() {
                         {/* Removed backdrop-blur-xl because it causes massive GPU lag during scroll */}
                         <button
                           onClick={() => handleCardClick(company.id)}
-                          className={`flex flex-col items-center justify-center p-6 h-full w-full gap-5 group cursor-pointer bg-white rounded-3xl shadow-xl border transition-all duration-300 text-left ${
+                          className={`flex flex-col items-center justify-center p-4 md:p-5 h-full w-full gap-3 md:gap-4 group cursor-pointer bg-white rounded-3xl shadow-xl border transition-all duration-300 text-left ${
                             isExpanded
                               ? 'border-primary shadow-[0_20px_50px_rgba(37,99,235,0.25)] ring-2 ring-primary/30'
                               : 'border-border/50 hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)]'
                           }`}
                         >
-                        <div className="h-40 md:h-48 w-full max-w-[280px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
+                        <div className="h-28 md:h-36 w-full max-w-[200px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
                           {company.image ? (
                             <Image 
                               src={company.image} 
@@ -177,7 +177,7 @@ export function SisterCompaniesSection() {
                           )}
                         </div>
                         <div className="text-center mt-2 relative z-10 w-full">
-                          <h4 className={`font-extrabold text-xl md:text-2xl transition-colors ${
+                          <h4 className={`font-extrabold text-lg md:text-xl transition-colors ${
                             isExpanded
                               ? 'text-primary'
                               : 'text-foreground group-hover:text-primary'
