@@ -221,9 +221,9 @@ export function SisterCompaniesSection() {
                 <div className="relative bg-white rounded-3xl shadow-2xl border border-primary/30 overflow-hidden">
                   {/* Card top accent */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/80 to-secondary" />
-                                    <div className={`p-8 md:p-12 flex gap-8 relative z-10 ${expandedCompany.gallery && expandedCompany.gallery.length > 0 ? 'flex-col' : 'flex-col md:flex-row items-center'}`}>
-                    {/* Text Details (Moved to top if gallery exists via flex-order) */}
-                    <div className={`flex-1 text-center md:text-left ${expandedCompany.gallery && expandedCompany.gallery.length > 0 ? 'order-1' : 'order-2'}`}>
+                  <div className={`p-8 md:p-12 flex gap-8 relative z-10 flex-col md:flex-row items-center`}>
+                    {/* Text Details */}
+                    <div className={`flex-1 text-center md:text-left order-2`}>
                       <div className="flex flex-col md:flex-row md:items-center gap-3 mb-3">
                         <h3 className="text-2xl md:text-3xl font-black text-foreground tracking-tight">{expandedCompany.name}</h3>
                         <span className="inline-flex items-center self-center md:self-auto px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-primary/10 text-primary border border-primary/20">
@@ -243,37 +243,19 @@ export function SisterCompaniesSection() {
                       )}
                     </div>
 
-                    {/* Company Logo / Image / Gallery */}
-                    {expandedCompany.gallery && expandedCompany.gallery.length > 0 ? (
-                      <div className="order-2 w-full pt-6 md:pt-8 border-t border-border/50 mt-2">
-                        <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 text-center md:text-left">Galeri Produk / Brand</h4>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 w-full">
-                          {expandedCompany.gallery.map((img: any, idx: number) => (
-                            <div key={idx} className="aspect-square relative bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl border border-border/50 shadow-md flex items-center justify-center p-4 hover:scale-105 hover:shadow-xl transition-all duration-300">
-                              <Image
-                                src={img}
-                                alt={`${expandedCompany.name} asset ${idx + 1}`}
-                                fill
-                                className="object-contain p-4 md:p-6 drop-shadow-sm"
-                              />
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="order-1 w-32 h-32 md:w-44 md:h-44 relative shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl border border-border/50 shadow-lg flex items-center justify-center p-4">
-                        {expandedCompany.image ? (
-                          <Image
-                            src={expandedCompany.image}
-                            alt={expandedCompany.name}
-                            fill
-                            className="object-contain p-4"
-                          />
-                        ) : (
-                          <span className="text-muted-foreground text-sm font-medium">No Logo</span>
-                        )}
-                      </div>
-                    )}
+                    {/* Company Logo / Image */}
+                    <div className="order-1 w-32 h-32 md:w-44 md:h-44 relative shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl border border-border/50 shadow-lg flex items-center justify-center p-4">
+                      {expandedCompany.image ? (
+                        <Image
+                          src={expandedCompany.image}
+                          alt={expandedCompany.name}
+                          fill
+                          className="object-contain p-4"
+                        />
+                      ) : (
+                        <span className="text-muted-foreground text-sm font-medium">No Logo</span>
+                      )}
+                    </div>
                   </div>
 
                   {/* Close button */}
