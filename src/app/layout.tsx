@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { LanguageProvider } from "@/context/LanguageContext";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-sans" });
-const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "PT Nawasena Jaya Group",
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" suppressHydrationWarning>
-      <body className={`${outfit.className} ${plusJakarta.variable} antialiased min-h-screen flex flex-col overscroll-none`}>
+      <body className={`${inter.className} antialiased min-h-screen flex flex-col overscroll-none`}>
           <LanguageProvider>
             <div className="flex flex-col min-h-screen overflow-x-hidden w-full max-w-[100vw]">
               {children}
