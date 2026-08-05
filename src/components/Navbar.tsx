@@ -46,16 +46,23 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
+                    onClick={(e) => {
+                      if (link.hasDropdown) {
+                        e.preventDefault();
+                        setActiveMenu(activeMenu === link.name ? null : link.name);
+                      }
+                    }}
                     className="flex items-center gap-1 px-4 py-2 text-sm font-semibold text-foreground/80 transition-colors hover:text-primary rounded-md"
                   >
                     {link.name}
-                    {link.hasDropdown && <ChevronDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />}
+                    {link.hasDropdown && <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeMenu === link.name ? 'rotate-180 opacity-100' : 'opacity-50 group-hover:opacity-100 group-hover:rotate-180'}`} />}
                   </Link>
 
                   {/* Mega Menu Dropdown */}
                   {link.hasDropdown && activeMenu === link.name && (
-                    <div className="absolute top-full right-0 w-[480px] bg-card text-card-foreground border shadow-xl rounded-b-xl p-6 grid grid-cols-2 gap-6 animate-in slide-in-from-top-2">
-                      <div>
+                    <div className="absolute top-full right-0 pt-4">
+                      <div className="w-[480px] bg-card text-card-foreground border shadow-xl rounded-xl p-6 grid grid-cols-2 gap-6 animate-in slide-in-from-top-2">
+                        <div>
                         <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
                         <ul className="space-y-3">
                           <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Alat Tulis Kantor (ATK)' : 'Office Supplies (ATK)'}</Link></li>
@@ -71,6 +78,7 @@ export function Navbar() {
                           <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Jalur Laut (Luar Pulau)' : 'Sea Route (Other Islands)'}</Link></li>
                         </ul>
                       </div>
+                    </div>
                     </div>
                   )}
                 </div>
