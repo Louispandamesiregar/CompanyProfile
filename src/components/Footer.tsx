@@ -47,8 +47,8 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">{footer.quickLinksTitle}</h4>
             <ul className="space-y-4">
-              <li><Link href="#about" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tentang Kami' : 'About Us'}</Link></li>
-              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}</Link></li>
+              <li><Link href="/#about" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tentang Kami' : 'About Us'}</Link></li>
+              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}</Link></li>
             </ul>
           </div>
 
@@ -56,10 +56,10 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">{language === 'id' ? 'Layanan Kami' : 'Our Services'}</h4>
             <ul className="space-y-4">
-              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengiriman Barang' : 'Freight Forwarding'}</Link></li>
-              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan ATK' : 'Office Supplies'}</Link></li>
-              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan Alkes' : 'Medical Equipment'}</Link></li>
-              <li><Link href="#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tinta & Printer' : 'Ink & Printers'}</Link></li>
+              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengiriman Barang' : 'Freight Forwarding'}</Link></li>
+              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan ATK' : 'Office Supplies'}</Link></li>
+              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan Alkes' : 'Medical Equipment'}</Link></li>
+              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tinta & Printer' : 'Ink & Printers'}</Link></li>
             </ul>
           </div>
 

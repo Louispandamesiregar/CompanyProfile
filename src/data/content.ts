@@ -40,8 +40,8 @@ const clientsData = {
 
 export const contentID = {
   navLinks: [
-    { name: "Tentang Kami", href: "#about" },
-    { name: "Layanan", href: "#services", hasDropdown: true },
+    { name: "Tentang Kami", href: "/#about" },
+    { name: "Layanan", href: "/#services", hasDropdown: true },
   ],
   companyInfo: {
     name: "PT. Nawasena Jaya Group",
@@ -276,8 +276,8 @@ export const contentID = {
 
 export const contentEN = {
   navLinks: [
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services", hasDropdown: true },
+    { name: "About Us", href: "/#about" },
+    { name: "Services", href: "/#services", hasDropdown: true },
   ],
   companyInfo: {
     name: "PT. Nawasena Jaya Group",
