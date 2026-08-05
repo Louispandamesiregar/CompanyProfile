@@ -56,10 +56,10 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">{language === 'id' ? 'Layanan Kami' : 'Our Services'}</h4>
             <ul className="space-y-4">
-              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengiriman Barang' : 'Freight Forwarding'}</Link></li>
-              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan ATK' : 'Office Supplies'}</Link></li>
-              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan Alkes' : 'Medical Equipment'}</Link></li>
-              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tinta & Printer' : 'Ink & Printers'}</Link></li>
+              <li><Link href="/services/1" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengiriman Barang' : 'Freight Forwarding'}</Link></li>
+              <li><Link href="/services/2" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan ATK' : 'Office Supplies'}</Link></li>
+              <li><Link href="/services/3" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Pengadaan Alkes' : 'Medical Equipment'}</Link></li>
+              <li><Link href="/services/4" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tinta & Printer' : 'Ink & Printers'}</Link></li>
             </ul>
           </div>
 

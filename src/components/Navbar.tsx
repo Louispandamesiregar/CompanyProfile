@@ -65,17 +65,17 @@ export function Navbar() {
                         <div>
                         <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
                         <ul className="space-y-3">
-                          <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Alat Tulis Kantor (ATK)' : 'Office Supplies (ATK)'}</Link></li>
-                          <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Alat Kesehatan (Alkes)' : 'Medical Equipment'}</Link></li>
-                          <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Tinta & Perlengkapan Printer' : 'Ink & Printer Accessories'}</Link></li>
+                          <li><Link href="/services/2" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Alat Tulis Kantor (ATK)' : 'Office Supplies (ATK)'}</Link></li>
+                          <li><Link href="/services/3" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Alat Kesehatan (Alkes)' : 'Medical Equipment'}</Link></li>
+                          <li><Link href="/services/4" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Tinta & Perlengkapan Printer' : 'Ink & Printer Accessories'}</Link></li>
                         </ul>
                       </div>
                       <div>
                         <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Distribusi' : 'Distribution'}</h4>
                         <ul className="space-y-3">
-                          <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Pengiriman Barang (Box)' : 'Freight Forwarding (Box)'}</Link></li>
-                          <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Jalur Darat (Jawa)' : 'Land Route (Java)'}</Link></li>
-                          <li><Link href="/#services" className="text-sm hover:text-primary transition-colors block">{language === 'id' ? 'Jalur Laut (Luar Pulau)' : 'Sea Route (Other Islands)'}</Link></li>
+                          <li><Link href="/services/1" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Pengiriman Barang (Box)' : 'Freight Forwarding (Box)'}</Link></li>
+                          <li><Link href="/services/1" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Jalur Darat (Jawa)' : 'Land Route (Java)'}</Link></li>
+                          <li><Link href="/services/1" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Jalur Laut (Luar Pulau)' : 'Sea Route (Other Islands)'}</Link></li>
                         </ul>
                       </div>
                     </div>
