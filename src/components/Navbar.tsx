@@ -8,6 +8,9 @@ import { useLanguage } from "@/context/LanguageContext"
 import { Button } from "./ui/button"
 import njgLogo from "@/assets/njg_logo.webp"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
+import { Montserrat } from "next/font/google"
+
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400", "500", "600", "700"] })
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -60,22 +63,22 @@ export function Navbar() {
 
                   {/* Mega Menu Dropdown */}
                   {link.hasDropdown && activeMenu === link.name && (
-                    <div className="absolute top-full right-0 pt-4">
+                    <div className={`absolute top-full right-0 pt-4 ${montserrat.className}`}>
                       <div className="w-[480px] bg-card text-card-foreground border shadow-xl rounded-xl p-6 grid grid-cols-2 gap-6 animate-in slide-in-from-top-2">
                         <div>
                         <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Pengadaan' : 'Procurement'}</h4>
                         <ul className="space-y-3">
-                          <li><Link href="/services/2" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Alat Tulis Kantor (ATK)' : 'Office Supplies (ATK)'}</Link></li>
-                          <li><Link href="/services/3" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Alat Kesehatan (Alkes)' : 'Medical Equipment'}</Link></li>
-                          <li><Link href="/services/4" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Tinta & Perlengkapan Printer' : 'Ink & Printer Accessories'}</Link></li>
+                          <li><Link href="/services/2" className="text-[15px] font-medium hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Alat Tulis Kantor (ATK)' : 'Office Supplies (ATK)'}</Link></li>
+                          <li><Link href="/services/3" className="text-[15px] font-medium hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Alat Kesehatan (Alkes)' : 'Medical Equipment'}</Link></li>
+                          <li><Link href="/services/4" className="text-[15px] font-medium hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Tinta & Perlengkapan Printer' : 'Ink & Printer Accessories'}</Link></li>
                         </ul>
                       </div>
                       <div>
                         <h4 className="font-bold bg-gradient-to-r from-[#35627A] to-teal-600 bg-clip-text text-transparent mb-4 border-b pb-2">{language === 'id' ? 'Distribusi' : 'Distribution'}</h4>
                         <ul className="space-y-3">
-                          <li><Link href="/services/1" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Pengiriman Barang (Box)' : 'Freight Forwarding (Box)'}</Link></li>
-                          <li><Link href="/services/1" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Jalur Darat (Jawa)' : 'Land Route (Java)'}</Link></li>
-                          <li><Link href="/services/1" className="text-sm hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Jalur Laut (Luar Pulau)' : 'Sea Route (Other Islands)'}</Link></li>
+                          <li><Link href="/services/1" className="text-[15px] font-medium hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Pengiriman Barang (Box)' : 'Freight Forwarding (Box)'}</Link></li>
+                          <li><Link href="/services/1" className="text-[15px] font-medium hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Jalur Darat (Jawa)' : 'Land Route (Java)'}</Link></li>
+                          <li><Link href="/services/1" className="text-[15px] font-medium hover:text-primary transition-colors block" onClick={closeMenu}>{language === 'id' ? 'Jalur Laut (Luar Pulau)' : 'Sea Route (Other Islands)'}</Link></li>
                         </ul>
                       </div>
                     </div>
