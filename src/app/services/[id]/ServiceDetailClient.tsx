@@ -14,6 +14,7 @@ import engkelboxImg from "@/assets/engkel_box.webp";
 import boxImg from "@/assets/box.webp";
 import atk1DetailImg from "@/assets/atk1.webp";
 import { buttonVariants } from "@/components/ui/button"
+import { motion } from "framer-motion"
 
 export function ServiceDetailClient({ id }: { id: string }) {
   const { language, content } = useLanguage()
@@ -48,17 +49,28 @@ export function ServiceDetailClient({ id }: { id: string }) {
           </div>
           
           <div className="container mx-auto px-6 md:px-12 relative z-10 pt-20">
-            <Link 
-              href="/" 
-              className="inline-flex items-center text-sm font-bold text-white/70 hover:text-white transition-colors mb-4"
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
-            </Link>
+              <Link 
+                href="/" 
+                className="inline-flex items-center text-sm font-bold text-white/70 hover:text-white transition-colors mb-4"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
+              </Link>
+            </motion.div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase text-white leading-tight">
+            <motion.h1 
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase text-white leading-tight"
+            >
               {service.title}
-            </h1>
+            </motion.h1>
           </div>
         </section>
 
@@ -67,7 +79,12 @@ export function ServiceDetailClient({ id }: { id: string }) {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             
             {/* Description */}
-            <div className="md:col-span-7 space-y-8">
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="md:col-span-7 space-y-8"
+            >
               <div>
                 <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                   <span className="w-8 h-1 bg-primary rounded-full"></span>
@@ -93,10 +110,15 @@ export function ServiceDetailClient({ id }: { id: string }) {
                   ))}
                 </div>
               )}
-            </div>
+            </motion.div>
 
             {/* Benefits Sidebar */}
-            <div className="md:col-span-5">
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="md:col-span-5"
+            >
               <div className="bg-card border shadow-xl rounded-3xl p-8 sticky top-28">
                 <h3 className="text-xl font-bold mb-6 border-b pb-4">
                   {language === 'id' ? 'Keunggulan Kami' : 'Our Advantages'}
@@ -129,7 +151,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
             </div>
         </section>
 
@@ -148,10 +170,26 @@ export function ServiceDetailClient({ id }: { id: string }) {
                 </p>
               </div>
               
-              <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+              <motion.div 
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+                variants={{
+                  hidden: { opacity: 0 },
+                  visible: {
+                    opacity: 1,
+                    transition: { staggerChildren: 0.1 }
+                  }
+                }}
+                className="flex flex-wrap justify-center gap-6 md:gap-10"
+              >
                 {serviceClients.map((client: any) => (
-                  <div 
+                  <motion.div 
                     key={client.id}
+                    variants={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
+                    }}
                     className="flex flex-col items-center justify-center p-6 md:p-8 bg-white rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-slate-100 group w-[150px] md:w-[200px]"
                   >
                     <div 
@@ -163,9 +201,9 @@ export function ServiceDetailClient({ id }: { id: string }) {
                     <span className="text-sm md:text-base font-bold text-center text-foreground/80 leading-tight">
                       {client.name}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           </section>
         )}
