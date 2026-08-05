@@ -15,6 +15,7 @@ import {
   CarouselPrevious,
   type CarouselApi
 } from "@/components/ui/carousel"
+import { motion } from "framer-motion"
 
 export function HeroSection() {
   const { content, language } = useLanguage()
@@ -69,7 +70,12 @@ export function HeroSection() {
                 {/* Content Container */}
                 <div className="absolute inset-0 flex items-center pt-8 md:pt-12 pb-8 md:pb-12">
                   <div className="container mx-auto px-6 md:px-12 w-full">
-                    <div className="w-full md:w-1/2 flex flex-col gap-6 animate-in slide-in-from-left-8 duration-700">
+                    <motion.div 
+                      initial={{ opacity: 0, x: -40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, ease: "easeOut" }}
+                      className="w-full md:w-1/2 flex flex-col gap-6"
+                    >
                       <div className="inline-block px-3 py-1 bg-white/20 text-white backdrop-blur-md border border-white/30 text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">
                         {slide.id === 1 ? badges.slide1 : slide.id === 2 ? badges.slide2 : badges.slide3}
                       </div>
@@ -87,12 +93,30 @@ export function HeroSection() {
                           {slide.cta}
                         </Link>
                       </div>
-                    </div>
+                    </motion.div>
 
                     {/* Embedded Features (Full Width Row) */}
-                    <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full animate-in slide-in-from-bottom-8 duration-700 delay-150">
+                    <motion.div 
+                      initial="hidden"
+                      animate="visible"
+                      variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                          opacity: 1,
+                          transition: { staggerChildren: 0.15, delayChildren: 0.3 }
+                        }
+                      }}
+                      className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full"
+                    >
                       {features.map((feat, i) => (
-                        <div key={i} className="flex items-center gap-3 md:gap-4">
+                        <motion.div 
+                          key={i} 
+                          variants={{
+                            hidden: { opacity: 0, y: 30 },
+                            visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
+                          }}
+                          className="flex items-center gap-3 md:gap-4"
+                        >
                           <div className="p-2 md:p-3 rounded-lg md:rounded-xl bg-white/10 text-white backdrop-blur-md border border-white/10 hover:bg-white/20 transition-colors">
                             <feat.icon className="w-6 h-6 md:w-7 md:h-7 shrink-0" strokeWidth={1.5} />
                           </div>
@@ -100,9 +124,9 @@ export function HeroSection() {
                             <span className="text-white font-bold text-base md:text-lg leading-tight tracking-tight">{feat.title}</span>
                             <span className="text-white/80 font-medium text-xs md:text-sm">{feat.subtitle}</span>
                           </div>
-                        </div>
+                        </motion.div>
                       ))}
-                    </div>
+                    </motion.div>
 
                   </div>
                 </div>

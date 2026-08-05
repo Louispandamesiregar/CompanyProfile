@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/LanguageContext"
 import Image from "next/image"
 import Autoplay from "embla-carousel-autoplay"
 import { X, MapPin } from "lucide-react"
+import { motion } from "framer-motion"
 import {
   Carousel,
   CarouselContent,
@@ -120,17 +121,29 @@ export function SisterCompaniesSection() {
       <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(29,78,216,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
       
       <div className="container mx-auto px-6 md:px-12 max-w-[1600px] relative z-10">
-        <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="text-center space-y-4 mb-16 max-w-3xl mx-auto"
+        >
           <h3 className="text-sm font-bold tracking-[0.3em] text-primary uppercase drop-shadow-sm">
             {content.sisterCompanies.subtitle}
           </h3>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground drop-shadow-sm">
             {content.sisterCompanies.title}
           </h2>
-        </div>
+        </motion.div>
 
         {/* Carousel */}
-        <div className="relative px-4 md:px-12 perspective-[1200px] animate-in fade-in zoom-in-95 duration-500">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="relative px-4 md:px-12 perspective-[1200px]"
+        >
           <Carousel
             setApi={setApi}
             plugins={[plugin]}
@@ -270,7 +283,7 @@ export function SisterCompaniesSection() {
               </div>
             )}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

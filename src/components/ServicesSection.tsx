@@ -7,6 +7,7 @@ import Link from "next/link"
 import { buttonVariants } from "./ui/button"
 import { ChevronRight } from "lucide-react"
 import { MdCheckCircle } from "react-icons/md"
+import { motion } from "framer-motion"
 
 import {
   Carousel,
@@ -59,19 +60,32 @@ export function ServicesSection() {
         }}
       />
       <div className="container mx-auto px-6 md:px-12 max-w-[1600px] relative z-10">
-        <div className="text-center mb-16 space-y-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="text-center mb-16 space-y-6"
+        >
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-foreground uppercase">
             {content.services.title}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
-        </div>
+        </motion.div>
 
         <div className="space-y-16 md:space-y-24">
           {services.map((service, index) => {
             const isEven = index % 2 === 0
             
             return (
-              <div key={service.id} className={`flex flex-col gap-4 md:gap-6 lg:gap-8 items-center justify-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <motion.div 
+                key={service.id} 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-100px" }}
+                className={`flex flex-col gap-4 md:gap-6 lg:gap-8 items-center justify-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+              >
                 
                 {/* Image Side with Autoplay Carousel */}
                 <ServiceCarousel service={service} index={index} />
@@ -95,7 +109,7 @@ export function ServicesSection() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             )
           })}
         </div>

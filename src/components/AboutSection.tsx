@@ -4,6 +4,7 @@ import * as React from "react"
 import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
 import boxDeretImg from "@/assets/Box_deret.webp"
+import { motion } from "framer-motion"
 
 export function AboutSection() {
   const { content } = useLanguage()
@@ -17,7 +18,13 @@ export function AboutSection() {
         <div className="relative w-full flex flex-col lg:flex-row">
           
           {/* KOTAK KIRI (Tentang Kami) */}
-          <div className="w-full lg:w-7/12 h-fit relative p-8 md:p-12 lg:p-16 lg:pr-40 z-10 shadow-sm animate-fade-in-up rounded-none overflow-hidden bg-slate-900">
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="w-full lg:w-7/12 h-fit relative p-8 md:p-12 lg:p-16 lg:pr-40 z-10 shadow-sm rounded-none overflow-hidden bg-slate-900"
+          >
             {/* Latar Belakang Gambar (Tanpa Blur agar Kontras) */}
             <Image 
               src={boxDeretImg}
@@ -44,10 +51,16 @@ export function AboutSection() {
                 {about.description}
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* KOTAK KANAN (Visi & Misi - Overlapping) */}
-          <div className="w-full lg:w-7/12 bg-slate-50 p-8 md:p-12 lg:p-16 z-20 shadow-2xl animate-fade-in-up mt-8 lg:-ml-32 lg:mt-24 border border-slate-100 rounded-none relative" style={{ animationDelay: '0.2s' }}>
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="w-full lg:w-7/12 bg-slate-50 p-8 md:p-12 lg:p-16 z-20 shadow-2xl mt-8 lg:-ml-32 lg:mt-24 border border-slate-100 rounded-none relative"
+          >
             
             {/* Layer Ornamen Geometris (Hanya untuk estetika latar belakang) */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -97,7 +110,7 @@ export function AboutSection() {
               </div>
 
             </div>
-          </div>
+          </motion.div>
           
         </div>
       </div>
