@@ -126,7 +126,7 @@ export function HeroSection() {
               key={i}
               onClick={() => api?.scrollTo(i)}
               className={`h-2 rounded-full transition-all duration-300 ${
-                i === current ? "w-8 bg-secondary" : "w-2 bg-primary-foreground/50 hover:bg-primary-foreground/80"
+                i === current ? "w-8 bg-[#E30613]" : "w-2 bg-primary-foreground/50 hover:bg-primary-foreground/80"
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />
