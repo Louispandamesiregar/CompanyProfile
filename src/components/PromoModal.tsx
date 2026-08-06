@@ -62,7 +62,7 @@ export function PromoModal() {
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute -top-12 right-0 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors border border-white/20"
+              className="absolute top-3 right-3 z-20 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors border border-white/20 backdrop-blur-sm"
               aria-label="Close promo banner"
             >
               <X className="w-6 h-6" />
