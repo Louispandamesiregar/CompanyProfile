@@ -131,7 +131,7 @@ export function SisterCompaniesSection() {
           <h3 className="text-sm font-bold tracking-[0.3em] text-primary uppercase drop-shadow-sm">
             {content.sisterCompanies.subtitle}
           </h3>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-foreground drop-shadow-sm">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-foreground drop-shadow-sm">
             {content.sisterCompanies.title}
           </h2>
         </motion.div>
