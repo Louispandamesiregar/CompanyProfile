@@ -53,7 +53,7 @@ export function HeroSection() {
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id}>
-              <div className="relative h-[75vh] md:h-[550px] lg:h-[600px] w-full overflow-hidden">
+              <div className="relative h-[85vh] md:h-[600px] lg:h-[700px] w-full overflow-hidden">
                 {/* Full width background image */}
                 <Image 
                   src={slide.image}
@@ -147,7 +147,7 @@ export function HeroSection() {
         </div>
 
         {/* Pagination Dots */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
+        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-20">
           {Array.from({ length: count }).map((_, i) => (
             <button
               key={i}
