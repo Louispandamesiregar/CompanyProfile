@@ -79,19 +79,19 @@ export function HeroSection() {
                       transition={{ duration: 0.8, ease: "easeOut" }}
                       className="w-full md:w-1/2 flex flex-col gap-6"
                     >
-                      <div className="inline-block px-3 py-1 bg-white/20 text-white backdrop-blur-md border border-white/30 text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">
+                      <div className="inline-block px-3 py-1 bg-white/20 text-white/90 backdrop-blur-md border border-white/30 text-xs font-bold tracking-widest uppercase rounded-sm w-max mb-2">
                         {slide.id === 1 ? badges.slide1 : slide.id === 2 ? badges.slide2 : badges.slide3}
                       </div>
-                      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-primary-foreground leading-[1.1]">
+                      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-primary-foreground/90 leading-[1.1]">
                         {slide.headline}
                       </h1>
-                      <p className="text-primary-foreground/90 text-sm md:text-xl font-medium max-w-lg">
+                      <p className="text-primary-foreground/80 text-sm md:text-xl font-medium max-w-lg">
                         {language === 'id' ? 'Kami menghadirkan solusi pengadaan ATK, Alat Kesehatan, dan layanan pengiriman barang dengan pelayanan cepat, ramah, dan profesional.' : 'We provide procurement solutions for Office Supplies, Medical Equipment, and freight forwarding services with fast, friendly, and professional service.'}
                       </p>
                       <div className="mt-2 flex flex-wrap gap-3">
                         <Link 
                           href={slide.link}
-                          className={buttonVariants({ variant: "ghost", size: "default", className: "text-white hover:bg-white/10 hover:text-white font-bold px-6 md:px-8 md:h-11 transition-colors" })}
+                          className={buttonVariants({ variant: "ghost", size: "default", className: "text-white/90 hover:bg-white/10 hover:text-white font-bold px-6 md:px-8 md:h-11 transition-colors" })}
                         >
                           {slide.cta}
                         </Link>
@@ -124,8 +124,8 @@ export function HeroSection() {
                             <feat.icon className="w-6 h-6 md:w-7 md:h-7 shrink-0" strokeWidth={1.5} />
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-white font-bold text-base md:text-lg leading-tight tracking-tight">{feat.title}</span>
-                            <span className="text-white/80 font-medium text-xs md:text-sm">{feat.subtitle}</span>
+                            <span className="text-white/90 font-bold text-base md:text-lg leading-tight tracking-tight">{feat.title}</span>
+                            <span className="text-white/70 font-medium text-xs md:text-sm">{feat.subtitle}</span>
                           </div>
                         </motion.div>
                       ))}
