@@ -73,7 +73,7 @@ export function ServicesSection() {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-10 md:space-y-12">
           {services.map((service, index) => {
             const isEven = index % 2 === 0
             
