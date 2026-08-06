@@ -73,8 +73,10 @@ export function ServicesSection() {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="space-y-10 md:space-y-12">
-          {services.map((service, index) => {
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+          {/* Main Content (Services List) */}
+          <div className="w-full lg:w-[70%] space-y-10 md:space-y-12">
+            {services.map((service, index) => {
             const isEven = index % 2 === 0
             
             return (
@@ -111,7 +113,21 @@ export function ServicesSection() {
                 </div>
               </motion.div>
             )
-          })}
+            })}
+          </div>
+
+          {/* Right Sidebar (Sticky Banner) for Desktop */}
+          <div className="hidden lg:block w-[30%] shrink-0 sticky top-32">
+            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50 bg-slate-900 group">
+              <Image
+                src="/banner.webp"
+                alt="Promo Banner"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
