@@ -64,6 +64,9 @@ export function HeroSection() {
                   priority={index === 0}
                 />
                 
+                {/* Subtle dark overlay to darken the image slightly */}
+                <div className="absolute inset-0 bg-black/20" />
+                
                 {/* Corporate Gradient Overlay for Text Readability - Lighter for better image visibility */}
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
 
