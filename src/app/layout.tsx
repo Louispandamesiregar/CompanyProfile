@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="id" suppressHydrationWarning>
       <body className={`${inter.className} antialiased min-h-screen flex flex-col overscroll-none`}>
           <LanguageProvider>
-            <div className="flex flex-col min-h-screen overflow-x-hidden w-full max-w-[100vw]">
+            <div className="flex flex-col min-h-screen overflow-x-clip w-full max-w-[100vw]">
               {children}
             </div>
             <FloatingWhatsApp />

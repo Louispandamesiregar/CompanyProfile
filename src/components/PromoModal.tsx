@@ -69,12 +69,11 @@ export function PromoModal() {
             </button>
             
             {/* Banner Image Container */}
-            <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-none overflow-hidden shadow-2xl border-2 border-white/10 bg-transparent">
+            <div className="w-full rounded-none overflow-hidden shadow-2xl border-2 border-white/10 bg-transparent">
               <Image
                 src={bannerImg}
                 alt="Promo Banner"
-                fill
-                className="object-contain"
+                className="w-full h-auto"
                 sizes="(max-width: 1024px) 85vw"
                 priority
               />

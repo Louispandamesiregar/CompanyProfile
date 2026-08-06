@@ -120,12 +120,11 @@ export function ServicesSection() {
           {/* Right Sidebar (Sticky Banner) for Desktop */}
           <div className="hidden lg:block w-[30%] shrink-0 relative">
             <div className="sticky top-32">
-              <div className="relative w-full aspect-[4/5] rounded-none overflow-hidden shadow-2xl border-4 border-white/50 bg-slate-900 group">
+              <div className="w-full rounded-none overflow-hidden shadow-2xl border-4 border-white/50 bg-slate-900 group">
                 <Image
                   src={bannerImg}
                   alt="Promo Banner"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
               </div>
