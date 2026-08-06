@@ -48,7 +48,7 @@ export function ServicesSection() {
   const services = content.services.items
 
   return (
-    <section id="services" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-slate-50/50 scroll-m-20 relative overflow-hidden">
+    <section id="services" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-slate-50/50 scroll-m-20 relative overflow-clip">
       {/* Subtle Dotted Background Pattern */}
       <div 
         className="absolute inset-0 z-0 pointer-events-none opacity-[0.4]"
@@ -118,7 +118,7 @@ export function ServicesSection() {
 
           {/* Right Sidebar (Sticky Banner) for Desktop */}
           <div className="hidden lg:block w-[30%] shrink-0 sticky top-32">
-            <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/50 bg-slate-900 group">
+            <div className="relative w-full aspect-[4/5] rounded-none overflow-hidden shadow-2xl border-4 border-white/50 bg-slate-900 group">
               <Image
                 src="/banner.webp"
                 alt="Promo Banner"

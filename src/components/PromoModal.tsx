@@ -68,7 +68,7 @@ export function PromoModal() {
             </button>
             
             {/* Banner Image Container */}
-            <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10 bg-transparent">
+            <div className="relative w-full aspect-[4/5] md:aspect-[3/4] rounded-none overflow-hidden shadow-2xl border-2 border-white/10 bg-transparent">
               <Image
                 src="/banner.webp"
                 alt="Promo Banner"
