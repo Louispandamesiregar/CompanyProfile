@@ -8,6 +8,7 @@ import { buttonVariants } from "./ui/button"
 import { ChevronRight } from "lucide-react"
 import { MdCheckCircle } from "react-icons/md"
 import { motion } from "framer-motion"
+import bannerImg from "@/assets/banner.webp"
 
 import {
   Carousel,
@@ -73,7 +74,7 @@ export function ServicesSection() {
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
           {/* Main Content (Services List) */}
           <div className="w-full lg:w-[70%] space-y-10 md:space-y-12">
             {services.map((service, index) => {
@@ -117,15 +118,17 @@ export function ServicesSection() {
           </div>
 
           {/* Right Sidebar (Sticky Banner) for Desktop */}
-          <div className="hidden lg:block w-[30%] shrink-0 sticky top-32">
-            <div className="relative w-full aspect-[4/5] rounded-none overflow-hidden shadow-2xl border-4 border-white/50 bg-slate-900 group">
-              <Image
-                src="/banner.webp"
-                alt="Promo Banner"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+          <div className="hidden lg:block w-[30%] shrink-0 relative">
+            <div className="sticky top-32">
+              <div className="relative w-full aspect-[4/5] rounded-none overflow-hidden shadow-2xl border-4 border-white/50 bg-slate-900 group">
+                <Image
+                  src={bannerImg}
+                  alt="Promo Banner"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+              </div>
             </div>
           </div>
         </div>
