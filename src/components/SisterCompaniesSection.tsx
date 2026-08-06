@@ -114,7 +114,7 @@ export function SisterCompaniesSection() {
   }, [api, onScroll])
 
   return (
-    <section id="group" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-slate-50 scroll-m-20 overflow-hidden relative border-y border-border/50">
+    <section id="group" className="pt-6 md:pt-8 pb-6 md:pb-8 bg-slate-50 scroll-m-20 overflow-hidden relative border-y border-border/50">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       <div className="absolute -left-40 top-1/2 w-96 h-96 bg-[radial-gradient(circle,rgba(37,99,235,0.15)_0%,transparent_70%)] rounded-full mix-blend-multiply pointer-events-none -translate-y-1/2" />
@@ -126,7 +126,7 @@ export function SisterCompaniesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-50px" }}
-          className="text-center space-y-4 mb-16 max-w-3xl mx-auto"
+          className="text-center space-y-4 mb-8 max-w-3xl mx-auto"
         >
           <h3 className="text-sm font-bold tracking-[0.3em] text-primary uppercase drop-shadow-sm">
             {content.sisterCompanies.subtitle}
@@ -154,7 +154,7 @@ export function SisterCompaniesSection() {
               }}
               className="w-full max-w-[1200px] mx-auto"
             >
-              <CarouselContent className="transform-style-3d py-8">
+              <CarouselContent className="transform-style-3d py-4">
                 {loopingCompanies.map((company, index) => {
                   const isExpanded = expandedCompanyId === company.id
                   return (
@@ -167,15 +167,13 @@ export function SisterCompaniesSection() {
                         style={{ transform: 'scale(0.75)', opacity: 0.4, zIndex: 0 }}
                       >
                         {/* Removed backdrop-blur-xl because it causes massive GPU lag during scroll */}
-                        <button
+                        <button 
                           onClick={() => handleCardClick(company.id)}
-                          className={`flex flex-col items-center justify-center p-4 md:p-5 h-full w-full gap-3 md:gap-4 group cursor-pointer bg-white rounded-3xl shadow-xl border transition-all duration-300 text-left ${
-                            isExpanded
-                              ? 'border-primary shadow-[0_20px_50px_rgba(37,99,235,0.25)] ring-2 ring-primary/30'
-                              : 'border-border/50 hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)]'
-                          }`}
+                          className={`flex flex-col items-center justify-center p-4 md:p-5 h-full w-full gap-2 md:gap-3 group cursor-pointer bg-white rounded-3xl shadow-xl border transition-all duration-300 text-left
+                            ${isExpanded ? 'border-primary ring-2 ring-primary/20 scale-[1.02]' : 'border-border/50 hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)]'}
+                          `}
                         >
-                        <div className="h-28 md:h-36 w-full max-w-[200px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
+                          <div className="h-24 md:h-32 w-full max-w-[200px] flex flex-col items-center justify-center relative transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-2">
                           {company.image ? (
                             <Image 
                               src={company.image} 
