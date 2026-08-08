@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { useLanguage } from "@/context/LanguageContext"
+import { useRouter } from "next/navigation"
 import { Phone, Mail, MapPin } from "lucide-react"
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa"
 import njgLogoFooter from "@/assets/Logo_NJG.webp"
@@ -11,6 +12,7 @@ import njgLogoFooter from "@/assets/Logo_NJG.webp"
 export function Footer() {
   const { content, language } = useLanguage()
   const { companyInfo, footer } = content
+  const router = useRouter()
   const year = new Date().getFullYear()
 
   return (
@@ -47,8 +49,24 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6">{footer.quickLinksTitle}</h4>
             <ul className="space-y-4">
-              <li><Link href="/#about" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Tentang Kami' : 'About Us'}</Link></li>
-              <li><Link href="/#services" className="text-[15px] text-muted-foreground hover:text-primary transition-colors">{language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}</Link></li>
+              <li>
+                <a 
+                  href="/#about" 
+                  onClick={(e) => { e.preventDefault(); router.push('/#about'); }}
+                  className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {language === 'id' ? 'Tentang Kami' : 'About Us'}
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/#services" 
+                  onClick={(e) => { e.preventDefault(); router.push('/#services'); }}
+                  className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
+                >
+                  {language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}
+                </a>
+              </li>
             </ul>
           </div>
 
