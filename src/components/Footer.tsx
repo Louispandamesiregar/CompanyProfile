@@ -93,15 +93,10 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-border bg-slate-50">
-        <div className="container mx-auto px-6 md:px-12 py-6 max-w-[1600px] flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-card-foreground/60 font-medium">
+        <div className="container mx-auto px-6 md:px-12 py-6 max-w-[1600px] flex flex-col items-center justify-center gap-4">
+          <p className="text-sm text-card-foreground/60 font-medium text-center">
             &copy; {year} {footer.copyright}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link href="#" className="text-sm text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Syarat & Ketentuan' : 'Terms & Conditions'}</Link>
-            <Link href="#" className="text-sm text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Kebijakan Privasi' : 'Privacy Policy'}</Link>
-            <Link href="#" className="text-sm text-card-foreground/60 hover:text-primary transition-colors">{language === 'id' ? 'Peta Situs' : 'Sitemap'}</Link>
-          </div>
         </div>
       </div>
     </footer>
