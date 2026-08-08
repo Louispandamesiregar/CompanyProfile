@@ -55,11 +55,11 @@ export function ServiceDetailClient({ id }: { id: string }) {
               transition={{ duration: 0.6 }}
             >
               <Link 
-                href="/" 
+                href="/#services" 
                 className="inline-flex items-center text-sm font-bold text-white/70 hover:text-white transition-colors mb-4"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                {language === 'id' ? 'Kembali ke Beranda' : 'Back to Home'}
+                {language === 'id' ? 'Kembali' : 'Back'}
               </Link>
             </motion.div>
             
