@@ -97,7 +97,7 @@ export function ServicesSection() {
                 <div className="w-full md:w-[50%] lg:w-[500px] space-y-6">
                   <h3 className="text-2xl md:text-4xl font-montserrat font-extrabold uppercase tracking-tight mb-6 text-slate-800">{service.title}</h3>
                   
-                  <ul className="space-y-4 list-disc pl-6 marker:text-primary/60 font-montserrat">
+                  <ul className="space-y-2 list-disc pl-6 marker:text-primary/60 font-montserrat">
                     {service.items?.map((item: string, i: number) => (
                       <li key={i} className="text-base md:text-lg text-foreground/80 leading-relaxed font-normal">
                         {item}
