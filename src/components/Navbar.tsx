@@ -26,8 +26,8 @@ export function Navbar() {
         <div className="w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
         <div className="container mx-auto px-4 md:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
-              <div className="relative w-24 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
+            <Link href="/" className="font-extrabold text-xl md:text-2xl tracking-tighter flex items-center gap-1 md:gap-2 group">
+              <div className="relative w-16 h-8 md:w-24 md:h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
                 <Image src={njgLogo} alt="Nawasena Jaya Group" fill className="object-contain" />
               </div>
               <span className="text-primary drop-shadow-sm ml-1">

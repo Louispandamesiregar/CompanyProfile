@@ -19,8 +19,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Column 1: Company Info */}
           <div className="space-y-6">
-            <Link href="/" className="font-extrabold text-2xl tracking-tighter flex items-center gap-2 group">
-              <div className="relative w-24 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
+            <Link href="/" className="font-extrabold text-xl md:text-2xl tracking-tighter flex items-center gap-1 md:gap-2 group">
+              <div className="relative w-16 h-8 md:w-24 md:h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-500 shrink-0">
                 <Image src={njgLogoFooter} alt="Nawasena Jaya Group" fill className="object-contain" />
               </div>
               <span className="bg-gradient-to-r from-blue-900 to-blue-500 bg-clip-text text-transparent drop-shadow-sm ml-1">
