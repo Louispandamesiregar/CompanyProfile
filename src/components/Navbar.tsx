@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Globe, Menu, ChevronDown } from "lucide-react"
+import { useRouter } from "next/navigation"
 import { useLanguage } from "@/context/LanguageContext"
 import { Button } from "./ui/button"
 import njgLogo from "@/assets/njg_logo.webp"
@@ -17,6 +18,7 @@ export function Navbar() {
   const [activeMenu, setActiveMenu] = React.useState<string | null>(null)
   const { language, toggleLanguage, content } = useLanguage()
   const { navLinks, companyInfo } = content
+  const router = useRouter()
   const closeMenu = () => setIsOpen(false)
 
   return (
@@ -108,14 +110,20 @@ export function Navbar() {
                 <SheetContent side="right" className="flex flex-col gap-6 pt-12 px-6 bg-background">
                   <div className="flex flex-col gap-4">
                     {navLinks.map((link) => (
-                      <Link
+                      <a
                         key={link.name}
                         href={link.href}
-                        onClick={closeMenu}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsOpen(false);
+                          setTimeout(() => {
+                            router.push(link.href);
+                          }, 150);
+                        }}
                         className="text-lg font-semibold text-foreground/80 hover:text-teal-600:text-teal-400 border-b pb-2 transition-colors"
                       >
                         {link.name}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                   <div className="mt-auto flex flex-col gap-4 pb-8">
