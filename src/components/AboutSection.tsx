@@ -36,7 +36,7 @@ export function AboutSection() {
             <div className="absolute inset-0 bg-slate-900/30 z-0"></div>
             
             {/* Overlay Biru Miring (Slanted Polygon) */}
-            <div className="absolute inset-0 bg-primary/95 z-0" style={{ clipPath: 'polygon(0 0, 85% 0, 55% 100%, 0 100%)' }}></div>
+            <div className="absolute inset-0 bg-primary/75 z-0" style={{ clipPath: 'polygon(0 0, 85% 0, 55% 100%, 0 100%)' }}></div>
             
             {/* Garis Aksen Miring */}
             <div className="absolute inset-0 bg-primary/60 z-0" style={{ clipPath: 'polygon(85% 0, 87% 0, 57% 100%, 55% 100%)' }}></div>
