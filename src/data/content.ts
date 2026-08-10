@@ -26,10 +26,7 @@ const clientsData = {
   titleEN: "Our Clients & Partners",
   subtitleID: "Mereka yang mempercayakan solusi pengadaan dan logistik kepada kami",
   subtitleEN: "Those who trust our procurement and logistics solutions",
-  items: [
-    // Klien akan ditambahkan di sini saat sudah ada
-    // { id: 1, name: "Nama Klien", logoText: "LOGO", color: "#4F46E5", serviceIds: [1] }
-  ]
+  items: [] as any[]
 };
 
 export const contentID = {
