@@ -107,7 +107,7 @@ export const contentID = {
     items: [
       {
         id: 1,
-        title: "Layanan Pengiriman Barang",
+        title: "Pengiriman Barang",
         fullDescription: "Kami menyediakan solusi logistik dan pengiriman barang yang terpadu, cepat, dan terpercaya. Dari dokumen penting hingga kargo besar, tim kami siap mengantarkan barang Anda dengan armada yang selalu dalam kondisi prima. Jaringan distribusi kami mencakup pulau Jawa hingga rute laut ke pulau-pulau besar lainnya di Indonesia.",
         benefits: [
           "Ketepatan waktu pengiriman yang sangat terjamin",
