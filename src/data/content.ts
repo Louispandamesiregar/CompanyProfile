@@ -28,13 +28,7 @@ const clientsData = {
   subtitleEN: "Those who trust our procurement and logistics solutions",
   items: [
     { id: 1, name: "Parit Padang Global", logoText: "PPG", color: "#4F46E5", serviceIds: [1] },
-    { id: 2, name: "Kementerian Kesehatan", logoText: "KEMKES", color: "#00A859", serviceIds: [3] },
-    { id: 3, name: "RS Hermina", logoText: "RSH", color: "#005BAA", serviceIds: [3] },
-    { id: 4, name: "PT Telkom Indonesia", logoText: "TLKM", color: "#EE3124", serviceIds: [2, 4] },
-    { id: 5, name: "Bank Mandiri", logoText: "MNDR", color: "#0F4C81", serviceIds: [2, 4] },
-    { id: 6, name: "Dinas Pendidikan", logoText: "DIKNAS", color: "#1D4ED8", serviceIds: [2, 4] },
     { id: 7, name: "Andini Sarana", logoText: "AS", color: "#059669", serviceIds: [1] },
-    { id: 8, name: "RS Mitra Keluarga", logoText: "MIKA", color: "#0693E3", serviceIds: [3] },
     { id: 9, name: "Kreatifindo Global Gemilang", logoText: "KGG", color: "#D97706", serviceIds: [1] },
     { id: 10, name: "Sumber Mas Autorindo", logoText: "SMA", color: "#DC2626", serviceIds: [1] },
     { id: 11, name: "Opthalindo Jaya", logoText: "OJ", color: "#2563EB", serviceIds: [1] },
