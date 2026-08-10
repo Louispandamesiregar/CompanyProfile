@@ -46,7 +46,6 @@ export function Footer() {
               <li>
                 <a 
                   href="/#about" 
-                  onClick={(e) => { e.preventDefault(); router.push('/#about'); }}
                   className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
                 >
                   {language === 'id' ? 'Tentang Kami' : 'About Us'}
@@ -55,7 +54,6 @@ export function Footer() {
               <li>
                 <a 
                   href="/#services" 
-                  onClick={(e) => { e.preventDefault(); router.push('/#services'); }}
                   className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
                 >
                   {language === 'id' ? 'Layanan Kami' : 'Our Services'}
