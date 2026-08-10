@@ -102,7 +102,7 @@ export const contentID = {
           whatsapp: "+6281311200074"
         }
       ],
-      email: "info@nawasenajaya.com",
+      email: "nawasenagroup00@gmail.com",
       address: "JL. Dermaga Raya No. 129-131, Klender, Duren Sawit, Jakarta Timur, DKI Jakarta 13470."
     }
   },
@@ -196,8 +196,8 @@ export const contentID = {
         id: 1,
         name: "Ayam Geprek",
         shortDesc: "F&B / Kuliner",
-        fullDesc: "[DRAFT] Sajian ayam geprek dengan sambal otentik dan bumbu rempah pilihan yang menggugah selera. Nikmati kelezatan ayam krispi berpadu dengan kepedasan yang pas.",
-        address: "[DRAFT] Jl. Dermaga Raya, Jakarta Timur",
+        fullDesc: "Sajian ayam geprek dengan sambal otentik dan bumbu rempah pilihan yang menggugah selera. Nikmati kelezatan ayam krispi berpadu dengan kepedasan yang pas.",
+        address: "Jl. Dermaga Raya, Jakarta Timur",
         website: "#",
         logoText: "AG",
         image: faenzoneAyamGeprekImg,
@@ -206,8 +206,8 @@ export const contentID = {
         id: 2,
         name: "Faenzone Coffee",
         shortDesc: "Coffee Shop",
-        fullDesc: "[DRAFT] Tempat nongkrong yang nyaman dengan pilihan biji kopi premium. Menyajikan berbagai minuman kopi dan non-kopi untuk menemani aktivitas Anda.",
-        address: "[DRAFT] Jl. Dermaga Raya, Jakarta Timur",
+        fullDesc: "Tempat nongkrong yang nyaman dengan pilihan biji kopi premium. Menyajikan berbagai minuman kopi dan non-kopi untuk menemani aktivitas Anda.",
+        address: "Jl. Dermaga Raya, Jakarta Timur",
         website: "#",
         logoText: "FC",
         image: faenzoneCoffeeImg,
@@ -216,8 +216,8 @@ export const contentID = {
         id: 3,
         name: "Seqata Coffee",
         shortDesc: "Coffee Shop",
-        fullDesc: "[DRAFT] Menghadirkan racikan kopi kekinian dengan cita rasa khas yang cocok untuk menemani waktu santai atau bekerja Anda.",
-        address: "[DRAFT] Jl. Dermaga Raya, Jakarta Timur",
+        fullDesc: "Menghadirkan racikan kopi kekinian dengan cita rasa khas yang cocok untuk menemani waktu santai atau bekerja Anda.",
+        address: "Jl. Dermaga Raya, Jakarta Timur",
         website: "#",
         logoText: "SC",
         image: seqataCoffeeImg,
@@ -329,7 +329,7 @@ export const contentEN = {
           whatsapp: "+6281311200074"
         }
       ],
-      email: "info@nawasenajaya.com",
+      email: "nawasenagroup00@gmail.com",
       address: "JL. Dermaga Raya No. 129-131, Klender, Duren Sawit, East Jakarta, DKI Jakarta 13470."
     }
   },
@@ -423,8 +423,8 @@ export const contentEN = {
         id: 1,
         name: "Ayam Geprek",
         shortDesc: "F&B / Culinary",
-        fullDesc: "[DRAFT] Ayam Geprek dishes with authentic chili paste and selected spices that tantalize your taste buds. Enjoy the deliciousness of crispy chicken combined with the perfect level of spiciness.",
-        address: "[DRAFT] Jl. Dermaga Raya, East Jakarta",
+        fullDesc: "Ayam Geprek dishes with authentic chili paste and selected spices that tantalize your taste buds. Enjoy the deliciousness of crispy chicken combined with the perfect level of spiciness.",
+        address: "Jl. Dermaga Raya, East Jakarta",
         website: "#",
         logoText: "AG",
         image: faenzoneAyamGeprekImg,
@@ -433,8 +433,8 @@ export const contentEN = {
         id: 2,
         name: "Faenzone Coffee",
         shortDesc: "Coffee Shop",
-        fullDesc: "[DRAFT] A cozy hangout spot with premium coffee bean selections. Serving a variety of coffee and non-coffee beverages to accompany your activities.",
-        address: "[DRAFT] Jl. Dermaga Raya, East Jakarta",
+        fullDesc: "A cozy hangout spot with premium coffee bean selections. Serving a variety of coffee and non-coffee beverages to accompany your activities.",
+        address: "Jl. Dermaga Raya, East Jakarta",
         website: "#",
         logoText: "FC",
         image: faenzoneCoffeeImg,
@@ -443,8 +443,8 @@ export const contentEN = {
         id: 3,
         name: "Seqata Coffee",
         shortDesc: "Coffee Shop",
-        fullDesc: "[DRAFT] Presenting modern coffee blends with distinctive flavors, perfect for accompanying your leisure or work time.",
-        address: "[DRAFT] Jl. Dermaga Raya, East Jakarta",
+        fullDesc: "Presenting modern coffee blends with distinctive flavors, perfect for accompanying your leisure or work time.",
+        address: "Jl. Dermaga Raya, East Jakarta",
         website: "#",
         logoText: "SC",
         image: seqataCoffeeImg,
