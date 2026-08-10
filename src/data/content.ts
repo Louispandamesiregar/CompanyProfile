@@ -24,7 +24,7 @@ import airinsParfumeImg from "../assets/companies/airins-parfume.webp";
 const clientsData = {
   titleID: "Klien & Mitra Kami",
   titleEN: "Our Clients & Partners",
-  subtitleID: "Mereka yang mempercayakan solusi pengadaan dan logistik kepada kami",
+  subtitleID: "Mereka yang mempercayakan pengadaan dan logistik kepada kami",
   subtitleEN: "Those who trust our procurement and logistics solutions",
   items: [
     { id: 1, name: "Parit Padang Global", logoText: "PPG", color: "#4F46E5", serviceIds: [1, 2, 3, 4] },
