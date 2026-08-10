@@ -27,8 +27,12 @@ const clientsData = {
   subtitleID: "Mereka yang mempercayakan solusi pengadaan dan logistik kepada kami",
   subtitleEN: "Those who trust our procurement and logistics solutions",
   items: [
-    // Klien akan ditambahkan di sini saat sudah ada
-    // { id: 1, name: "Nama Klien", logoText: "LOGO", color: "#4F46E5", serviceIds: [1] }
+    { id: 1, name: "Parit Padang Global", logoText: "PPG", color: "#4F46E5", serviceIds: [1, 2, 3, 4] },
+    { id: 7, name: "Andini Sarana", logoText: "AS", color: "#059669", serviceIds: [1, 2, 3, 4] },
+    { id: 9, name: "Kreatifindo Global Gemilang", logoText: "KGG", color: "#D97706", serviceIds: [1, 2, 3, 4] },
+    { id: 10, name: "Sumber Mas Autorindo", logoText: "SMA", color: "#DC2626", serviceIds: [1, 2, 3, 4] },
+    { id: 11, name: "Opthalindo Jaya", logoText: "OJ", color: "#2563EB", serviceIds: [1, 2, 3, 4] },
+    { id: 12, name: "Kintetsu World Express", logoText: "KWE", color: "#7C3AED", serviceIds: [1, 2, 3, 4] },
   ]
 };
 
