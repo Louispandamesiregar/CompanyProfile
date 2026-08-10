@@ -58,7 +58,7 @@ export function Footer() {
                   onClick={(e) => { e.preventDefault(); router.push('/#services'); }}
                   className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
                 >
-                  {language === 'id' ? 'Solusi & Layanan' : 'Solutions & Services'}
+                  {language === 'id' ? 'Layanan Kami' : 'Our Services'}
                 </a>
               </li>
             </ul>

@@ -69,7 +69,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase text-white leading-tight"
             >
-              {service.title}
+              {serviceId === 3 && language === 'id' ? 'Pengadaan Alat Kesehatan' : service.title}
             </motion.h1>
           </div>
         </section>
