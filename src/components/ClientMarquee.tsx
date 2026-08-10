@@ -7,6 +7,10 @@ export function ClientMarquee() {
   const { content } = useLanguage()
   const { clients } = content
 
+  if (!clients.items || clients.items.length === 0) {
+    return null
+  }
+
   // Duplicate items for seamless infinite scroll
   const scrollItems = [...clients.items, ...clients.items, ...clients.items]
 
