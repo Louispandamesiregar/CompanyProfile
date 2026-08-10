@@ -117,7 +117,7 @@ export const contentID = {
     items: [
       {
         id: 1,
-        title: "Layanan Pengiriman Barang",
+        title: "Pengiriman Barang",
         fullDescription: "Kami menyediakan solusi logistik dan pengiriman barang yang terpadu, cepat, dan terpercaya. Dari dokumen penting hingga kargo besar, tim kami siap mengantarkan barang Anda dengan armada yang selalu dalam kondisi prima. Jaringan distribusi kami mencakup pulau Jawa hingga rute laut ke pulau-pulau besar lainnya di Indonesia.",
         benefits: [
           "Ketepatan waktu pengiriman yang sangat terjamin",
@@ -353,7 +353,7 @@ export const contentEN = {
     items: [
       {
         id: 1,
-        title: "Freight Forwarding Services",
+        title: "Freight Forwarding",
         fullDescription: "We provide integrated, fast, and highly reliable logistics and freight forwarding solutions. From important documents to large cargo, our team is ready to deliver your goods using well-maintained fleets. Our distribution network covers Java and sea routes to other major islands in Indonesia.",
         benefits: [
           "Strict adherence to delivery schedules",
