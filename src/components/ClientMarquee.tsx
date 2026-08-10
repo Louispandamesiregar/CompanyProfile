@@ -34,7 +34,7 @@ export function ClientMarquee() {
           {scrollItems.map((client, idx) => (
             <div 
               key={`${client.id}-${idx}`} 
-              className="mx-8 md:mx-12 flex flex-col items-center justify-center group cursor-default transition-all duration-300 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110"
+              className="mx-8 md:mx-12 flex flex-col items-center justify-center group cursor-default transition-all duration-300 hover:scale-110"
             >
               <div 
                 className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center text-white shadow-sm group-hover:shadow-lg transition-all duration-300"
