@@ -44,20 +44,20 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-6">{footer.quickLinksTitle}</h4>
             <ul className="space-y-4">
               <li>
-                <a 
+                <Link 
                   href="/#about" 
                   className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
                 >
                   {language === 'id' ? 'Tentang Kami' : 'About Us'}
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
+                <Link 
                   href="/#services" 
                   className="text-[15px] text-muted-foreground hover:text-primary transition-colors"
                 >
                   {language === 'id' ? 'Layanan Kami' : 'Our Services'}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
