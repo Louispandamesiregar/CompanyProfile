@@ -142,7 +142,7 @@ export function ServiceDetailClient({ id }: { id: string }) {
                       : 'Interested in this service? Contact our team now for the best offer.'}
                   </p>
                   <a 
-                    href="https://wa.me/6281807963210"
+                    href={`https://wa.me/${serviceId === 1 ? '6281388398303' : '6281807963210'}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={buttonVariants({ variant: "default", size: "lg", className: "w-full font-bold shadow-lg" })}
