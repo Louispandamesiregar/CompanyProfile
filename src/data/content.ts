@@ -226,7 +226,8 @@ export const contentID = {
         address: "Sekitar Duren Sawit, Jakarta Timur",
         website: "#",
         logoText: "KK",
-        image: faenzoneCartImg,
+        image: kopiKitaImg,
+        detailImage: faenzoneCartImg,
       },
       {
         id: 6,
@@ -452,7 +453,8 @@ export const contentEN = {
         address: "Around Duren Sawit, East Jakarta",
         website: "#",
         logoText: "KK",
-        image: faenzoneCartImg,
+        image: kopiKitaImg,
+        detailImage: faenzoneCartImg,
       },
       {
         id: 6,

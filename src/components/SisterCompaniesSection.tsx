@@ -155,7 +155,7 @@ export function SisterCompaniesSection() {
               className="w-full max-w-[1200px] mx-auto"
             >
               <CarouselContent className="transform-style-3d py-4">
-                {loopingCompanies.map((company, index) => {
+                {loopingCompanies.map((company: any, index: number) => {
                   const isExpanded = expandedCompanyId === company.id
                   return (
                     <CarouselItem 
@@ -256,9 +256,9 @@ export function SisterCompaniesSection() {
 
                     {/* Company Logo / Image */}
                     <div className="order-1 w-32 h-32 md:w-44 md:h-44 relative shrink-0 bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl border border-border/50 shadow-lg flex items-center justify-center p-4">
-                      {expandedCompany.image ? (
+                      {(expandedCompany.detailImage || expandedCompany.image) ? (
                         <Image
-                          src={expandedCompany.image}
+                          src={expandedCompany.detailImage || expandedCompany.image}
                           alt={expandedCompany.name}
                           fill
                           className="object-contain p-4"
