@@ -33,12 +33,6 @@ export function Footer() {
               {footer.description}
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-100 border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-muted-foreground">
-                <FaFacebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-slate-100 border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-muted-foreground">
-                <FaTwitter className="w-4 h-4" />
-              </a>
               <a href="https://www.instagram.com/njg_trans" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-100 border border-border flex items-center justify-center hover:bg-primary hover:text-white transition-colors text-muted-foreground">
                 <FaInstagram className="w-4 h-4" />
               </a>
