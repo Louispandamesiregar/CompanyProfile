@@ -31,7 +31,7 @@ export function ClientMarquee() {
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-[#f4f7fb] to-transparent z-10 pointer-events-none" />
 
         <div className="flex w-max animate-marquee hover:[animation-play-state:paused] items-center">
-          {scrollItems.map((client, idx) => (
+          {scrollItems.map((client: any, idx: number) => (
             <div 
               key={`${client.id}-${idx}`} 
               className="mx-8 md:mx-12 flex flex-col items-center justify-center group cursor-default transition-all duration-300 hover:scale-110"
