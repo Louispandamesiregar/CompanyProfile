@@ -27,12 +27,8 @@ const clientsData = {
   subtitleID: "Mereka yang mempercayakan solusi pengadaan dan logistik kepada kami",
   subtitleEN: "Those who trust our procurement and logistics solutions",
   items: [
-    { id: 1, name: "Parit Padang Global", logoText: "PPG", color: "#4F46E5", serviceIds: [1, 2, 3, 4] },
-    { id: 7, name: "Andini Sarana", logoText: "AS", color: "#059669", serviceIds: [1, 2, 3, 4] },
-    { id: 9, name: "Kreatifindo Global Gemilang", logoText: "KGG", color: "#D97706", serviceIds: [1, 2, 3, 4] },
-    { id: 10, name: "Sumber Mas Autorindo", logoText: "SMA", color: "#DC2626", serviceIds: [1, 2, 3, 4] },
-    { id: 11, name: "Opthalindo Jaya", logoText: "OJ", color: "#2563EB", serviceIds: [1, 2, 3, 4] },
-    { id: 12, name: "Kintetsu World Express", logoText: "KWE", color: "#7C3AED", serviceIds: [1, 2, 3, 4] },
+    // Klien akan ditambahkan di sini saat sudah ada
+    // { id: 1, name: "Nama Klien", logoText: "LOGO", color: "#4F46E5", serviceIds: [1] }
   ]
 };
 
@@ -111,7 +107,7 @@ export const contentID = {
     items: [
       {
         id: 1,
-        title: "Pengiriman Barang",
+        title: "Layanan Pengiriman Barang",
         fullDescription: "Kami menyediakan solusi logistik dan pengiriman barang yang terpadu, cepat, dan terpercaya. Dari dokumen penting hingga kargo besar, tim kami siap mengantarkan barang Anda dengan armada yang selalu dalam kondisi prima. Jaringan distribusi kami mencakup pulau Jawa hingga rute laut ke pulau-pulau besar lainnya di Indonesia.",
         benefits: [
           "Ketepatan waktu pengiriman yang sangat terjamin",
@@ -226,20 +222,10 @@ export const contentID = {
         id: 4,
         name: "Kopi Kita",
         shortDesc: "Coffee Shop",
-        fullDesc: "[DRAFT] Kopi Kita menyuguhkan aneka minuman kopi dan minuman segar lainnya dengan harga bersahabat dan kualitas rasa yang konsisten.",
-        address: "[DRAFT] Jl. Dermaga Raya, Jakarta Timur",
+        fullDesc: "Kopi Kita menyuguhkan aneka minuman kopi dan minuman segar lainnya dengan harga bersahabat. Berlokasi strategis di sekitar Duren Sawit, Jakarta Timur.",
+        address: "Sekitar Duren Sawit, Jakarta Timur",
         website: "#",
         logoText: "KK",
-        image: kopiKitaImg,
-      },
-      {
-        id: 5,
-        name: "Coffee Cart",
-        shortDesc: "Mobile Coffee",
-        fullDesc: "[DRAFT] Layanan kopi keliling praktis yang menyajikan kesegaran racikan minuman langsung ke tempat Anda, cocok untuk event atau acara khusus.",
-        address: "[DRAFT] Mobile Service",
-        website: "#",
-        logoText: "CC",
         image: faenzoneCartImg,
       },
       {
@@ -347,7 +333,7 @@ export const contentEN = {
     items: [
       {
         id: 1,
-        title: "Freight Forwarding",
+        title: "Freight Forwarding Services",
         fullDescription: "We provide integrated, fast, and highly reliable logistics and freight forwarding solutions. From important documents to large cargo, our team is ready to deliver your goods using well-maintained fleets. Our distribution network covers Java and sea routes to other major islands in Indonesia.",
         benefits: [
           "Strict adherence to delivery schedules",
@@ -462,20 +448,10 @@ export const contentEN = {
         id: 4,
         name: "Kopi Kita",
         shortDesc: "Coffee Shop",
-        fullDesc: "[DRAFT] Kopi Kita offers a variety of coffee and refreshing drinks with friendly prices and consistent quality taste.",
-        address: "[DRAFT] Jl. Dermaga Raya, East Jakarta",
+        fullDesc: "Kopi Kita offers a variety of coffee and refreshing drinks at friendly prices. Strategically located around Duren Sawit, East Jakarta.",
+        address: "Around Duren Sawit, East Jakarta",
         website: "#",
         logoText: "KK",
-        image: kopiKitaImg,
-      },
-      {
-        id: 5,
-        name: "Coffee Cart",
-        shortDesc: "Mobile Coffee",
-        fullDesc: "[DRAFT] A practical mobile coffee service that delivers refreshing blended drinks directly to your place, suitable for events or special occasions.",
-        address: "[DRAFT] Mobile Service",
-        website: "#",
-        logoText: "CC",
         image: faenzoneCartImg,
       },
       {
