@@ -88,9 +88,12 @@ export function Footer() {
                   {companyInfo.contact.address}
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-muted-foreground shrink-0" />
-                <span className="text-[15px] text-card-foreground/70">{companyInfo.contact.contacts[0].whatsapp}</span>
+              <li className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <span className="text-[15px] text-card-foreground/70">{companyInfo.contact.contacts[0].whatsapp} (Admin Ekspedisi)</span>
+                  <span className="text-[15px] text-card-foreground/70">081807963210 (Admin Pengadaan)</span>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-muted-foreground shrink-0" />
