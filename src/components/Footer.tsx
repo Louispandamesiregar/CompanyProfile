@@ -92,7 +92,7 @@ export function Footer() {
                 <Phone className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <span className="text-[15px] text-card-foreground/70">{companyInfo.contact.contacts[0].whatsapp} (Admin Ekspedisi)</span>
-                  <span className="text-[15px] text-card-foreground/70">081807963210 (Admin Pengadaan)</span>
+                  <span className="text-[15px] text-card-foreground/70">+6281807963210 (Admin Pengadaan)</span>
                 </div>
               </li>
               <li className="flex items-center gap-3">
