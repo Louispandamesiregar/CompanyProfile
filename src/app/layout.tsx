@@ -9,8 +9,30 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 
 export const metadata: Metadata = {
-  title: "PT Nawasena Jaya Group",
+  title: {
+    default: "PT Nawasena Jaya Group",
+    template: "%s | PT Nawasena Jaya Group",
+  },
   description: "Solusi Pengadaan & Distribusi Terpercaya. Layanan Pengiriman Barang, Pengadaan ATK, Alat Kesehatan, dan Perlengkapan Printer.",
+  keywords: ["Nawasena Jaya Group", "Pengadaan Barang", "Distribusi", "Logistik", "ATK", "Alat Kesehatan", "Pengiriman Barang", "Tender"],
+  openGraph: {
+    title: "PT Nawasena Jaya Group",
+    description: "Solusi Pengadaan & Distribusi Terpercaya. Layanan Pengiriman Barang, Pengadaan ATK, dan Alat Kesehatan.",
+    siteName: "PT Nawasena Jaya Group",
+    locale: "id_ID",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
