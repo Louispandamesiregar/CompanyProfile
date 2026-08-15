@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/', // Just an example if there's any private route
     },
-    sitemap: 'https://nawasenajaya.com/sitemap.xml', // Adjust to real domain
+    sitemap: 'https://nawasenajayagroup.com/sitemap.xml', // Adjust to real domain
   }
 }

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://nawasenajaya.com' // Adjust to the real domain once deployed
+  const baseUrl = 'https://nawasenajayagroup.com' // Adjust to the real domain once deployed
 
   return [
     {
