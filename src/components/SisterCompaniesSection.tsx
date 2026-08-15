@@ -249,7 +249,13 @@ export function SisterCompaniesSection() {
                       {expandedCompany.address && (
                         <div className="inline-flex items-start gap-2 bg-slate-50 p-3 md:p-4 rounded-xl border border-border/50 text-left">
                           <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                          <span className="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">{expandedCompany.address}</span>
+                          {expandedCompany.mapLink ? (
+                            <a href={expandedCompany.mapLink} target="_blank" rel="noopener noreferrer" className="text-xs md:text-sm text-slate-600 font-medium leading-relaxed hover:text-primary transition-colors hover:underline">
+                              {expandedCompany.address}
+                            </a>
+                          ) : (
+                            <span className="text-xs md:text-sm text-slate-600 font-medium leading-relaxed">{expandedCompany.address}</span>
+                          )}
                         </div>
                       )}
                     </div>
